@@ -5,10 +5,7 @@ This project generates the HTML source for [Design Enthusiast](http://brandonmat
 This website is can be built with the [Henrik's version of Jekyll](http://github.com/henrik/jekyll/tree/master)
 that adds support for HAML and SASS.
 
-This project requires [Compass](http://github.com/chriseppstein/compass) to generate its stylesheets. First make sure you have the latest
-Compass gem installed and in the root directory of the project run:
-
-<pre>compass --sass-dir=source/stylesheets --css-dir=output/stylesheets .</pre>
+This project requires the [Compass gem](http://github.com/chriseppstein/compass) to generate its stylesheets.
 
 To generate the website in the output directory, type:
 

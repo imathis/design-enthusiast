@@ -1,0 +1,88 @@
+!!!
+%html{:xmlns=>"http://www.w3.org/1999/xhtml", "xml:lang"=>"en", :lang=>"en"}
+  %head
+    %meta{:content=>"text/html; charset=utf-8", "http-equiv"=>"Content-Type"}
+    %title= page.title
+    - if page.respond_to? :description
+      %meta{:name=>"description", :content=>page.description}/
+    - if page.respond_to? :keywords
+      %meta{:name=>"keywords", :content=>page.keywords}/
+    %link{:href=>"/stylesheets/main.css", :rel=>"stylesheet", :media=>"screen, projection", :type=>"text/css"}
+  %body{:id=>(page.respond_to?(:body_id) ? page.body_id : nil)}
+    #header_wrapper
+      #header
+        %h1 Brandon Mathis
+        .nav
+          %ul
+            %li.here
+              %a(href="/" title="Home") Home
+            %li
+              %a(href="/blog/" title="Blog") Blog
+            %li
+              %a(href="/work/" title="Work") Work
+            %li
+              %a(href="/about/" title="About") About
+    #content_wrapper
+      #content
+        #page_wrapper
+          #page
+            .contents
+              = content
+        #sidebar.aside
+          #hire_me.section.alpha.omega
+            %img#hire_img(src="/images/hire_me.png" width="80px")
+            %h3 Let&rsquo;s Talk.
+            %p
+              I work on all kinds of projects, from large web applications to simple graphic designs. If you have an idea for a
+              project, I’d love to talk to you about it.
+    #footer_wrapper
+      #footer
+        #page_bottom
+        .bottom_nav
+          .contents
+            %a.ucase(href="#") &uarr; back to top
+        #about.section
+          .contents
+            %h5 About Me
+            %span.avatar
+              %img(src="/content/avatar.jpg")
+            %p
+              I’m a design enthusiast who’s passionate about my craft. I primarily design
+              web applications, but I also love photography, and work on print design
+              projects when I can find the time.
+              %br
+              %a(href="/about/") Read more &rarr;
+        #twitter.section
+          .contents
+            %h5 Twitter
+            .tweet
+              %p
+                The mount came with our house. The flag was locally made. A US flag supported by a Chinese mount is parallel to a scary reality
+            %p.follow
+              %img(src="/images/twitter_bird.png")
+              %span
+                follow
+                %a(href="http://twitter.com/imathis") imathis
+        #contact.section
+          .contents
+            %h5 Contact Me
+            %ul
+              %li <a href="mailto:imathis@me.com">imathis@me.com</a>
+              %li +1 (205) 258-8648
+              %li
+                %ul#social
+                  %li <a href="http://twitter.com/imathis" class="twitter" title="Follow me on Twitter">Twitter</a>
+                  %li <a href="http://github.com/imathis" class="github" title="My Github profile">Github</a>
+                  %li <a href="http://facebook.com/brandon.mathis" class="facebook" title="My Facebook profile">Facebook</a>
+                  %li <a href="http://www.linkedin.com/in/brandonmathis" class="linkedin" title="My Linked-in profile">Linked-in</a>
+                  %li <a href="http://delicious.com/imathis/" class="delicious" title="My Delicious links">Delicious</a>
+                  %li <a href="http://flickr.com/photos/imathis/" class="flickr" title="My Flickr photo stream">Flickr</a>
+        #foot_bottom
+          %h6 &copy; MMIX &ndash; Brandon Mathis
+          <a href="http://apple.com" title="Designed on an Apple computer" class="affiliate apple">Designed on an Apple Computer</a>
+          <a href="http://terralien.com" title="I'm a Terralien crew member" class="affiliate terralien">I'm a Terralien Crew Member</a>
+          .text_links
+            Powered by
+            %a(href="http://github.com/henrik/jekyll/") Jekyll
+            and
+            %a(href="http://github.com/chriseppstein/compass/") Compass

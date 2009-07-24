@@ -1,0 +1,94 @@
+!default_link_color           ||= #B3272D
+!default_link_color_hover     ||= #fff
+!default_link_color_alt       ||= #80D4F5
+!default_link_color_hover_alt ||= #000
+
+=link-color(!hover = true)
+  +link-color-style(!default_link_color, !default_link_color_hover, !hover)
+
+=link-color-alt(!hover = true)
+  +link-color-style(!default_link_color_alt, !default_link_color_hover_alt, !hover)
+
+=link-color-style(!color = !default_link_color, !color_hover = !default_link_color_hover, !hover = true)
+  color= !color
+  padding: 2px
+  margin: 0 -2px
+  +border-radius(3px)
+  @if !hover
+    &:hover
+      background= !color
+      color= !color_hover
+      text-decoration: none
+
+=fixed_font
+  font-family: Monaco, 'Andale Mono', 'Lucida Console', monospace
+=sans_font
+  font-family: "Lucida Grande", Lucida, Myriad, Helvetica, Arial, sans-serif
+=heading_font 
+  font-family: Myriad, "Helvetica Neue" Helvetica, Lucida, Verdana, sans-serif
+=serif_font
+  font-family: Times, "Times New Roman", Georgia, serif
+
+body
+  +sans_font
+#content
+  h1,h2,h3,h4,h5,h6
+    +heading_font
+    color: #444
+    font-weight: bold
+    a:hover
+      background: none
+em
+  +serif_font
+#content, #sidebar
+  a
+    +link-color
+#footer .contents
+  a
+    +link-color-alt
+
+span.highlight, em.highlight, strong.highlight
+  background-color: #ff6
+  padding: 2px
+  margin: 0 -2px
+  +border-radius(3px)
+p
+  padding-bottom: 1.5em
+
+h2
+  font-size: 325%
+  letter-spacing: -.05em
+  line-height: 1.2em
+h3
+  font-size: 200%
+  margin-top: 1.5em
+  margin-bottom: .7em
+  letter-spacing: -.05em
+h4
+  font-size: 140%
+  margin-top: 1.5em
+  margin-bottom: .7em
+  letter-spacing: -.05em
+h5
+  font-size: 120%
+  margin-top: 1em
+  margin-bottom: .7em
+  letter-spacing: -.05em
+h6
+  font-size: 100%
+  margin-top: 1em
+  margin-bottom: .7em
+
+strong
+  font-weight: bold
+em
+  font-style: italic
+
+small
+  font-size: 80%
+.ucase
+  text-transform: uppercase
+  
+.amp
+  font-family: Baskerville, Palatino, Times, "Times New Roman", serif
+  font-style: italic

@@ -1,0 +1,74 @@
+#head_quote
+  position: relative
+  padding-bottom: 30px
+  +serif_font
+  .quote
+    position: absolute
+    font-size: 1000%
+    font-weight: bold
+    color: #f0f0f0
+    top: .35em
+    left: -15px
+    letter-spacing: -.12em
+  .cite, h2
+    display: block
+  .cite
+    padding-top: 25px
+    color= !default_link_color
+    text-transform: uppercase
+  h2
+    font-family: inherit
+    margin-top: -5px
+#featured_work
+  margin: 0 -30px
+  padding: 30px 30px 10px
+  color: #fff
+  background: #4d4d4d url(/images/line_tile.png)
+  +clearfix
+  border:
+    top: 1px solid #1a1a1a
+    bottom: 1px solid #1a1a1a
+  a
+    +link-color-alt
+    text-decoration: none
+  h3
+    margin-top: 0
+    color: #fff
+  .art
+    text-align: center
+    img
+      display: block
+      padding-bottom: 17px
+      background: url(/images/work_shadow_bg.png) no-repeat bottom
+    a
+      font-size: 85%
+  p, .art
+    font-size: 90%
+    line-height: 1.5em
+#writings
+  h3
+    margin-top: 1em
+  ul
+    border-top: 1px solid #ededed
+    margin-bottom: 15px
+  li
+    +clearfix
+    border-bottom: 1px solid #ededed
+    padding: 1.5em 0 0
+    .date
+      +column(3)
+      font-size: 75%
+      color: #808080
+    .article
+      +column(13, true)
+      h5
+        display: inline
+        color: #444
+      a
+        +link-colors("inherit")
+      p
+        font-size: 80%
+        margin-top: .5em
+        line-height: 1.5em
+        color: #666
+        margin-bottom: 0

@@ -1,0 +1,38 @@
+=clearfix
+  overflow: hidden
+  display: inline-block
+  display: block
+=grid_no_margin
+  margin-left: -10px
+  margin-right: 0px
+  padding-right: 20px
+
+// expects a number from 0 to 1
+=opacity(!opacity = 1)
+  :opacity= !opacity
+  :-moz-opacity= !opacity
+  :-khtml-opacity= !opacity
+  :-ms-filter= "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + (!opacity*100) + ")"
+  :filter= "alpha(opacity=" + (!opacity*100) + ")"
+
+=opacity-hover(!opacity)
+  &:hover
+    +opacity(!opacity)
+
+// Configuration
+@import partials/config.sass
+
+// Utility modules
+@import compass/utilities.sass
+@import modules/grid.sass
+@import modules/reset.sass
+
+// Reset
++global-reset
+
+// Typography
+@import partials/typography.sass
+@import partials/syntax.sass
+@import partials/layout.sass
+@import partials/sidebar.sass
+@import partials/page.sass

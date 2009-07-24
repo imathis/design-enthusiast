@@ -1,3 +1,19 @@
+//**
+  Example 1:
+  a.twitter
+    +sprite-img("icons-32.png", 1)
+  a.facebook
+    +sprite-img("icons-32png", 2)
+  ...
+  Example 2:
+  a
+    +sprite-background("icons-32.png")
+    a.twitter
+      +sprite-column(1)
+    a.facebook
+      +sprite-row(2)
+    ...
+ 
 !sprite_default_size  ||= 32px
 !sprite_default_margin ||= 0px
 !sprite_image_default_width ||= !sprite_default_size
@@ -16,7 +32,7 @@
  
 // Sets rules common for all sprites, assumes a rectangular region.
 =sprite-background-rectangle(!img, !width = !sprite_image_default_width, !height = !sprite_image_default_height)
-  :background= url(!img) "no-repeat"
+  :background= image_url(!img) "no-repeat"
   :width= !width
   :height= !height
   :overflow hidden

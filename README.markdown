@@ -5,21 +5,10 @@ This project generates the HTML source for [Design Enthusiast](http://brandonmat
 This website is can be built with the [Henrik's version of Jekyll](http://github.com/henrik/jekyll/tree/master)
 that adds support for HAML and SASS.
 
-The following change is from the [Recursive Creative Website](http://github.com/rcreative/rcreative-website/) project.
+This project requires [Compass](http://github.com/chriseppstein/compass) to generate its stylesheets. First make sure you have the latest
+Compass gem installed and in the root directory of the project run:
 
-You need to make a small change to the HAML gem in order to get the SASS to compile. In:
-
-<pre>lib/sass/tree/import_node.rb</pre>
-
-Change the line:
-
-<pre>paths = (@options[:load_paths] || []).dup</pre>
-
-To this:
-
-<pre>paths = (@options[:load_paths] || []).dup.to_a</pre>
-
-Hopefully this change won't be necessary in future versions of HAML, but as of 2.2.2 it seems to be.
+<pre>compass --sass-dir=source/stylesheets --css-dir=output/stylesheets .</pre>
 
 To generate the website in the output directory, type:
 
@@ -28,7 +17,6 @@ To generate the website in the output directory, type:
 To generate and deploy, type:
 
 <pre>rake deploy</pre>
-
 
 ## License
 

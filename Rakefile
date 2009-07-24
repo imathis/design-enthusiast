@@ -25,6 +25,7 @@ end
 desc "generate website in output directory"
 task :generate => :clean do
   puts "Generating website..."
+  system "compass"
   system "jekyll"
 end
 

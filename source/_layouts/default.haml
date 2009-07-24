@@ -7,7 +7,7 @@
       %meta{:name=>"description", :content=>page.description}/
     - if page.respond_to? :keywords
       %meta{:name=>"keywords", :content=>page.keywords}/
-    %link{:href=>"/stylesheets/main.css", :rel=>"stylesheet", :media=>"screen, projection", :type=>"text/css"}
+    %link{:href=>"/stylesheets/screen.css", :rel=>"stylesheet", :media=>"screen, projection", :type=>"text/css"}
   %body{:id=>(page.respond_to?(:body_id) ? page.body_id : nil)}
     #header_wrapper
       #header

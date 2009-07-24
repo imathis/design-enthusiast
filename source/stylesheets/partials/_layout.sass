@@ -149,17 +149,17 @@ body
       +opacity(.7)
       +opacity-hover(1)
       &.twitter
-        +sprite-position-y(1,24px)
+        +sprite-row(1,24px)
       &.github
-        +sprite-position-y(2,24px)
+        +sprite-row(2,24px)
       &.facebook
-        +sprite-position-y(3,24px)
+        +sprite-row(3,24px)
       &.linkedin          
-        +sprite-position-y(4,24px)
+        +sprite-row(4,24px)
       &.delicious         
-        +sprite-position-y(5,24px)
+        +sprite-row(5,24px)
       &.flickr            
-        +sprite-position-y(6,24px)
+        +sprite-row(6,24px)
 #foot_bottom
   +column(24)
   padding-top: 10px
@@ -181,12 +181,18 @@ body
     text-indent: -9999em
     &:hover
       background-color: none
-    &.wordpress
-      +sprite-position-x(1,34px)
+    &.compass
+      +sprite-column(1,34px)
+      &:hover
+        +sprite-position(1,2,34px,38px)
     &.apple
-      +sprite-position-x(2,34px)
+      +sprite-column(2,34px)
+      &:hover
+        +sprite-position(2,2,34px,38px)
     &.terralien
-      +sprite-position-x(3,34px)
+      +sprite-column(3,34px)
+      &:hover
+        +sprite-position(3,2,34px,38px)
   .text_links
     float: left
     font-size: 80%

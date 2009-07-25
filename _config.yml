@@ -1,5 +1,5 @@
-source: source
-destination: output
+source: _source
+destination: _site
 markdown: rdiscount
 pygments: true
 permalink: /:year/:month/:day/:title.html
@@ -7,4 +7,4 @@ multiviews: true
 sass: false
 haml: true
 post_defaults:
-  layout: post
+  layout: default

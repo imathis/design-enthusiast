@@ -96,6 +96,7 @@ body
   .bottom_nav
     font-size: 70%
     a
+      +link-color-style(#aaa,#000)
       display: inline-block
       margin: 20px 0 0 10px
   .section
@@ -182,17 +183,11 @@ body
     &:hover
       background-color: none
     &.compass
-      +sprite-column(1,34px)
-      &:hover
-        +sprite-position(1,2,34px,38px)
+      +sprite-column-hover-row(1,2,34px,38px)
     &.apple
-      +sprite-column(2,34px)
-      &:hover
-        +sprite-position(2,2,34px,38px)
+      +sprite-column-hover-row(2,2,34px,38px)
     &.terralien
-      +sprite-column(3,34px)
-      &:hover
-        +sprite-position(3,2,34px,38px)
+      +sprite-column-hover-row(3,2,34px,38px)
   .text_links
     float: left
     font-size: 80%

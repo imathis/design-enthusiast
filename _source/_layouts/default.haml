@@ -14,7 +14,7 @@
         %h1 Brandon Mathis
         .nav
           %ul
-            %li.here
+            %li{:class => ((page.nav == 'home') ? 'here' : nil)}
               %a(href="/" title="Home") Home
             %li
               %a(href="/blog/" title="Blog") Blog

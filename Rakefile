@@ -9,6 +9,7 @@ def ok_failed(condition)
 end
 
 port = "2345"
+site = "_site"
 
 desc "list tasks"
 task :default do
@@ -19,7 +20,7 @@ end
 desc "remove files in output directory"
 task :clean do
   puts "Removing output..."
-  Dir["output/*"].each { |f| rm_rf(f) }
+  Dir["#{site}/*"].each { |f| rm_rf(f) }
 end
 
 desc "generate website in output directory"
@@ -27,11 +28,12 @@ task :generate => :clean do
   puts "Generating website..."
   system "compass"
   system "jekyll"
+  Dir["#{site}/stylesheets/*.sass"].each { |f| rm_rf(f) }
 end
 
 desc "start up an instance of serve on the output files"
 task :start_serve => :stop_serve do
-  cd "output" do
+  cd "#{site}" do
     print "Starting serve..."
     ok_failed system("serve #{port} > /dev/null 2>&1 &")
   end

@@ -14,13 +14,13 @@
         %h1 Brandon Mathis
         .nav
           %ul
-            %li{:class => ((page.nav == 'home') ? 'here' : nil)}
+            %li{:class => (page.respond_to?(:nav) && (page.nav == 'home') ? 'here' : nil)}
               %a(href="/" title="Home") Home
-            %li
-              %a(href="/blog/" title="Blog") Blog
-            %li
+            %li{:class => (page.respond_to?(:nav) && (page.nav == 'work') ? 'here' : nil)}
               %a(href="/work/" title="Work") Work
-            %li
+            %li{:class => (page.respond_to?(:nav) && (page.nav == 'blog') ? 'here' : nil)}
+              %a(href="/blog/" title="Blog") Blog
+            %li{:class => (page.respond_to?(:nav) && (page.nav == 'about') ? 'here' : nil)}
               %a(href="/about/" title="About") About
     #content_wrapper
       #content

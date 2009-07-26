@@ -1,3 +1,46 @@
+#page
+  .contents
+    .heading
+      p
+        +serif_font
+        font-style: italic
+        font-size: 105%
+        +soft-grey
+    img.shadow
+      display: block
+      padding-bottom: 16px
+      &.medium
+        background: url(/images/work_shadow_bg.png) no-repeat bottom
+    .article
+      border-top: 1px solid #eee
+body#work
+  .article
+    padding: 1em 0
+    +clearfix
+    .info
+      +column(7,true)
+    p
+      font-size: 85%
+    h3
+      margin:
+        top: .4em
+        bottom: .4em
+    .soft
+      +soft-grey
+      &.block
+        border:
+          top: 1px solid #eee
+          bottom: 1px solid #eee
+        display: block
+        padding: 3px 0
+        margin-bottom: 1em
+    img
+      border: 1px solid #ccc
+      background: #fff
+      +border-radius
+      padding: 3px
+
+//Home Page sections
 #head_quote
   position: relative
   padding-bottom: 30px
@@ -22,30 +65,27 @@
 #featured_work
   margin: 0 -30px
   padding: 30px 30px 10px
-  color: #fff
-  background: #4d4d4d url(/images/line_tile.png)
+  background: #333 url(/images/line_tile.png)
   +clearfix
+  color: #ddd
   border:
-    top: 1px solid #1a1a1a
-    bottom: 1px solid #1a1a1a
-  a
-    +link-color-alt
-    text-decoration: none
+    top: 1px solid #555
+    bottom: 1px solid #555
   h3
     margin-top: 0
-    color: #fff
+    color: #eee
+    text-shadow: #1a1a1a 1px 1px 3px
   .art
     text-align: center
-    img
-      display: block
-      padding-bottom: 17px
-      background: url(/images/work_shadow_bg.png) no-repeat bottom
-    a
-      font-size: 85%
-  p, .art
-    font-size: 90%
-    line-height: 1.5em
+  p
+    font-size: 85%
+    line-height: 1.6em
+  a
+    +link-color-alt
 #writings
+  background: url(/images/section_shadow_bg.png) repeat-x left 1px
+  padding: 1px 30px 10px
+  margin: 0 -30px
   h3
     margin-top: 1em
   ul

@@ -8,6 +8,8 @@
     - if page.respond_to? :keywords
       %meta{:name=>"keywords", :content=>page.keywords}/
     %link{:href=>"/stylesheets/screen.css", :rel=>"stylesheet", :media=>"screen, projection", :type=>"text/css"}
+    %script{:type=>"text/javascript", :src=>"/javascripts/mootools.js"}
+    %script{:type=>"text/javascript", :src=>"/javascripts/site.js"}
   %body{:id=>(page.respond_to?(:body_id) ? page.body_id : nil)}
     #header_wrapper
       #header
@@ -56,8 +58,8 @@
           .contents
             %h5 Twitter
             .tweet
-              %p
-                The mount came with our house. The flag was locally made. A US flag supported by a Chinese mount is parallel to a scary reality
+              %p#twitter_status
+                Status updating...
             %p.follow
               %img(src="/images/twitter_bird.png")
               %span

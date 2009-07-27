@@ -2,22 +2,23 @@
 // require the twitter library
 require "twitter.lib.php";
 
-$savedTweet = "./tweet.txt";
-if(time() - filemtime($savedTweet) > 600){
-  $tweet = getLatestTweet();
+$saved_tweet = "./tweet.txt";
+if (file_exists($saved_tweet)){
+  if(time() - filemtime($saved_tweet) > 600){
+    $tweet = getLatestTweet();
+  }
 }
 
 if($tweet){
-  $fh = fopen($savedTweet, 'w') or die("can't open file");
-  fwrite($fh, $tweet);
-  fclose($fh);
-  echo $tweet;
+  $handle = fopen($saved_tweet, 'w') or die("can't open file");
+  fwrite($handle, $tweet);
+  fclose($handle);
 }else{
-  $fh = fopen($savedTweet, 'r') or die("can't open file");
-  $tweet = fread($fh, filesize($savedTweet));
-  fclose($fh);
-  echo $tweet;
+  $handle = fopen($saved_tweet, 'r') or die("can't open file");
+  $tweet = fread($handle, filesize($saved_tweet));
+  fclose($handle);
 }
+echo $tweet;
 
 function autolink($text)
 {

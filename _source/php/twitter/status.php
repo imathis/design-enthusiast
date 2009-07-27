@@ -4,22 +4,27 @@ require "twitter.lib.php";
 
 $saved_tweet = "./tweet.txt";
 if (file_exists($saved_tweet)){
+  // if the last read tweet is over 10 minutes old, check for a new tweet.
   if(time() - filemtime($saved_tweet) > 600){
     $tweet = getLatestTweet();
   }
 }
 
 if($tweet){
+  //if there is a new tweet, save it to tweet.txt
   $handle = fopen($saved_tweet, 'w') or die("can't open file");
   fwrite($handle, $tweet);
   fclose($handle);
 }else{
+  //if there isn't a new tweet read from tweet.txt
   $handle = fopen($saved_tweet, 'r') or die("can't open file");
   $tweet = fread($handle, filesize($saved_tweet));
   fclose($handle);
 }
+//echo the tweet for javascript to read in
 echo $tweet;
 
+//auto link urls, @usernames, and #hashtags
 function autolink($text)
 {
     $ret = ' ' . $text;
@@ -32,6 +37,10 @@ function autolink($text)
     return($ret);
 }
 function getLatestTweet(){
+  //you'll need to create a credentials.php file in the same directory with the following:
+  //$username = "your_user_name";
+  //$password = "your_password";
+  // 
   include "credentials.php";
   // initialize the twitter class
   $twitter = new Twitter($username, $password);

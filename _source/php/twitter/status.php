@@ -3,11 +3,10 @@
 require "twitter.lib.php";
 
 $saved_tweet = "./tweet.txt";
-if (file_exists($saved_tweet)){
-  // if the last read tweet is over 10 minutes old, check for a new tweet.
-  if(time() - filemtime($saved_tweet) > 600){
+$mod_date = 0;
+if (!file_exists($saved_tweet) || (time() - filemtime($saved_tweet) > 600)){
+  // If there is no cached tweet, or if the cache is over 10 minutes old, check for a new tweet.
     $tweet = getLatestTweet();
-  }
 }
 
 if($tweet){
@@ -15,11 +14,14 @@ if($tweet){
   $handle = fopen($saved_tweet, 'w') or die("can't open file");
   fwrite($handle, $tweet);
   fclose($handle);
-}else{
+}else if(file_exists($saved_tweet)){
   //if there isn't a new tweet read from tweet.txt
   $handle = fopen($saved_tweet, 'r') or die("can't open file");
   $tweet = fread($handle, filesize($saved_tweet));
   fclose($handle);
+}else{
+  //no tweet.txt exists, no tweets can be retrieved
+  $tweet = 'Twitter problems: no tweets could be retrieved.';
 }
 //echo the tweet for javascript to read in
 echo $tweet;

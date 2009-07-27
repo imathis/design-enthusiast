@@ -1,4 +1,9 @@
 <?php
+//
+//you must create a credentials.php file in the same directory as this file with the following:
+//$username = "your_user_name";
+//$password = "your_password";
+//
 // require the twitter library
 require "twitter.lib.php";
 
@@ -39,9 +44,6 @@ function autolink($text)
     return($ret);
 }
 function getLatestTweet(){
-  //you'll need to create a credentials.php file in the same directory with the following:
-  //$username = "your_user_name";
-  //$password = "your_password";
   // 
   include "credentials.php";
   // initialize the twitter class

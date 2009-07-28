@@ -1,0 +1,15 @@
+---
+layout: default
+body_id: "blog"
+title: Blog
+---
+ 
+#head
+  %h2 Blog
+ 
+.articles
+  - site.posts.sort_by(&:date).reverse[0..10].each do |post|
+    .article
+      %h3.title= link_to(h(post.title.titlecase), post.url)
+      %span.date=post.date.strftime("%d %b, %Y")
+      %p.exerpt= post.content

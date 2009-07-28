@@ -24,19 +24,13 @@ keywords: "Brandon Mathis, imathis, ruby on rails, ruby, rails, designer, develo
   %p
     <a href="#">Terralien</a> | <a href="/work/">All work</a>
 #writings.section
-  %h3 Writings
+  %h3 From the Blog
   %ul
-    %li.first
-      %span.date 23 June, 2009
-      %span.article
-        %h5.title
-          <a href="#">I Shot the Serif</a>
-        %p.exerpt The sun was setting just past the x-height of the horizon. Bodoni had been pressing on since daybreak, tracking was getting narrower
-    %li
-      %span.date 23 June, 2009
-      %span.article
-        %h5.title
-          <a href="#">I Shot the Serif</a>
-        %p.exerpt The sun was setting just past the x-height of the horizon. Bodoni had been pressing on since daybreak, tracking was getting narrower
+    - site.posts.sort_by(&:date).reverse[0..1].each do |post|
+      %li
+        %span.date=post.date.strftime("%d %b, %Y")
+        %span.article
+          %h5.title= link_to(h(post.title.titlecase), post.url)
+          = shorten(post.content)
   %small
-    <a href="/blog/">All Writing</a>
+    <a href="/blog/">More Posts &rarr;</a>

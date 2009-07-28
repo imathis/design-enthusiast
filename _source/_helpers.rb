@@ -2,6 +2,14 @@ gem 'activesupport', ">= 2.3.2"
 require 'active_support'
 
 module Helpers
+  def shorten (string, word_limit = 25)
+    words = string.split(/\s/)
+    if words.size >= word_limit
+      words[0,(word_limit-1)].join(" ") + '...'
+    else 
+      string
+    end
+  end
   module EscapeHelper
     HTML_ESCAPE = { '&' => '&amp;',  '>' => '&gt;',   '<' => '&lt;', '"' => '&quot;' }
     JSON_ESCAPE = { '&' => '\u0026', '>' => '\u003E', '<' => '\u003C' }
@@ -149,5 +157,37 @@ module Helpers
       end
   end
   include TagHelper
+  class String
+    def titlecase
+      small_words = %w(a an and as at but by en for if in of on or the to v v. via vs vs.)
+
+      x = split(" ").map do |word|
+        # note: word could contain non-word characters!
+        # downcase all small_words, capitalize the rest
+        small_words.include?(word.gsub(/\W/, "").downcase) ? word.downcase! : word.smart_capitalize!
+        word
+      end
+      # capitalize first and last words
+      x.first.smart_capitalize!
+      x.last.smart_capitalize!
+      # small words after colons are capitalized
+      x.join(" ").gsub(/:\s?(\W*#{small_words.join("|")}\W*)\s/) { ": #{$1.smart_capitalize} " }
+    end
+
+    def smart_capitalize
+      # ignore any leading crazy characters and capitalize the first real character
+      if self =~ /^['"\(\[']*([a-z])/
+        i = index($1)
+        x = self[i,self.length]
+        # word with capitals and periods mid-word are left alone
+        self[i,1] = self[i,1].upcase unless x =~ /[A-Z]/ or x =~ /\.\w+/
+      end
+      self
+    end
+
+    def smart_capitalize!
+      replace(smart_capitalize)
+    end
+  end
 end
 

@@ -1,0 +1,9 @@
+---
+title: Innovation doesn't grow on money?
+---
+
+Interesting to see the [R&D budgets of these big companies](http://techblog.dallasnews.com/archives/2008/04/why-doesnt-microsoft-outinnova.html). Microsoft $7.4 billion last year on research and development. We already have our [stupid table](http://www.youtube.com/watch?v=CZrr7AZ9nCY) what else could we need?
+
+Microsoft must be starting and abandoning some wonderful projects, or at least playing catch up with OS X Leopard and the iPhone.
+
+Microsoft spent $7.4 billion last year on research and development. Apple spent $844 million.

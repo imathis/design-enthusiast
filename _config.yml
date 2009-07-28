@@ -2,9 +2,9 @@ source: _source
 destination: _site
 markdown: rdiscount
 pygments: true
-permalink: /:year/:month/:day/:title.html
+permalink: /blog/:year/:month/:day/:title
 multiviews: true
 sass: false
 haml: true
 post_defaults:
-  layout: default
+  layout: blog

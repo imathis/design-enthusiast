@@ -38,7 +38,7 @@ keywords: "Brandon Mathis, imathis, ruby on rails, ruby, rails, designer, develo
         - else
           = post.content
       .footer
-        %a(href="#{post.url}/#disqus_thread")Comments
+        %a(href="#{(post.data['link'] ? post.data['link'] : post.url)}/#disqus_thread")Comments
         %span.vr &nbsp;
         =link_to('Read More &raquo;', post.url, {:class=>'more'})
   .see_more.right

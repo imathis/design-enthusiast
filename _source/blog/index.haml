@@ -5,8 +5,8 @@ nav: blog
 title: Blog
 ---
 #blog.main
-  - site.posts.sort_by(&:date).reverse[0..10].each_with_index do |post,index|
-    .section{:class=>"#{(index==0 ? 'alpha' : (index==10 ? "omega" : nil))}"}
+  - site.posts.sort_by(&:date).reverse[0..9].each_with_index do |post,index|
+    .section{:class=>"#{(index==0 ? 'alpha' : (index==9 ? "omega" : nil))}"}
       %h3.header
         - if post.data["link"]
           = link_to(h(post.title), post.data["link"], {:class=>"title"})
@@ -15,6 +15,6 @@ title: Blog
           = link_to(h(post.title), post.url, {:class=>"title"})
       .article= post.content
       .footer
-        %a(href="#{post.url}/#disqus_thread")Leave a Comment &raquo;
+        %a(href="#{(post.data['link'] ? post.data['link'] : post.url)}/#disqus_thread")Leave a Comment &raquo;
   .see_more
     =link_to("&larr; Read more at the archives", "/blog/archives.html")

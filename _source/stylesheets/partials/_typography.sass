@@ -4,47 +4,50 @@
 !default_link_color_hover_alt ||= #000
 
 =link-color(!hover = true)
-  +link-color-style(!default_link_color, !default_link_color_hover, !hover)
+  +link-color-style(!default_link_color, !default_link_color_hover, !default_link_color, !hover)
 
 =link-color-alt(!hover = true)
-  +link-color-style(!default_link_color_alt, !default_link_color_hover_alt, !hover)
+  +link-color-style(!default_link_color_alt, !default_link_color_hover_alt, !default_link_color_alt, !hover)
+  
+=link-color-heading(!link_color = "inherit", !hover_bg_color = #ccc)
+  +link-color-style(!link_color,)
 
-=link-color-style(!color = !default_link_color, !color_hover = !default_link_color_hover, !hover = true)
+=link-color-style(!color = !default_link_color, !color_hover = !default_link_color_hover, !link_hover_bg = !color, !hover = true)
   color= !color
   padding: 2px
   margin: 0 -2px
   +border-radius(3px)
   @if !hover
     &:hover
-      background= !color
+      background= !link_hover_bg
       color= !color_hover
       text-decoration: none
 =soft-grey
   color: #999
 
-=fixed_font
+=fixed-font
   font-family: Monaco, 'Andale Mono', 'Lucida Console', monospace
-=sans_font
-  font-family: "Lucida Grande", Lucida, Myriad, Helvetica, Arial, sans-serif
-=heading_font 
-  font-family: Myriad, "Helvetica Neue" Helvetica, Lucida, Verdana, sans-serif
-=serif_font
+=sans-font
+  font-family: "Lucida Grande", Lucida, Helvetica, Arial, sans-serif
+=heading-font 
+  font-family: "Helvetica Neue", Helvetica, Lucida, Verdana, sans-serif
+=serif-font
   font-family: Times, "Times New Roman", Georgia, serif
 
 body
-  +sans_font
+  +sans-font
 #content
   h1,h2,h3,h4,h5,h6
-    +heading_font
+    +heading-font
+    line-height: 120%
     color: #444
     font-weight: bold
+    a
+      color: inherit
     a:hover
       background: none
 em
-  +serif_font
-#content, #sidebar
-  a
-    +link-color
+  +serif-font
 #footer .contents
   a
     +link-color-alt
@@ -60,7 +63,6 @@ p
 h2
   font-size: 325%
   letter-spacing: -.05em
-  line-height: 1.2em
 h3
   font-size: 200%
   margin-top: 1em

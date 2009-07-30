@@ -1,0 +1,14 @@
+---
+layout: default
+body_id: blog
+nav: blog
+title: Blog Archives
+---
+%h2 Blog Archives
+
+- posts = site.posts.group_by { |p| p.date.strftime("%Y") }
+- posts.keys.sort.reverse.each do |year|
+  %h3= year
+  %ul
+    - posts[year].sort_by(&:date).reverse.each do |post|
+      %li= link_to(h(post.title), post.url)

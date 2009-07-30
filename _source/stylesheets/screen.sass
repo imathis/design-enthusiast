@@ -7,13 +7,12 @@
   margin-right: 0px
   padding-right: 20px
 
-// expects a number from 0 to 1
-=opacity(!opacity = 1)
-  :opacity= !opacity
-  :-moz-opacity= !opacity
-  :-khtml-opacity= !opacity
-  :-ms-filter= "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + (!opacity*100) + ")"
-  :filter= "alpha(opacity=" + (!opacity*100) + ")"
+
+=rotate_me
+  //The rotation property of the BasicImage filter can accept one of four values: 0, 1, 2, or 3 which will rotate the element 0, 90, 180 or 270
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3)
+  -webkit-transform: rotate(-90deg)
+  -moz-transform: rotate(-90deg)
 
 =opacity-hover(!opacity)
   &:hover

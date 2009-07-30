@@ -1,7 +1,9 @@
 ---
 title: "I Shot the Serif"
+exerpt: The sun was setting just past the x-height of the horizon. Bodoni had been pressing on since daybreak, tracking was getting narrower, and he knew his bounty lay over the next hill
 ---
 
+<img src="/content/blog/2009/i_shot_the_serif.jpg" alt="I shot the serif" title="I shot the serif" width="200px" class="left"/>
 [ [Original Story](http://bit.ly/2QayWk) by [digg user wild](http://digg.com/users/wild) ]
 
 The sun was setting just past the x-height of the horizon. Bodoni had been pressing on since daybreak, tracking was getting narrower, and he knew his bounty lay over the next hill. The bitter grit of ampersand was coating his throat, and he was thirsty for a resolution. At the top of the hill he looked out. All of Rosewood lay below him. 
@@ -29,7 +31,5 @@ Bodoni knew he could not match Helvetica for speed. He was a legend, but at the 
 The Serif pulled out his revolver quick as an em dash and squeezed the trigger. He missed wide, letting out a cursive as he dropped to his left. Helvetica fell to his knees and drew fast. Bodoni took a bullet in the neck and fell backwards. He rasped for breath, reaching for the gun that lay just a few points too far from his hands. 
 
 Helvetica stared down at him, pity in his eyes. "It didn't have to be this way. I may have shot you Serif, but I did not shoot your Century."
-
-![I shot the serif](/content/blog/2009/i_shot_the_serif.jpg)
 
 Tee shirt design: [http://www.loiterink.com/i-shot-the-serif/362/](http://www.loiterink.com/i-shot-the-serif/362/)

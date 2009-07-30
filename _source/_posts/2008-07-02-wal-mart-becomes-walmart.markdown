@@ -6,7 +6,7 @@ It would seem that Walmart has lost another round of "she loves me not"
 
 ![new Walmart logo](http://i26.tinypic.com/15309oy.gif "Unimpressive")
 
-[Check out their previous logos for reference](http://walmartstores.com/AboutUs/8412.aspx)
+Check out their [previous logos](http://walmartstores.com/AboutUs/8412.aspx) for reference
 
 I feel like either Walmart has more vitamin C, or they are offering some kind of web hosting solution. It's almost as if they used some [Web 2.0 Logo Generator](http://creatr.cc/creatr/ "Web 2.0 Logo Generator") but forgot the glare and reflections.
 

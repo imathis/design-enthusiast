@@ -2,7 +2,7 @@
   .contents
     .heading
       p
-        +serif_font
+        +serif-font
         font-style: italic
         font-size: 105%
         +soft-grey
@@ -11,11 +11,16 @@
       padding-bottom: 16px
       &.medium
         background: url(/images/work_shadow_bg.png) no-repeat bottom
-body#work, body#blog
+body#work
   .article
     border-top: 1px solid #eee
-    padding: 15px 0 0
+    padding: 15px 0 35px
     +clearfix
+    &.alpha
+      border: none
+      padding-top: 0
+      h3
+        margin-top: 0
     .info
       +column(7,true)
     p
@@ -45,7 +50,7 @@ body#work, body#blog
 #head_quote
   position: relative
   padding-bottom: 30px
-  +serif_font
+  +serif-font
   .quote
     position: absolute
     font-size: 1000%
@@ -83,33 +88,85 @@ body#work, body#blog
     line-height: 1.6em
   a
     +link-color-alt
-#writings
+#blog.mini
   background: url(/images/section_shadow_bg.png) repeat-x left 1px
-  padding: 1px 30px 10px
+  padding: 1px 28px 0
   margin: 0 -30px
-  h3
-    margin-top: 1em
-  ul
-    border-top: 1px solid #ededed
-    margin-bottom: 15px
-  li
-    +clearfix
-    border-bottom: 1px solid #ededed
-    padding: 1.5em 0 0
-    .date
-      +column(3)
-      font-size: 75%
-      color: #808080
+  a.title
+    font-size: 160%
+    line-height: 100%
+    font-weight: bold
+    +heading-font
+    letter-spacing: -1px
+  .section .header a.permalink
+    font-size: 120%
+#blog
+  .section
+    position: relative
+    margin: 25px 0 0
+    padding: 0 2px
+    &.alpha
+      padding-top: 0
+      margin-top: 0
+      .header
+        margin-top: 2px
+        padding-top: 0
+    .header
+      padding: 5px 0 0
+      margin-bottom: .8em
+      &:hover
+        a.permalink
+          color: #999
+      a.title
+        +link-color-style(#444)
+        padding: 0 4px 0 2px
+        display: inline-block
+      a.permalink
+        font-size: 100%
+        line-height: 120%
+        font-weight: bold
+        vertical-align: top
+        margin-top: 1px
+        +heading-font
+        +link-colors(#ccc,#444)
+        text-decoration: none
+        padding-left: 4px
     .article
-      +column(13, true)
-      h5
-        display: inline
-        color: #444
-      a
-        +link-colors("inherit")
+      clear: left
       p
-        font-size: 80%
-        margin-top: .5em
-        line-height: 1.5em
-        color: #666
-        margin-bottom: 0
+        font-size: 85%
+        line-height: 150%
+        color: #444
+        padding-bottom: 15px
+        a
+          +link-color-style
+      img
+        border: none
+        &.left
+          +float("left")
+          margin-right: 15px
+          margin-bottom: 15px
+        &.right
+          +float("right")
+          margin-right: 15px
+          margin-bottom: 15px
+    .footer
+      margin-bottom: 15px
+      border-bottom: 1px solid #ededed
+      padding-bottom: 20px
+      font-size: 75%
+      .vr
+        display: inline-block
+        border-left: 1px solid #999
+        width: 0
+        margin: 0 4px
+        line-height: 120%
+      a
+        +link-color-style
+  .see_more
+    display: block
+    &.right
+      text-align: right
+    a
+      +link-color-style(#666)
+      font-size: 80%

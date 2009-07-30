@@ -23,14 +23,23 @@ keywords: "Brandon Mathis, imathis, ruby on rails, ruby, rails, designer, develo
     <br/>
   %p
     <a href="#">Terralien</a> | <a href="/work/">All work</a>
-#writings.section
-  %h3 From the Blog
-  %ul
-    - site.posts.sort_by(&:date).reverse[0..1].each do |post|
-      %li
-        %span.date=post.date.strftime("%d %b, %Y")
-        %span.article
-          %h5.title= link_to(h(post.title.titlecase), post.url)
-          = shorten(post.content)
-  %small
-    <a href="/blog/">More Posts &rarr;</a>
+#blog.mini
+  .section
+    - site.posts.sort_by(&:date).reverse[0..2].each_with_index do |post,index|
+      .header
+        - if post.data["link"]
+          = link_to(h(post.title), post.data["link"], {:class=>"title"})
+          %a.permalink(href="#{post.url}") &infin;
+        - else
+          = link_to(h(post.title), post.url, {:class=>"title"})
+      .article
+        - if post.data["exerpt"]
+          = site.markdown("#{post.data['exerpt']} &hellip;")
+        - else
+          = post.content
+      .footer
+        %a(href="#{post.url}/#disqus_thread")Comments
+        %span.vr &nbsp;
+        =link_to('Read More &raquo;', post.url, {:class=>'more'})
+  .see_more.right
+    <a href="/blog/">More from the blog &rarr;</a>

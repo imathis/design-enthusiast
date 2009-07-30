@@ -1,15 +1,20 @@
 ---
 layout: default
-body_id: "blog"
+body_id: blog
+nav: blog
 title: Blog
 ---
- 
-#head
-  %h2 Blog
- 
-.articles
-  - site.posts.sort_by(&:date).reverse[0..10].each do |post|
-    .article
-      %h3.title= link_to(h(post.title.titlecase), post.url)
-      %span.date=post.date.strftime("%d %b, %Y")
-      %p.exerpt= post.content
+#blog.main
+  - site.posts.sort_by(&:date).reverse[0..10].each_with_index do |post,index|
+    .section{:class=>"#{(index==0 ? 'alpha' : (index==10 ? "omega" : nil))}"}
+      %h3.header
+        - if post.data["link"]
+          = link_to(h(post.title), post.data["link"], {:class=>"title"})
+          %a.permalink(href="#{post.url}") &infin;
+        - else
+          = link_to(h(post.title), post.url, {:class=>"title"})
+      .article= post.content
+      .footer
+        %a(href="#{post.url}/#disqus_thread")Leave a Comment &raquo;
+  .see_more
+    =link_to("&larr; Read more at the archives", "/blog/archives.html")

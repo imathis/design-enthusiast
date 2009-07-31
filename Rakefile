@@ -31,6 +31,12 @@ task :generate => :clean do
   Dir["#{site}/stylesheets/*.sass"].each { |f| rm_rf(f) }
 end
 
+desc "generate and deploy website"
+task :deploy => :generate do
+  print "Deploying website..."
+  ok_failed system("rsync -avz --delete --rsync-path=/usr/local/bin/rsync #{site}/ mathisweb@imathis.com:~/brandonmathis.com/")
+end
+
 desc "start up an instance of serve on the output files"
 task :start_serve => :stop_serve do
   cd "#{site}" do

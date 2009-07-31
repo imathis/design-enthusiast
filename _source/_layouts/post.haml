@@ -10,7 +10,7 @@
     %link{:href=>"/stylesheets/screen.css", :rel=>"stylesheet", :media=>"screen, projection", :type=>"text/css"}
     %script{:type=>"text/javascript", :src=>"/javascripts/mootools.js"}
     %script{:type=>"text/javascript", :src=>"/javascripts/site.js"}
-  %body{:id=>(page.respond_to?(:body_id) ? page.body_id : nil)}
+  %body{:id=>"post"}
     #header_wrapper
       #header
         %h1 Brandon Mathis
@@ -22,36 +22,41 @@
               %a(href="/work/" title="Work") Work
             %li{:class => "here"}
               %a(href="/blog/" title="Blog") Blog
-            %li
-              %a(href="/about.html" title="About") About
     #content_wrapper
       #content
         #page_wrapper
-          #page
-            .contents
-              %h2
+          #page.blog
+            .contents.section.alpha
+              %h2.header
                 - if page.respond_to?(:link)
-                  = link_to(h(page.title), page.link)
-                  %a.permalink(href="#{page.url}") &infin;
+                  = link_to(page.title, page.link, {:class=>"title"})
                 - else
-                  = link_to(h(page.title), page.url)
-              %span.pubdate=page.date.strftime("%d %b, %Y")
-              = content
-              #comments
-                #disqus_thread
-                :javascript
-                  var disqus_developer = true;
-                  var disqus_url = "#{(page.respond_to?(:link) ? page.link : page.url)}";
-                %noscript
-                  <a href="http://designenthusiast.disqus.com/?url=ref">View the discussion thread.</a>
-                %script{:type=>"text/javascript", :src=>"http://disqus.com/forums/designenthusiast/embed.js"}
+                  = page.title
+              .article=content
+              .footer{:class=>(page.respond_to?(:comments_off) ? "alt" : nil)}
+                %span.pubdate
+                  Posted:
+                  =page.date.strftime("%d %b, %Y")
+                - if page.respond_to?(:comments_off)
+                  %span.vr &nbsp;
+                  %em.comments_off Comments have been disabled for this post.
+                - else
+                  #disqus_thread
+                  :javascript
+                    var disqus_developer = true;
+                    var disqus_url = "#{(page.respond_to?(:link) ? page.link : page.url)}";
+                  %noscript
+                    <a href="http://designenthusiast.disqus.com/?url=ref">View the discussion thread.</a>
+                  %script{:type=>"text/javascript", :src=>"http://disqus.com/forums/designenthusiast/embed.js"}
         #sidebar.aside
-          #hire_me.section.alpha.omega
-            %img#hire_img(src="/images/hire_me.png" width="80px")
-            %h3 Let&rsquo;s Talk.
-            %p
-              I work on all kinds of projects, from large web applications to simple graphic designs. If you have an idea for a
-              project, I’d love to talk to you about it.
+          /
+            %h3.heading Blog Archives
+            - posts = site.posts.group_by { |p| p.date.strftime("%Y") }
+            - posts.keys.sort.reverse.each do |year|
+              %h5= year
+              %ul.section
+                - posts[year].sort_by(&:date).reverse.each do |post|
+                  %li{:style=>"font-size: 60%"}= link_to(post.title, post.url)
     #footer_wrapper
       #footer
         #page_bottom
@@ -64,7 +69,7 @@
             %span.avatar
               %img(src="/content/avatar.jpg")
             %p
-              I&rsquo;m a design enthusiast who&rsquo;s passionate about my craft. I mainly design web applications, but I also love photography and print design.
+              I&rsquo;m a design enthusiast who&rsquo;s passionate about my craft. I mainly design web applications, but<br/>I also love photography and print design.
               %br
               %br
               %a(href="/about.html") Read more &rarr;
@@ -83,7 +88,7 @@
           .contents
             %h5 Contact Me
             %ul
-              %li <a href="mailto:imathis@me.com">imathis@me.com</a>
+              %li <a href="m&#97;ilto:&#105;&#109;&#97;&#116;&#104;&#105;&#115;&#64;&#109;&#101;&#46;&#99;&#111;&#109;? title="send an email to Brandon Mathis">&#105;&#109;&#97;&#116;&#104;&#105;&#115;&#64;&#109;&#101;&#46;&#99;&#111;&#109;</a>
               %li +1 (205) 258-8648
               %li
                 %ul#social

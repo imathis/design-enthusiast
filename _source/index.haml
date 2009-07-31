@@ -3,7 +3,7 @@ layout: default
 body_id: home_page_layout
 nav: home
 title: "Brandon Mathis - Design Enthusiast"
-description: "I&lsquo;m a design enthusiast who&lsquo;s passionate about my craft. This is where I show my work, and share what I'm learning."
+description: "I'm a design enthusiast who's passionate about my craft. This is where I show my work, and share what I'm learning."
 keywords: "Brandon Mathis, imathis, ruby on rails, ruby, rails, designer, developer, web applications, php, compass, javascript, interactive, UX, UI"
 ---
 
@@ -23,22 +23,25 @@ keywords: "Brandon Mathis, imathis, ruby on rails, ruby, rails, designer, develo
     <br/>
   %p
     <a href="#">Terralien</a> | <a href="/work/">All work</a>
-#blog.mini
+.blog.mini
   .section
     - site.posts.sort_by(&:date).reverse[0..2].each_with_index do |post,index|
       .header
         - if post.data["link"]
-          = link_to(h(post.title), post.data["link"], {:class=>"title"})
+          = link_to(post.title, post.data["link"], {:class=>"title"})
           %a.permalink(href="#{post.url}") &infin;
         - else
-          = link_to(h(post.title), post.url, {:class=>"title"})
+          = link_to(post.title, post.url, {:class=>"title"})
       .article
         - if post.data["exerpt"]
           = site.markdown("#{post.data['exerpt']} &hellip;")
         - else
           = post.content
       .footer
-        %a(href="#{(post.data['link'] ? post.data['link'] : post.url)}/#disqus_thread")Comments
+        - if post.data["comments_off"]
+          %em.comments_off Comments disabled
+        - else
+          %a(href="#{post.url}/#disqus_thread")Comments
         %span.vr &nbsp;
         =link_to('Read More &raquo;', post.url, {:class=>'more'})
   .see_more.right

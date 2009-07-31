@@ -1,4 +1,12 @@
 #page
+  .header a
+    +link-color-style(#444)
+  .article a, .footer a
+    +link-color-style
+#sidebar .section a
+  +link-color-style
+
+#page
   .contents
     .heading
       p
@@ -11,26 +19,32 @@
       padding-bottom: 16px
       &.medium
         background: url(/images/work_shadow_bg.png) no-repeat bottom
-body#work
-  .article
+body#work #page
+  h2
+    margin-top: 0
+    margin-bottom: .2em
+    padding: 0 2px
+  .section
     border-top: 1px solid #eee
-    padding: 15px 0 35px
+    padding: 15px 2px 35px
     +clearfix
     &.alpha
       border: none
       padding-top: 0
-      h3
-        margin-top: 0
-    .info
-      +column(7,true)
-    p
+    p, .footer
       font-size: 85%
-    h3
+    img
+      border: 1px solid #ccc
+      background: #fff
+      +border-radius
+      padding: 3px
+    .header
       margin:
-        top: .4em
+        top: 0
         bottom: .4em
     .soft
       +soft-grey
+      width: 48%
       &.block
         border:
           top: 1px solid #eee
@@ -38,14 +52,24 @@ body#work
         display: block
         padding: 3px 0
         margin-bottom: 1em
-#page .contents
-  .article
-    img
-      border: 1px solid #ccc
-      background: #fff
-      +border-radius
-      padding: 3px
-
+body#post .blog 
+  h2
+    margin-bottom: .4em
+  .footer
+    font-size: inherit
+    margin-bottom: 0
+    padding-bottom: 0
+    border-bottom: 0
+    &.alt
+      margin-top: 10px
+      padding-top: 20px
+      border-top: 1px solid #ededed
+    .pubdate
+      display: block
+      padding-bottom: 20px
+      margin-bottom: 20px
+      border-bottom: 1px solid #ededed
+  
 //Home Page sections
 #head_quote
   position: relative
@@ -68,6 +92,8 @@ body#work
   h2
     font-family: inherit
     margin-top: -5px
+    margin-bottom: 10px
+    font-size: 325%
 #featured_work
   margin: 0 -30px
   padding: 30px 30px 10px
@@ -88,19 +114,7 @@ body#work
     line-height: 1.6em
   a
     +link-color-alt
-#blog.mini
-  background: url(/images/section_shadow_bg.png) repeat-x left 1px
-  padding: 1px 28px 0
-  margin: 0 -30px
-  a.title
-    font-size: 160%
-    line-height: 100%
-    font-weight: bold
-    +heading-font
-    letter-spacing: -1px
-  .section .header a.permalink
-    font-size: 120%
-#blog
+.blog
   .section
     position: relative
     margin: 25px 0 0
@@ -118,9 +132,7 @@ body#work
         a.permalink
           color: #999
       a.title
-        +link-color-style(#444)
         padding: 0 4px 0 2px
-        display: inline-block
       a.permalink
         font-size: 100%
         line-height: 120%
@@ -138,8 +150,6 @@ body#work
         line-height: 150%
         color: #444
         padding-bottom: 15px
-        a
-          +link-color-style
       img
         border: none
         &.left
@@ -151,18 +161,23 @@ body#work
           margin-right: 15px
           margin-bottom: 15px
     .footer
+      padding-top: 10px
       margin-bottom: 15px
       border-bottom: 1px solid #ededed
-      padding-bottom: 20px
-      font-size: 75%
+      padding-bottom: 45px
+      font-size: 80%
       .vr
         display: inline-block
         border-left: 1px solid #999
         width: 0
         margin: 0 4px
         line-height: 120%
-      a
-        +link-color-style
+      .comments_off, .pubdate
+        color: #666
+      .pubdate
+        font-size: 80%
+      .comments_off
+        font-size: 95%
   .see_more
     display: block
     &.right
@@ -170,3 +185,17 @@ body#work
     a
       +link-color-style(#666)
       font-size: 80%
+  &.mini
+    background: url(/images/section_shadow_bg.png) repeat-x left 1px
+    padding: 1px 28px 0
+    margin: 0 -30px
+    a.title
+      font-size: 160%
+      line-height: 100%
+      font-weight: bold
+      +heading-font
+      letter-spacing: -1px
+    .section .header a.permalink
+      font-size: 120%
+    .footer
+      padding-bottom: 20px

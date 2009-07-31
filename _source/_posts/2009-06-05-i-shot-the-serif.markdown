@@ -1,11 +1,11 @@
 ---
 title: "I Shot the Serif"
-exerpt: The sun was setting just past the x-height of the horizon. Bodoni had been pressing on since daybreak, tracking was getting narrower, and he knew his bounty lay over the next hill
+exerpt: <img src="/content/blog/2009/i_shot_the_serif.jpg" alt="I shot the serif" title="I shot the serif" width="60px" class="left"/> The sun was setting just past the x-height of the horizon. Bodoni had been pressing on since daybreak, tracking was getting narrower, and he knew his bounty lay over the next hill
 ---
 
-<img src="/content/blog/2009/i_shot_the_serif.jpg" alt="I shot the serif" title="I shot the serif" width="200px" class="left"/>
 [ [Original Story](http://bit.ly/2QayWk) by [digg user wild](http://digg.com/users/wild) ]
 
+<img src="/content/blog/2009/i_shot_the_serif.jpg" alt="I shot the serif" title="I shot the serif" width="200px" class="left"/>
 The sun was setting just past the x-height of the horizon. Bodoni had been pressing on since daybreak, tracking was getting narrower, and he knew his bounty lay over the next hill. The bitter grit of ampersand was coating his throat, and he was thirsty for a resolution. At the top of the hill he looked out. All of Rosewood lay below him. 
 
 A pica jumped out from behind a bush, startling him.

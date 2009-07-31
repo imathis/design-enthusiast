@@ -8,7 +8,7 @@ def ok_failed(condition)
   end
 end
 
-port = "2345"
+port = "4000"
 site = "_site"
 
 desc "list tasks"
@@ -34,7 +34,7 @@ end
 desc "generate and deploy website"
 task :deploy => :generate do
   print "Deploying website..."
-  ok_failed system("rsync -avz --delete --rsync-path=/usr/local/bin/rsync #{site}/ mathisweb@imathis.com:~/brandonmathis.com/")
+  ok_failed system("rsync -avz --delete #{site}/ mathisweb@imathis.com:~/brandonmathis.com/")
 end
 
 desc "start up an instance of serve on the output files"

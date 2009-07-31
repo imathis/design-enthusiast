@@ -119,24 +119,27 @@ body
   +column(8)
   .tweet
     margin-bottom: 0
-    background: url(/images/tweet_middle.png) repeat-y top left
+    width: 308px
+    background: url(/images/tweet_bg.png) repeat-y center center
     p
-      width: 90%
       padding: 15px 15px 5px
       display: inline-block
       min-height: 25px
-      background: url(/images/tweet_top.png) no-repeat top left
+      width: 278px
+      background: url(/images/tweet_bg.png) no-repeat top left
       position: relative
       top: -5px
   .follow
-    background: url(/images/tweet_bottom.png) no-repeat top left
+    width: 308px
+    background: url(/images/tweet_bg.png) no-repeat top right
     padding: 0
     +clearfix
-    img, span
-      float: left
     span
-      padding: 15px 0 0 30px
       color: #8B8B8B
+      position: relative
+      top: -15px
+      right: -20px
+        
 #contact
   +column(6,true)
   .contents
@@ -199,10 +202,8 @@ body
     &.terralien
       +sprite-column-hover-row(3,2,34px,38px)
   .text_links
-    float: left
     font-size: 80%
     padding: 10px 0 0 5px
     color: #767676
-    display: inline-block
     a
       +link-color-style(#aaa,#000)

@@ -8,12 +8,6 @@
 
 #page
   .contents
-    .heading
-      p
-        +serif-font
-        font-style: italic
-        font-size: 105%
-        +soft-grey
     img.shadow
       display: block
       padding-bottom: 16px
@@ -24,9 +18,12 @@ body#work #page
     margin-top: 0
     margin-bottom: .2em
     padding: 0 2px
+  p em
+    font-size: 100%
+    +soft-grey
   .section
     border-top: 1px solid #eee
-    padding: 15px 2px 35px
+    padding: 25px 2px 15px
     +clearfix
     &.alpha
       border: none
@@ -179,9 +176,9 @@ body#post .blog
       .comments_off
         font-size: 95%
   .see_more
-    display: block
+    //display: block
     &.right
-      text-align: right
+      //text-align: right
     a
       +link-color-style(#666)
       font-size: 80%
@@ -199,3 +196,14 @@ body#post .blog
       font-size: 120%
     .footer
       padding-bottom: 20px
+#disqus_thread
+  #dsq-login-toggle, .dsq-by a
+    &:hover
+      background: none
+  a.dsq-help
+    border-bottom: 0 !important
+    text-decoration: underline !important
+    &:hover
+      text-decoration: none !important
+    +link-color-style(#5a9a41)
+    

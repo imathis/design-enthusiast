@@ -4,7 +4,7 @@ body_id: blog
 nav: blog
 title: Blog Archives
 ---
-%h2 Blog Archives
+%h2 Design Enthusiast Archives
 
 - posts = site.posts.group_by { |p| p.date.strftime("%Y") }
 - posts.keys.sort.reverse.each do |year|

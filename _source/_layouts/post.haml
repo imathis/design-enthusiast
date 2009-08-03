@@ -32,7 +32,7 @@
                   = link_to(page.title, page.link, {:class=>"title"})
                 - else
                   = page.title
-              .article=content
+              .article= absolute_url(content)
               .footer{:class=>(page.respond_to?(:comments_off) ? "alt" : nil)}
                 %span.pubdate
                   Posted:
@@ -43,8 +43,7 @@
                 - else
                   #disqus_thread
                   :javascript
-                    var disqus_developer = true;
-                    var disqus_url = "#{page.url}";
+                    var disqus_url = "#{full_url(page.url)}";
                   %noscript
                     <a href="http://designenthusiast.disqus.com/?url=ref">View the discussion thread.</a>
                   %script{:type=>"text/javascript", :src=>"http://disqus.com/forums/designenthusiast/embed.js"}

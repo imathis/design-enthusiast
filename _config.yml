@@ -3,6 +3,7 @@ destination: _site
 markdown: rdiscount
 pygments: true
 permalink: /blog/:year/:month/:day/:title
+url_base: http://brandonmathis.com
 multiviews: true
 sass: false
 haml: true

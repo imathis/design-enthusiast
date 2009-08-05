@@ -3,7 +3,7 @@
     +link-color-style(#444)
   .article a, .footer a
     +link-color-style
-#sidebar .section a
+#sidebar .section p a, #sidebar .section .header a, #sidebar .section ul a
   +link-color-style
 
 #page
@@ -61,7 +61,7 @@ body#post .blog
       margin-top: 10px
       padding-top: 20px
       border-top: 1px solid #ededed
-    .pubdate
+    .metadata
       display: block
       padding-bottom: 20px
       margin-bottom: 20px
@@ -128,6 +128,13 @@ body#post .blog
       &:hover
         a.permalink
           color: #999
+      &.link
+        font-size: 135%
+        letter-spacing: 0
+        a
+          text-decoration: underline
+      a
+        text-decoration: none
       a.title
         padding: 0 4px 0 2px
       a.permalink
@@ -157,31 +164,24 @@ body#post .blog
           +float("right")
           margin-right: 15px
           margin-bottom: 15px
+    .vr
+      display: inline-block
+      border-left: 1px solid #999
+      width: 0
+      margin: 0 4px
+      line-height: 120%
     .footer
       padding-top: 10px
       margin-bottom: 15px
       border-bottom: 1px solid #ededed
       padding-bottom: 45px
       font-size: 80%
-      .vr
-        display: inline-block
-        border-left: 1px solid #999
-        width: 0
-        margin: 0 4px
-        line-height: 120%
-      .comments_off, .pubdate
+      .comments_off, .metadata
         color: #666
-      .pubdate
+      .metadata
         font-size: 80%
       .comments_off
         font-size: 95%
-  .see_more
-    //display: block
-    &.right
-      //text-align: right
-    a
-      +link-color-style(#666)
-      font-size: 80%
   &.mini
     background: url(/images/section_shadow_bg.png) repeat-x left 1px
     padding: 1px 28px 0

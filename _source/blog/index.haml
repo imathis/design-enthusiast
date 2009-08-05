@@ -3,15 +3,17 @@ layout: default
 body_id: blog
 nav: blog
 title: Design Enthusiast - Blog
+bottom_nav: <a href="/blog/archives.html">&larr; Read more at the archives</a>
 ---
 .blog
   - site.posts.sort_by(&:date).reverse[0..9].each_with_index do |post,index|
     .section{:class=>"#{(index==0 ? 'alpha' : (index==9 ? "omega" : nil))}"}
-      %h3.header
-        - if post.data["link"]
+      - if post.data["link"]
+        %h3.header.link
           = link_to(post.title, post.data["link"], {:class=>"title"})
           %a.permalink(href="#{post.url}") &infin;
-        - else
+      - else
+        %h3.header
           = link_to(post.title, post.url, {:class=>"title"})
       .article= post.content
       .footer
@@ -19,5 +21,3 @@ title: Design Enthusiast - Blog
           %em.comments_off Comments disabled
         - else
           %a(href="#{post.url}/#disqus_thread")Leave a Comment &raquo;
-  .see_more
-    =link_to("&larr; Read more at the archives", "/blog/archives.html")

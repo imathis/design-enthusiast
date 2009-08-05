@@ -29,64 +29,62 @@
             .contents
               = content
         #sidebar.aside
-          #hire_me.section.alpha.omega
-            %img#hire_img(src="/images/hire_me.png" width="80px")
-            %h3 Let&rsquo;s Talk.
-            %p
+          .section.alpha
+            %img.left(src="/images/hire_me2.png" style="margin: -5px 5px 5px -8px" width="80px")
+            %h3 Let&rsquo;s Talk
+            %p.clear
               I work on all kinds of projects, from large web applications to simple graphic designs. If you have an idea for a
               project, I’d love to talk to you about it.
             %p
               Call me: <strong>+1 (205) 258-8648</strong>
               Email me: <strong><a href="m&#97;ilto:&#105;&#109;&#97;&#116;&#104;&#105;&#115;&#64;&#109;&#101;&#46;&#99;&#111;&#109;? title="send an email to Brandon Mathis">&#105;&#109;&#97;&#116;&#104;&#105;&#115;&#64;&#109;&#101;&#46;&#99;&#111;&#109;</a></strong>
-    #footer_wrapper
-      #footer
-        #page_bottom
-        .bottom_nav
-          .contents
-            %a.ucase(href="#") &uarr; back to top
-        #about.section
-          .contents
-            %h5 About Me
-            %span.avatar
-              %img(src="/content/avatar.jpg")
-            %p
-              I&rsquo;m a design enthusiast who&rsquo;s passionate about my craft. I mainly design web applications, but<br/>I also love photography and print design.
-              %br
-              %br
-              %a(href="/about.html") Read more &rarr;
-        #twitter.section
-          .contents
-            %h5 Twitter
+          .section
+            %h3 About Me
+            %p.clear
+              %img.left(src="/content/avatar.jpg" style="margin-top: 3px; margin-bottom: 0")
+              I&rsquo;m a design enthusiast who&rsquo;s passionate about my craft. I mainly design web applications, but I also love photography and print design.
+          #twitter.section
+            .header
+              %h3(style="display: inline-block") Twitter
+              %span
+                follow
+                %a(href="http://twitter.com/imathis") imathis
             .tweet
               %p#twitter_status
                 Status updating...
             %p.follow
               %img(src="/images/twitter_bird.png")
-              %span
-                follow
-                %a(href="http://twitter.com/imathis") imathis
-        #contact.section
+          #delicious.section
+            .header
+              %h3(style="display: inline-block") Delicious
+              %span=link_to('subscribe','http://feeds.delicious.com/v2/rss/imathis?count=15')
+              %em.clear hand picked links
+            <script type="text/javascript" src="http://feeds.delicious.com/v2/js/imathis/share?title=&count=3&sort=date&extended"></script>
+          .section.omega
+            %ol#social
+              %li <a href="http://twitter.com/imathis" class="twitter" title="Follow me on Twitter">Twitter</a>
+              %li <a href="http://github.com/imathis" class="github" title="My Github profile">Github</a>
+              %li <a href="http://facebook.com/brandon.mathis" class="facebook" title="My Facebook profile">Facebook</a>
+              %li <a href="http://www.linkedin.com/in/brandonmathis" class="linkedin" title="My Linked-in profile">Linked-in</a>
+              %li <a href="http://delicious.com/imathis/" class="delicious" title="My Delicious links">Delicious</a>
+              %li <a href="http://flickr.com/photos/imathis/" class="flickr" title="My Flickr photo stream">Flickr</a>
+    #footer_wrapper
+      #footer
+        #page_bottom
+          - if page.respond_to?(:bottom_nav)
+            %p= page.bottom_nav
+        .bottom_nav
           .contents
-            %h5 Contact Me
-            %ul
-              %li <a href="m&#97;ilto:&#105;&#109;&#97;&#116;&#104;&#105;&#115;&#64;&#109;&#101;&#46;&#99;&#111;&#109;? title="send an email to Brandon Mathis">&#105;&#109;&#97;&#116;&#104;&#105;&#115;&#64;&#109;&#101;&#46;&#99;&#111;&#109;</a>
-              %li +1 (205) 258-8648
-              %li
-                %ul#social
-                  %li <a href="http://twitter.com/imathis" class="twitter" title="Follow me on Twitter">Twitter</a>
-                  %li <a href="http://github.com/imathis" class="github" title="My Github profile">Github</a>
-                  %li <a href="http://facebook.com/brandon.mathis" class="facebook" title="My Facebook profile">Facebook</a>
-                  %li <a href="http://www.linkedin.com/in/brandonmathis" class="linkedin" title="My Linked-in profile">Linked-in</a>
-                  %li <a href="http://delicious.com/imathis/" class="delicious" title="My Delicious links">Delicious</a>
-                  %li <a href="http://flickr.com/photos/imathis/" class="flickr" title="My Flickr photo stream">Flickr</a>
-        #foot_bottom
-          %h6 design <span class="amp">&</span> content &copy; mmix &ndash; brandon mathis
+            %a.ucase(href="#") &uarr; back to top
+        #foot_bottom.alone
           <a href="http://compass-style.org" title="Styled with Compass" class="affiliate compass">Styled with Compass</a>
           <a href="http://apple.com" title="Designed on an Apple computer" class="affiliate apple">Designed on an Apple Computer</a>
           <a href="http://terralien.com/" title="I'm a Terralien crew member" class="affiliate terralien">I'm a Terralien Crew Member</a>
           .text_links
-            Generated by
+            Site powered by
             %a(href="http://jekyllrb.com/") Jekyll
+            &ndash;
+          %h6 design <span class="amp">&</span> content &copy; mmix &ndash; brandon mathis
     - if page.respond_to?(:body_id) && page.body_id == "blog"
       :javascript
         (function() {

@@ -18,7 +18,8 @@ body
   float: right
   margin: 0 0 15px 15px
 #header_wrapper
-  background: #1c1c1c url(/images/header_bg.jpg) repeat-x center bottom
+  background: #1c1c1c
+  //url(/images/header_bg.jpg) repeat-x center bottom
   height: 151px
 #header
   color: #fff
@@ -65,7 +66,8 @@ body
     padding-left: 10px
 
 #content_wrapper
-  background: #ebebeb url(/images/line_tile.png)
+  background: #ebebeb
+  //url(/images/line_tile.png)
 
 #page_wrapper, #page
   +column(18)
@@ -93,6 +95,11 @@ body
   +column(18)
   background: #fff url(/images/page_bottom_bg.png) repeat-x bottom
   height: 50px
+  p
+    padding: 5px 30px 0
+  a
+    +link-color-style(#666)
+    font-size: 80%
 #footer
   color: #d8d8d8
   .nav ul
@@ -115,7 +122,7 @@ body
   +column(10)
   .avatar
     +column(2)
-#twitter
+#footer #twitter
   +column(8)
   .tweet
     margin-bottom: 0
@@ -151,39 +158,42 @@ body
     padding: 0 0 5px
     img
       margin-top: 5px
-  #social
-    li,a
-      display: inline-block
-    li a
-      +reset-box-model
-      +sprite-background("/images/social.png",24px)
-      text-indent: -9999em
-      +opacity(.7)
-      +opacity-hover(1)
-      &.twitter
-        +sprite-row(1,24px)
-      &.github
-        +sprite-row(2,24px)
-      &.facebook
-        +sprite-row(3,24px)
-      &.linkedin          
-        +sprite-row(4,24px)
-      &.delicious         
-        +sprite-row(5,24px)
-      &.flickr            
-        +sprite-row(6,24px)
+#social
+  list-style: none
+  li,a
+    display: inline-block
+  li a
+    +reset-box-model
+    +sprite-background("/images/social.png",24px)
+    text-indent: -9999em
+    &.twitter
+      +sprite-row(1,24px)
+    &.github
+      +sprite-row(2,24px)
+    &.facebook
+      +sprite-row(3,24px)
+    &.linkedin          
+      +sprite-row(4,24px)
+    &.delicious         
+      +sprite-row(5,24px)
+    &.flickr            
+      +sprite-row(6,24px)
 #foot_bottom
   +column(24)
   padding-top: 10px
   border-top: 1px solid #4D4D4D
   margin-top: 15px
+  &.alone
+    border-top: 0
+    +column(18)
   h6
-    float: right
     color: #767676
     +reset-box-model
-    padding-top: 9px
+    padding: 10px 5px 0
     font-size: 75%
     text-transform: uppercase
+    float: left
+    display: inline-block
   a.affiliate
     +reset-box-model
     +sprite-background("/images/association_logos.png",34px,38px)
@@ -203,7 +213,8 @@ body
       +sprite-column-hover-row(3,2,34px,38px)
   .text_links
     font-size: 80%
-    padding: 10px 0 0 5px
+    padding: 10px 0 0 10px
     color: #767676
+    float: left
     a
-      +link-color-style(#aaa,#000)
+      +link-color-style(#767676,#000)

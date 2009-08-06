@@ -29,44 +29,45 @@
             .contents
               = content
         #sidebar.aside
-          .section.alpha
-            %img.left(src="/images/hire_me.png" style="margin: -5px 5px 5px -8px" width="80px")
-            %h3 Let&rsquo;s Talk
-            %p.clear
-              I work on all kinds of projects, from large web applications to simple graphic designs. If you have an idea for a
-              project, I’d love to talk to you about it.
-            %p
-              Call me: <strong>+1 (205) 258-8648</strong>
-              Email me: <strong><a href="m&#97;ilto:&#105;&#109;&#97;&#116;&#104;&#105;&#115;&#64;&#109;&#101;&#46;&#99;&#111;&#109;? title="send an email to Brandon Mathis">&#105;&#109;&#97;&#116;&#104;&#105;&#115;&#64;&#109;&#101;&#46;&#99;&#111;&#109;</a></strong>
-          .section
-            %h3 About Me
-            %p.clear
-              %img.left(src="/content/avatar.jpg" style="margin-top: 3px; margin-bottom: 0")
-              I&rsquo;m a design enthusiast who&rsquo;s passionate about my craft. I mainly design web applications, but I also love photography and print design.
-          #twitter.section
-            .header
-              %h3(style="display: inline-block") Twitter
-              %span
-                follow
-                %a(href="http://twitter.com/imathis") imathis
-            .tweet
-              %p#twitter_status
-                Status updating...
-            %p.follow
-              %img(src="/images/twitter_bird.png")
-          #delicious.section
-            .header
-              %h3(style="display: inline-block") Delicious Links
-              %span=link_to('more &rarr;','http://delicious.com/imathis')
-            <script type="text/javascript" src="http://feeds.delicious.com/v2/js/imathis/share?title=&count=3&sort=date&extended"></script>
-          .section.omega
-            %ol#social
-              %li <a href="http://twitter.com/imathis" class="twitter" title="Follow me on Twitter">Twitter</a>
-              %li <a href="http://github.com/imathis" class="github" title="My Github profile">Github</a>
-              %li <a href="http://facebook.com/brandon.mathis" class="facebook" title="My Facebook profile">Facebook</a>
-              %li <a href="http://www.linkedin.com/in/brandonmathis" class="linkedin" title="My Linked-in profile">Linked-in</a>
-              %li <a href="http://delicious.com/imathis/" class="delicious" title="My Delicious links">Delicious</a>
-              %li <a href="http://flickr.com/photos/imathis/" class="flickr" title="My Flickr photo stream">Flickr</a>
+          - if !page.respond_to?(:empty_sidebar)
+            .section.alpha
+              %img.left(src="/images/hire_me.png" style="margin: -5px 5px 5px -8px" width="80px")
+              %h3 Let&rsquo;s Talk
+              %p.clear
+                I work on all kinds of projects, from large web applications to simple graphic designs. If you have an idea for a
+                project, I’d love to talk to you about it.
+              %p
+                Call me: <strong>+1 (205) 258-8648</strong>
+                Email me: <strong><a href="m&#97;ilto:&#105;&#109;&#97;&#116;&#104;&#105;&#115;&#64;&#109;&#101;&#46;&#99;&#111;&#109;? title="send an email to Brandon Mathis">&#105;&#109;&#97;&#116;&#104;&#105;&#115;&#64;&#109;&#101;&#46;&#99;&#111;&#109;</a></strong>
+            .section
+              %h3 About Me
+              %p.clear
+                %img.left(src="/content/avatar.jpg" style="margin-top: 3px; margin-bottom: 0")
+                I&rsquo;m a design enthusiast who&rsquo;s passionate about my craft. I mainly design web applications, but I also love photography and print design.
+            #twitter.section
+              .header
+                %h3(style="display: inline-block") Twitter
+                %span
+                  follow
+                  %a(href="http://twitter.com/imathis") imathis
+              .tweet
+                %p#twitter_status
+                  Status updating...
+              %p.follow
+                %img(src="/images/twitter_bird.png")
+            #delicious.section
+              .header
+                %h3(style="display: inline-block") Delicious Links
+                %span=link_to('more &rarr;','http://delicious.com/imathis')
+              <script type="text/javascript" src="http://feeds.delicious.com/v2/js/imathis/share?title=&count=3&sort=date&extended"></script>
+            .section.omega
+              %ol#social
+                %li <a href="http://twitter.com/imathis" class="twitter" title="Follow me on Twitter">Twitter</a>
+                %li <a href="http://github.com/imathis" class="github" title="My Github profile">Github</a>
+                %li <a href="http://facebook.com/brandon.mathis" class="facebook" title="My Facebook profile">Facebook</a>
+                %li <a href="http://www.linkedin.com/in/brandonmathis" class="linkedin" title="My Linked-in profile">Linked-in</a>
+                %li <a href="http://delicious.com/imathis/" class="delicious" title="My Delicious links">Delicious</a>
+                %li <a href="http://flickr.com/photos/imathis/" class="flickr" title="My Flickr photo stream">Flickr</a>
     #footer_wrapper
       #footer
         #page_bottom

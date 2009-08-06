@@ -66,8 +66,7 @@ body
     padding-left: 10px
 
 #content_wrapper
-  background: #ebebeb
-  //url(/images/line_tile.png)
+  background: #ebebeb url(/images/line_tile.png)
 
 #page_wrapper, #page
   +column(18)
@@ -178,11 +177,14 @@ body
       +sprite-row(5,24px)
     &.flickr            
       +sprite-row(6,24px)
+
 #foot_bottom
   +column(24)
   padding-top: 10px
   border-top: 1px solid #4D4D4D
   margin-top: 15px
+  a
+    +link-color-style(#999,#000)
   &.alone
     border-top: 0
     +column(18)
@@ -216,5 +218,4 @@ body
     padding: 10px 0 0 10px
     color: #767676
     float: left
-    a
-      +link-color-style(#767676,#000)
+#archives

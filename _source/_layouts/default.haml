@@ -30,7 +30,7 @@
               = content
         #sidebar.aside
           .section.alpha
-            %img.left(src="/images/hire_me2.png" style="margin: -5px 5px 5px -8px" width="80px")
+            %img.left(src="/images/hire_me.png" style="margin: -5px 5px 5px -8px" width="80px")
             %h3 Let&rsquo;s Talk
             %p.clear
               I work on all kinds of projects, from large web applications to simple graphic designs. If you have an idea for a
@@ -56,9 +56,8 @@
               %img(src="/images/twitter_bird.png")
           #delicious.section
             .header
-              %h3(style="display: inline-block") Delicious
-              %span=link_to('subscribe','http://feeds.delicious.com/v2/rss/imathis?count=15')
-              %em.clear hand picked links
+              %h3(style="display: inline-block") Delicious Links
+              %span=link_to('more &rarr;','http://delicious.com/imathis')
             <script type="text/javascript" src="http://feeds.delicious.com/v2/js/imathis/share?title=&count=3&sort=date&extended"></script>
           .section.omega
             %ol#social
@@ -81,10 +80,10 @@
           <a href="http://apple.com" title="Designed on an Apple computer" class="affiliate apple">Designed on an Apple Computer</a>
           <a href="http://terralien.com/" title="I'm a Terralien crew member" class="affiliate terralien">I'm a Terralien Crew Member</a>
           .text_links
-            Site powered by
+          %h6
+            Powered by
             %a(href="http://jekyllrb.com/") Jekyll
-            &ndash;
-          %h6 design <span class="amp">&</span> content &copy; mmix &ndash; brandon mathis
+            &ndash; design <span class="amp">&</span> content &copy; mmix &ndash; brandon mathis
     - if page.respond_to?(:body_id) && page.body_id == "blog"
       :javascript
         (function() {

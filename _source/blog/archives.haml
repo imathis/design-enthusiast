@@ -1,14 +1,14 @@
 ---
 layout: default
-body_id: blog
+body_id: archives
 nav: blog
 title: Blog Archives
 ---
-%h2 Design Enthusiast Archives
+%h2(style="margin-top:0") Post Archives
 
 - posts = site.posts.group_by { |p| p.date.strftime("%Y") }
 - posts.keys.sort.reverse.each do |year|
   %h3= year
   %ul
     - posts[year].sort_by(&:date).reverse.each do |post|
-      %li= link_to(post.title, post.url)
+      %li(class="#{(post.data['link'] ? "link" : nil )}")= link_to(post.title, post.url)

@@ -1,5 +1,6 @@
 ---
 title: "Simplifying a complex website structure"
+link: http://www.37signals.com/svn/posts/1030-think-about-paths-instead-of-hierarchies
 ---
 
 This article encourages developers to structure sites as a user focused "path based" site, rather than the traditional "hierarchical" organization.

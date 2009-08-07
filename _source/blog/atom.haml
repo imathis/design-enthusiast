@@ -1,23 +1,26 @@
 ---
-layout: default
-body_id: blog
-nav: blog
-title: Design Enthusiast - Blog
-bottom_nav: <a href="/blog/archives.html">&larr; Read more at the archives</a>
+layout: nil
 ---
-.blog
-  - site.posts.sort_by(&:date).reverse[0..9].each_with_index do |post,index|
-    .section{:class=>"#{(index==0 ? 'alpha' : (index==9 ? "omega" : nil))}"}
-      - if post.data["link"]
-        %h3.header.link
-          = link_to(post.title, post.data["link"], {:class=>"title"})
-          %a.permalink(href="#{post.url}") &infin;
-      - else
-        %h3.header
-          = link_to(post.title, post.url, {:class=>"title"})
-      .article= post.content
-      .footer
-        - if post.data["comments_off"]
-          %em.comments_off Comments disabled
-        - else
-          %a(href="#{post.url}/#disqus_thread")Leave a Comment &raquo;
+<?xml version="1.0" encoding="utf-8"?>
+%feed(xmlns="http://www.w3.org/2005/Atom")
+  %title Brandon Mathis - Design Enthusiast
+  %link(href="http://brandonmathis.com/atom.xml" rel="self")
+  %link(href="http://brandonmathis.com/")
+  %updated= Time.now.xmlschema
+  %id http://brandonmathis.com/
+  %author
+    %name Brandon Mathis
+    %email imathis[at]me.com
+  - site.posts.sort_by(&:date).reverse[0..14].each do |post|
+    %entry
+      %title= post.title
+      - if post.data['link']
+        %link(href="#{post.data['link']}")
+      -else
+        %link(href="#{full_url(post.url)}")
+      %updated=post.date.xmlschema
+      %id= full_url(post.id)
+      %content(type="html")
+        = h(absolute_url(rp(post.content)))
+        - if post.data['link']
+          = h("<p><a href='#{full_url(post.url)}'>&infin; permalink</a><p>")

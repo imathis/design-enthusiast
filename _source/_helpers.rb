@@ -1,10 +1,11 @@
 gem 'activesupport', ">= 2.3.2"
 require 'active_support'
+require 'rubypants'
 
 module Helpers
   module EscapeHelper
-    HTML_ESCAPE = { '&' => '&amp;',  '>' => '&gt;',   '<' => '&lt;', '"' => '&quot;' }
-    JSON_ESCAPE = { '&' => '\u0026', '>' => '\u003E', '<' => '\u003C' }
+    HTML_ESCAPE = { '&' => '&amp; ',  '>' => '&gt;',   '<' => '&lt;', '"' => '&quot;' }
+    JSON_ESCAPE = { '&' => '\u0026 ', '>' => '\u003E', '<' => '\u003C' }
     
     # A utility method for escaping HTML tag characters.
     # This method is also aliased as <tt>h</tt>.
@@ -15,10 +16,13 @@ module Helpers
     # ==== Example:
     #   puts html_escape("is a > 0 & a < 10?")
     #   # => is a &gt; 0 &amp; a &lt; 10?
-    def html_escape(s)
-      s.to_s.gsub(/[&"><]/) { |special| HTML_ESCAPE[special] }
+    def html_escape(html)
+      html.to_s.gsub(/[&"><]/) { |special| HTML_ESCAPE[special] }
     end
-    alias h html_escape
+    def escape_once(html)
+      html.to_s.gsub(/[\"><]|&(?!([a-zA-Z]+|(#\d+));)/) { |special| HTML_ESCAPE[special] }
+    end
+    alias h escape_once
     
     # A utility method for escaping HTML entities in JSON strings.
     # This method is also aliased as <tt>j</tt>.
@@ -167,6 +171,9 @@ module Helpers
   
   def full_url(input)
     'http://brandonmathis.com'+input
+  end
+  def rp(input)
+    RubyPants.new(input).to_html
   end
 end
 

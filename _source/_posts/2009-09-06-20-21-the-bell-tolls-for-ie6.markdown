@@ -8,4 +8,4 @@ Some webmasters are so desperate they are borrowing from the malware author&rsqu
 
 Lately some major players have decided to join the effort ([Youtube](http://www.techcrunch.com/2009/07/14/youtube-will-be-next-to-kiss-ie6-support-goodbye/) and [Digg](http://blog.digg.com/?p=878) among others) and it seems that we might finally be getting somewhere.
 
-Note: This site has not been tested in IE6. If it looks like rubbish I don&rsquo;t care.
+Note: This site has not been tested in IE6. If it looks like rubbish I don't care.

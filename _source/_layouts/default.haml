@@ -8,6 +8,7 @@
     - if page.respond_to? :keywords
       %meta{:name=>"keywords", :content=>page.keywords}/
     %link{:href=>"/stylesheets/screen.css", :rel=>"stylesheet", :media=>"screen, projection", :type=>"text/css"}
+    %link{:href=>"/blog/atom.xml", :rel=>"alternate", :title=>"Brandon Mathis - Design Enthusiast", :type=>"application/atom+xml"}
     %script{:type=>"text/javascript", :src=>"http://ajax.googleapis.com/ajax/libs/mootools/1.2.3/mootools-yui-compressed.js"}
     %script{:type=>"text/javascript", :src=>"/javascripts/site.js"}
   %body{:id=>(page.respond_to?(:body_id) ? page.body_id : nil)}

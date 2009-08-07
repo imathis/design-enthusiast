@@ -29,6 +29,7 @@ task :generate => :clean do
   system "compass"
   system "jekyll"
   Dir["#{site}/stylesheets/*.sass"].each { |f| rm_rf(f) }
+  system "mv _site/blog/atom.html _site/blog/atom.xml"
 end
 
 desc "generate and deploy website"

@@ -125,28 +125,27 @@ body#post .blog
     .header
       padding: 5px 0 0
       margin-bottom: .8em
-      &:hover
-        a.permalink
-          color: #999
       &.link
         font-size: 135%
         letter-spacing: 0
-        a
+        a.title
           text-decoration: underline
+        a.permalink
+          font-size: 95%
+          line-height: 120%
+          font-weight: bold
+          vertical-align: top
+          margin-top: 1px
+          color: #ccc !important
+          text-decoration: none
+          padding-left: 4px
+          &:hover
+            background: #aaa !important
+            color: #fff !important
       a
         text-decoration: none
       a.title
         padding: 0 4px 0 2px
-      a.permalink
-        font-size: 100%
-        line-height: 120%
-        font-weight: bold
-        vertical-align: top
-        margin-top: 1px
-        +heading-font
-        +link-colors(#ccc,#444)
-        text-decoration: none
-        padding-left: 4px
     .article
       clear: left
       p
@@ -186,16 +185,12 @@ body#post .blog
     background: url(/images/section_shadow_bg.png) repeat-x left 1px
     padding: 1px 28px 0
     margin: 0 -30px
-    a.title
-      font-size: 160%
-      line-height: 100%
-      font-weight: bold
-      +heading-font
-      letter-spacing: -1px
-    .section .header a.permalink
-      font-size: 120%
+    .header
+      margin-top: 5px
+      margin-bottom: 20px
     .footer
-      padding-bottom: 20px
+      padding-bottom: 25px
+    
 #disqus_thread
   #dsq-login-toggle, .dsq-by a
     &:hover

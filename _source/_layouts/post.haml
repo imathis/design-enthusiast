@@ -29,10 +29,10 @@
             .contents.section.alpha
               %h2.header
                 - if page.respond_to?(:link)
-                  = link_to(page.title, page.link, {:class=>"title"})
+                  = link_to(rp(page.title), page.link, {:class=>"title"})
                 - else
-                  = page.title
-              .article= absolute_url(content)
+                  = rp(page.title)
+              .article= rp(content)
               .footer{:class=>(page.respond_to?(:comments_off) ? "alt" : nil)}
                 .metadata
                   Published:

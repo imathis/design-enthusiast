@@ -175,5 +175,8 @@ module Helpers
   def rp(input)
     RubyPants.new(input).to_html
   end
+  def style_amp(input)
+    input.gsub(" & "," <span class='amp'>&</span> ")
+  end
 end
 

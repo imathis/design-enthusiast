@@ -1,6 +1,7 @@
 ---
 title: The Bell Tolls for IE6
 link: http://www.computerworld.com/s/article/9136286/_Kill_IE6_campaign_gains_force_30M_Web_users_get_switch_pitch
+category: link
 ---
 
 Web developers have been trying to encourage the masses [to](http://www.explorerdestroyer.com/) [stop](http://browsehappy.com/) [using](http://www.killbillsbrowser.com/) [IE6](http://www.end6.org/) for quite some time.

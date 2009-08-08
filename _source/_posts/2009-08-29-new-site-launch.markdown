@@ -1,6 +1,7 @@
 ---
 title: New Site Launch
 exerpt: I&rsquo;m finally replacing my old wordpress blog with a [jekyll](http://github.com/henrick/jekyll/) powered site. I built this site to host my professional work as a web designer, share my open source projects
+category: site
 ---
 
 I&rsquo;m finally replacing my old wordpress blog with a [jekyll](http://github.com/henrick/jekyll/) powered site. I built this site to host my professional work as a web designer, share my open source projects, and give me a space to write about things that inspire me.

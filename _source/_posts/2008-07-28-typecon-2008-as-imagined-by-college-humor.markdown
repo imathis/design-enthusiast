@@ -1,5 +1,6 @@
 ---
 title: TypeCon 2008 as Imagined by College Humor
+category: video
 ---
 
 TypeCon 2008 just finished up, and while you could read about how great it was and how you should have been there, you&rsquo;d probably rather pretend this is what happened.

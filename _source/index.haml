@@ -29,16 +29,16 @@ bottom_nav: <a href="/blog/">More from the blog &rarr;</a>
     - site.posts.sort_by(&:date).reverse[0..3].each_with_index do |post,index|
       - if post.data["link"]
         %h3.header.link
-          = link_to(post.title, post.data["link"], {:class=>"title"})
+          = link_to(rp(style_amp(post.title)), post.data["link"], {:class=>"title"})
           %a.permalink(href="#{post.url}") &infin;
       - else
         %h3.header
-          = link_to(post.title, post.url, {:class=>"title"})
+          = link_to(rp(style_amp(post.title)), post.url, {:class=>"title"})
       .article
         - if post.data["exerpt"]
-          = site.markdown("#{post.data['exerpt']} &hellip;")
+          = rp(site.markdown("#{post.data['exerpt']} &hellip;"))
         - else
-          = post.content
+          = rp(post.content)
       .footer
         - if post.data["comments_off"]
           %em.comments_off Comments disabled

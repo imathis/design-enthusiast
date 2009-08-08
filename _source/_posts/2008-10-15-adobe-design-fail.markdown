@@ -1,6 +1,7 @@
 ---
 title: "Adobe Design FAIL"
 exerpt: "I&rsquo;m amazed that Adobe can be so backward. Taking over the web browser&rsquo;s interface is offensive especially when it breaks the usability"
+category: design
 ---
 
 ![Adobe ruins usability with a hideous scrollbar](/content/blog/2008/adobe_scrolls.png "hideous")

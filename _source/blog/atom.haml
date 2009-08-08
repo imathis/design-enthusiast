@@ -13,7 +13,7 @@ layout: nil
     %email imathis[at]me.com
   - site.posts.sort_by(&:date).reverse[0..14].each do |post|
     %entry
-      %title= post.title
+      %title= rp(post.title)
       - if post.data['link']
         %link(href="#{post.data['link']}")
       -else
@@ -23,4 +23,4 @@ layout: nil
       %content(type="html")
         = h(absolute_url(rp(post.content)))
         - if post.data['link']
-          = h("<p><a href='#{full_url(post.url)}'>&infin; permalink</a><p>")
+          = h("<p><a href='#{full_url(post.url)} title='permanent link to #{rp(post.title)}'> &infin; </a><p>")

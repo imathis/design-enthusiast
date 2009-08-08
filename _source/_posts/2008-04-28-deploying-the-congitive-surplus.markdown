@@ -1,6 +1,6 @@
 ---
 title: How to deploy the cognitive surplus
-category: quote
+category: video
 ---
 
 <embed src="http://blip.tv/play/gshVtNIUhrwN" type="application/x-shockwave-flash" width="320" height="242" allowscriptaccess="always" allowfullscreen="true"></embed> 

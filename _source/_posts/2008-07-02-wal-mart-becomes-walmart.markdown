@@ -1,5 +1,6 @@
 ---
 title: "WAL*MART becomes Walmart*"
+category: design
 ---
 
 It would seem that Walmart has lost another round of "she loves me not"

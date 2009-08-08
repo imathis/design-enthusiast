@@ -10,12 +10,12 @@ bottom_nav: <a href="/blog/archives.html">&larr; Read more at the archives</a>
     .section{:class=>"#{(index==0 ? 'alpha' : (index==9 ? "omega" : nil))}"}
       - if post.data["link"]
         %h3.header.link
-          = link_to(post.title, post.data["link"], {:class=>"title"})
+          = link_to(rp(post.title), post.data["link"], {:class=>"title"})
           %a.permalink(href="#{post.url}") &infin;
       - else
         %h3.header
-          = link_to(post.title, post.url, {:class=>"title"})
-      .article= post.content
+          = link_to(rp(post.title), post.url, {:class=>"title"})
+      .article= rp(post.content)
       .footer
         - if post.data["comments_off"]
           %em.comments_off Comments disabled

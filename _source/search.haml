@@ -5,11 +5,13 @@ nav: home
 title: Brandon Mathis - Design Enthusiast - Search Results
 empty_sidebar: true
 ---
-<div id="cse" style="width: 100%;">Loading</div>
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<div id="cse-search-results"></div>
 <script type="text/javascript">
-google.load('search', '1');
-google.setOnLoadCallback(function(){
-new google.search.CustomSearchControl('000682590315597099166:l47aablh-em').draw('cse');
-}, true);
+var googleSearchIframeName = "cse-search-results";
+var googleSearchFormName = "cse-search-box";
+var googleSearchFrameWidth = 100;
+var googleSearchDomain = "www.google.com";
+var googleSearchPath = "/cse";
 </script>
+<script type="text/javascript" src="http://www.google.com/afsonline/show_afs_search.js"></script>
+

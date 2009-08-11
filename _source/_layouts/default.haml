@@ -23,6 +23,13 @@
               %a(href="/work/" title="Work") Work
             %li{:class => (page.respond_to?(:nav) && (page.nav == 'blog') ? 'here' : nil)}
               %a(href="/blog/" title="Blog") Blog
+        #search
+          %form(action="http://www.google.com/cse" id="cse-search-box")
+            %input(type="hidden" name="cx" value="000682590315597099166:l47aablh-em")
+            %input(type="hidden" name="ie" value="UTF-8")
+            %input#q(type="text" name="q")
+            /%input(type="submit" name="sa" value="Search")
+          
         #blog_links
           %a#rss(href="/blog/atom.xml" title="subscribe")
             %img(src="/images/rss.png")

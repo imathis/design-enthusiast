@@ -1,0 +1,15 @@
+---
+layout: default
+body_id: search_results
+nav: home
+title: Brandon Mathis - Design Enthusiast - Search Results
+empty_sidebar: true
+---
+<div id="cse" style="width: 100%;">Loading</div>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">
+google.load('search', '1');
+google.setOnLoadCallback(function(){
+new google.search.CustomSearchControl('000682590315597099166:l47aablh-em').draw('cse');
+}, true);
+</script>

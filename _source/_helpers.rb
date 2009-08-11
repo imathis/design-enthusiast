@@ -156,12 +156,21 @@ module Helpers
   
   # My added helpers
   
-  def shorten (string, word_limit = 25)
+  def shorten_words (string, word_limit = 25)
     words = string.split(/\s/)
     if words.size >= word_limit
-      words[0,(word_limit-1)].join(" ") + '...'
+      words[0,(word_limit-1)].join(" ") + '&hellip;'
     else 
       string
+    end
+  end
+  
+  def shorten (string, char_limit = 55)
+    chars = string.scan(/.{1,1}/)
+    if chars.size >= char_limit
+      chars[0,(char_limit-1)].join + '&hellip;'
+    else
+      "blah2"
     end
   end
   

@@ -22,6 +22,7 @@ body
   //url(/images/header_bg.jpg) repeat-x center bottom
   height: 151px
 #header
+  position: relative
   color: #fff
   background: url(/images/page_top.png) no-repeat bottom left
   h1
@@ -60,6 +61,33 @@ body
             padding:
               left: 0
               right: 0
+  #blog_links
+    position: absolute
+    bottom: 2px
+    left: 720px
+    padding-left: 18px
+    height: 40px
+    font-size: 13px
+    a
+      color: #999
+      &:hover
+        color: #fff
+    #rss
+      text-decoration: none
+      &:hover img
+        +opacity(1)
+      img
+        vertical-align: -30%
+        margin-right: 2px
+        +opacity(.7)
+      span
+        text-decoration: underline
+    #archive
+      display: inline-block
+      border-left: 1px solid #444
+      padding-left: 12px
+      margin-left: 8px
+
 #search
   padding-top: 58px
   .contents
@@ -233,5 +261,3 @@ body
     span
       font-size: 75%
       color: #8B8B8B
-    //li.link a
-    //+link-color-style(#888, #fff, #444)

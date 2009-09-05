@@ -2,10 +2,11 @@
 
 This project generates the HTML source for [Design Enthusiast](http://brandonmathis.com).
 
-**required gems:**
-henrik-jekyll [here](http://github.com/henrik/jekyll/tree/master) Jekyll + HAML & SASS<br/>
-chriseppstein-compass [here](http://github.com/chriseppstein/compass) SASS framework</br>
-activesupport</br>
+## Required gems:
+
+**henrik-jekyll** [here](http://github.com/henrik/jekyll/tree/master) Jekyll + HAML & SASS  
+**chriseppstein-compass** [here](http://github.com/chriseppstein/compass) SASS framework  
+**activesupport**  
 
 To generate the website in the output directory, type:
 

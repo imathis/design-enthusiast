@@ -9,7 +9,7 @@ A couple of weeks ago I tweeted
 
 > 5 hour rumble with [@pilgrimgeorge](http://twitter.com/pilgrimgeorge) on a redesign of [http://christiangeorge.org](http://christiangeorge.org) No mockups, straight to HTML/CSS. Compass is my ally. Pumped!
 
-Using Compass (which leverages the power of [SASS](http://sass-lang.com)), I was able to infuse my stylesheets with the power of 'mixins' allowing me to be extremely agile during the design process. This enabled me to skip the mockup stage and go straight to the code.
+Using Compass (which leverages the power of [SASS](http://sass-lang.com)), I was able to infuse my stylesheets with the power of 'mixins' allowing me to be extremely agile during the design process. This enabled me to skip the mockup phase, and go straight to the code.
 
 **Here's an example.** The typographic units on Christian's new site &mdash; things like font-sizes, line-height, and heading margins &mdash; are all being generated from a single base font size. Math is one of the primary components of typography, and using Compass, I was able to express typographic design principles in an abstract way. As a result we were able to test different several typography settings simply by changing the base font size.
 

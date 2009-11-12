@@ -1,0 +1,17 @@
+---
+layout: default
+title: Blog
+---
+.blog
+  - site.posts.sort_by(&:date).reverse[0..9].each_with_index do |post,index|
+    .article
+      %h2= link_to(post.title, post.url, {:class=>"title"})
+      = preserve rp(post.content)
+      - if page.respond_to? :disqus_short_name
+        .footer
+          - if post.data["comments_off"]
+            %em.comments_off Comments disabled
+          - else
+            %a(href="#{post.url}/#disqus_thread")Comments
+  .footer
+    %a(href="/archives.html" title="archives") &laquo; Blog Archives

@@ -156,6 +156,15 @@ module Helpers
   
   # My added helpers
   
+  def to_html_email(address)
+    email = string_to_html(address)
+    "<a href=\"#{string_to_html('mailto:')}#{email}\">#{email}</a>"
+  end
+
+  def string_to_html(s)
+    s.strip.unpack("C*").map{|ch| "&#" + ch.to_s + ";" }.to_s
+  end
+  
   def shorten_words (string, word_limit = 25)
     words = string.split(/\s/)
     if words.size >= word_limit

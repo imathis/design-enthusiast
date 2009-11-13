@@ -117,7 +117,7 @@
     font-size= floor(!font_size * 1.25)
 
 =ol-style(!font_size = !base_font_size)
-  list-style: outside
+  list-style: inside
   margin= 0 0 !font_size * 1.625
   li
     list-style: decimal
@@ -125,7 +125,7 @@
       margin= 0 0 !font_size * 1.625
       
 =ul-style(!font_size = !base_font_size)
-  list-style: outside
+  list-style: inside
   margin= 0 0 !font_size * 1.625
   li ul
     margin= 0 0 !font_size * 1.625
@@ -138,14 +138,15 @@
     margin-left= !font_size * 1.625
 
 =quote-style(!font_size = !base_font_size)
-  padding= !font_size !font_size !font_size * 1.625 !font_size * 1.4
+  padding= !font_size*1.5 !font_size*1.5 !font_size * 1.5 !font_size * 1.8
+  position: relative
+  margin-bottom= !font_size * 0.8125 
   &:before
     content: "\201C"
     font-size= !font_size * 3
-    margin= 0 0 0 -.625em
+    margin= 5px 0 0 -.525em
     position: absolute
     font-family: Times, Georgia, serif
-    color: #aaa
     line-height: 0
   > p
     padding: 0

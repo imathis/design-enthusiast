@@ -1,0 +1,34 @@
+#footer
+  color= !footer_color
+  border-top= "14px solid" !footer_bg
+  span.credit
+    color: #767676
+    +reset-box-model
+    padding: 10px 5px 0
+    font-size= 75%
+    text-transform: uppercase
+    float: left
+    display: inline-block
+    padding: 10px 0 0 10px
+    color: #767676
+    float: left
+    a
+      +link-color-style(#aaa, #000)
+  a.affiliate
+    +reset-box-model
+    +sprite-background("association_logos.png",34px,38px)
+    float: left
+    display: inline-block
+    margin: 0 5px 0 0
+    +opacity(.7)
+    &:hover
+      +opacity(1)
+    text-indent: -9999em
+    &:hover
+      background-color: none
+    &.compass
+      +sprite-column-hover-row(1,2,34px,38px)
+    &.apple
+      +sprite-column-hover-row(2,2,34px,38px)
+    &.terralien
+      +sprite-column-hover-row(3,2,34px,38px)

@@ -1,6 +1,5 @@
 ---
 title: "Multiple File Uploads - The Stickman"
-link: http://the-stickman.com/files/mootools/multiupload/
 category: link
 ---
 

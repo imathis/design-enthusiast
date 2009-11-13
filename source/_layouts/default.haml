@@ -1,5 +1,5 @@
 ---
-blog_title: Brandon Mathis
+blog_title: "Brandon Mathis :: Design Enthusiast"
 
 twitter_user: imathis
 tweet_count: 3
@@ -11,7 +11,7 @@ delicious_count: 3
 full_url: http://brandonmathis.com
 disqus_short_name: designenthusiast
 
-google_custom_search_id: 
+google_custom_search_id: 000682590315597099166:l47aablh-em
 google_analytics: true
 
 ---
@@ -19,7 +19,7 @@ google_analytics: true
 !!! 1.1 Transitional
 %html(xmlns="http://www.w3.org/1999/xhtml" xml:lang="en")
   %head
-    %title= "#{page.title} - #{page.blog_title}"
+    %title #{page.blog_title} :: #{page.title}
     - if page.respond_to? :description
       %meta(name="description" content="#{page.description}")/
     - if page.respond_to? :keywords
@@ -37,75 +37,87 @@ google_analytics: true
       %script(src="/javascripts/twitter.js" type="text/javascript")
     - if page.respond_to? :google_analytics
       %script(src="http://www.google-analytics.com/ga.js" type="text/javascript")
-  %body
-    #header
-      .page_width
-        %a.title(href="/")=page.blog_title
-        - if page.respond_to? :google_custom_search_id
-          #search
-            %form(action="http://www.google.com/cse" id="cse-search-box")
-              %input(type="hidden" name="cx" value="#{page.google_custom_search_id}")
-              %input(type="hidden" name="ie" value="UTF-8")
-              %input#q(type="text" name="q")
-    #nav
-      .page_width
+  %body(id="#{(page.respond_to?(:body_id) ? page.body_id : nil)}")
+    #header.page_width
+      %a.title(href="/")=page.blog_title
+      - if page.respond_to? :google_custom_search_id
+        #search
+          %form(action="http://www.google.com/cse" id="cse-search-box")
+            %input(type="hidden" name="cx" value="#{page.google_custom_search_id}")
+            %input(type="hidden" name="ie" value="UTF-8")
+            %input#q(type="text" name="q")
+      #nav
         %ul
-          %li.alpha
+          %li.alpha(class="#{(page.respond_to?(:nav) && (page.nav == 'blog') || !page.respond_to?(:nav) ? 'here' : nil)}")
             %a(href="/") Blog
-          %li.omega
-            %a(href="/about") About
-          %li.subscribe
-            %a(href="/atom.xml") Subscribe
+          %li.omega(class="#{(page.respond_to?(:nav) && (page.nav == 'work') ? 'here' : nil)}")
+            %a(href="/work") Work
     #page
       .page_width
-        #main
+        #main(class="#{(page.respond_to?(:no_sidebar) ? 'expanded' : nil)}")
           - if page.respond_to? :date
-            %h2= page.title
-            = preserve rp(content)
-            %p.pubdate
-              Published:
-              =page.date.strftime("%d %b, %Y")
+            .blog
+              %h2= page.title
+              .article
+                = preserve rp(content)
+              %p.pubdate
+                Published:
+                =page.date.strftime("%d %b, %Y")
               - if page.respond_to? :disqus_short_name
                 #disqus_thread
-                :javascript
-                  var disqus_developer = true;
-                  var disqus_url = "#{page.full_url}/#{page.url}";
-                %noscript
-                  %a(href="http://designenthusiast.disqus.com/?url=ref") View the discussion thread
-                %script(type="text/javascript" src="http://disqus.com/forums/#{page.disqus_short_name}/embed.js")
+                  :javascript
+                    var disqus_developer = true;
+                    var disqus_url = "#{page.full_url}/#{page.url}";
+                  %noscript
+                    %a(href="http://designenthusiast.disqus.com/?url=ref") View the discussion thread
+                  %script(type="text/javascript" src="http://disqus.com/forums/#{page.disqus_short_name}/embed.js")
           - else
             = preserve rp(content)
-        #sidebar
-          - if page.respond_to? :twitter_user
-            %h4 Twitter <a class="small" href="http://twitter.com/#{page.twitter_user}">@#{page.twitter_user}</a>
-            #twitter
-              %ul#twitter_status
-                Status updating...
-          - if page.respond_to? :delicious_user
-            %h4 My Delicious <a class="small" href="http://delicious.com/#{page.delicious_user}">more &rarr;</a>
-            #delicious
-              %script(type="text/javascript" src="http://feeds.delicious.com/v2/js/#{page.delicious_user}?title=&count=#{page.delicious_count}&sort=date&extended")
+        - unless page.respond_to? :no_sidebar
+          #sidebar
+            #blog_links.section.alpha
+              %a#rss(href="/atom.xml" title="subscribe") Subscribe
+              %a#archive(href="/archives.html" title="blog archive") Blog Archive
+            - unless page.respond_to? :date
+              #hire_me.section
+                %h4 Let&rsquo;s Talk
+                %p
+                  I work on all kinds of projects, from large web applications to simple graphic designs. If you have an idea for a
+                  project, I&rsquo;d love to talk to you about it.
+                %p
+                  Call me: <strong>+1 (205) 258-8468</strong><br/>
+                  Email me: <strong>#{to_html_email('brandon@imathis.com')}</strong>
+            .section
+              %h4 About Me
+              %p
+                %img.left(src="/content/avatar.jpg" style="margin-top: 3px; margin-bottom: 0")
+                I&rsquo;m a design enthusiast who&rsquo;s passionate about my craft. I mainly design web applications, but I also love photography and print design.
+            - unless page.respond_to? :date
+              - if page.respond_to? :twitter_user
+                .section
+                  %h4 Twitter <small>follow <a href="http://twitter.com/#{page.twitter_user}">@#{page.twitter_user}</a></small>
+                  #twitter
+                    %ul#twitter_status
+                      Status updating...
+              - if page.respond_to? :delicious_user
+                .section
+                  %h4 My Delicious <small><a href="http://delicious.com/#{page.delicious_user}">more &rarr;</a></small>
+                  #delicious
+                    %script(type="text/javascript" src="http://feeds.delicious.com/v2/js/#{page.delicious_user}?title=&count=#{page.delicious_count}&sort=date&extended")
+              .section.omega
+                %ol#social
+                  %li <a href="http://twitter.com/imathis" class="twitter" title="Follow me on Twitter">Twitter</a>
+                  %li <a href="http://github.com/imathis" class="github" title="My Github profile">Github</a>
+                  %li <a href="http://facebook.com/brandon.mathis" class="facebook" title="My Facebook profile">Facebook</a>
+                  %li <a href="http://www.linkedin.com/in/brandonmathis" class="linkedin" title="My Linked-in profile">Linked-in</a>
+                  %li <a href="http://delicious.com/imathis/" class="delicious" title="My Delicious links">Delicious</a>
+                  %li <a href="http://flickr.com/photos/imathis/" class="flickr" title="My Flickr photo stream">Flickr</a>
     #footer
       .page_width
-        Copyright &copy; #{Time.now.strftime('%Y')} - #{page.blog_title} -
-        %span.credit Powered by <a href="http://github.com/imathis/octopress/">Octopress</a>
-    - if page.respond_to? :disqus_short_name
-      //Disqus Comments code
-      :javascript
-        (function() {
-            var links = document.getElementsByTagName('a');
-            var query = '?';
-            for(var i = 0; i < links.length; i++) {
-              if(links[i].href.indexOf('#disqus_thread') >= 0) {
-                query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-              }
-            }
-            document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/#{page.disqus_short_name}/get_num_replies.js' + query + '"></' + 'script>');
-          })();
-    - if page.respond_to? :google_analytics
-      //Google Analytics code
-      :javascript
-        try {
-        var pageTracker = _gat._getTracker("UA-10876422-1");
-        pageTracker._trackPageview();
-        } catch(err) {}
+        <a href="http://compass-style.org" title="Styled with Compass" class="affiliate compass">Styled with Compass</a>
+        <a href="http://apple.com" title="Designed on an Apple computer" class="affiliate apple">Designed on an Apple Computer</a>
+        <a href="http://terralien.com/" title="I'm a Terralien crew member" class="affiliate terralien">I'm a Terralien Crew Member</a>
+        %span.credit
+          Powered by <a href="http://octopress.org">Octopress</a>
+          &ndash; design <span class="amp">&</span> content &copy; #{Time.now.strftime('%Y')} &ndash; brandon mathis
+        %span.credit 

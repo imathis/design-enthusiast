@@ -1,8 +1,30 @@
-.blog
-  .article
-    padding= !base_font_size * 1.5 0 !base_font_size * 1.5
-    border-bottom= "1px solid" !article_border
-    &:first-child
-      padding-top: 0
-  .footer
-    padding-top= !base_font_size
+#page
+  .blog
+    h2
+      line-height: 1.25em
+      margin-bottom: .625em
+    .article
+      padding= 0 0 !base_font_size * 1.5
+      border-bottom= "1px solid" !article_border
+      &:first-child
+        padding-top: 0
+      em
+        color= !light_text
+    .pubdate
+      padding: 15px 0
+      font-size: 80%
+      color= !light_text
+      text-align: right
+    .footer
+      padding-top= !base_font_size * 1.5
+      padding-bottom: 35px
+      font-size: 80%
+      .comments_off, .metadata
+        color: #666
+      .comments_off
+        font-size: 95%
+
+#disqus_thread
+  margin-top: 35px
+  a
+    +link-color-style-none(!link_color)

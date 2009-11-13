@@ -1,6 +1,8 @@
 !page_width = 900px
-!sidebar_width = 250px
+!main_width = 700px
+!page_pad = 30px
 !sidebar_margin = 30px
+!sidebar_width = (!page_width + !page_pad*2) - !main_width - !sidebar_margin
 !pad = 15px
 !default_border_radius = 4px
 
@@ -11,120 +13,64 @@ html body
     color= !link_color
 
 #header
-  background-color= !header_bg
-  border-bottom= "1px solid" !header_border
-  padding: 30px 0
-  .page_width
-    position: relative
-  a.title
-    font-size= !h1
-    +heading-font
-    display: inline-block
-    color= !title_color
-    text-decoration: none
-
-#nav
   +clearfix
+  background-color= !header_bg
   position: relative
-  z-index: 1
-  padding: 6px 0
-  background:
-    color= !nav_bg
-    image: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#ddd), color-stop(0.3, #f4f4f4))
-    image: -moz-linear-gradient(left top, left bottom, from(#fcfcfc), to(#ddd), color-stop(0.3, #f4f4f4))
-  border:
-    top= "1px solid" !nav_border_top
-    bottom= "1px solid" !nav_border_bottom
-  ul
+  a.title
+    +replace-text("logo.png")
+    display: inline-block
+    text-decoration: none
+    height: 64px
+    width: 280px
+    float: left
     position: relative
-    +horizontal-list
-    margin: 0 auto
-    overflow: visible
-    li
-      padding: 0 15px
-      border-left= "1px solid" !nav_border_left
-      border-right= "1px solid" !nav_border_right
-      &.alpha
-        border-left: none
-        padding-left: 0
-      &.omega
-        border-right: 0
-      &.subscribe
-        position: absolute
-        left= !page_width - !sidebar_width - !sidebar_margin/2
-        border: none
-        a
-          display: inline-block
-          padding-left: 28px
-          background: url("/images/rss.png") left top no-repeat
-      a
-        display: inline-block
-        color= !nav_color
-        line-height: 150%
-        text-decoration: none
-        &:hover
-          color= !nav_color_hover
+    top: 30px
+
 
 .page_width
   width= !page_width
   margin: 0 auto
   padding:
-    left: 30px
-    right: 30px
+    left= !page_pad
+    right= !page_pad
 
 #page
   +clearfix
   background-color= !page_bg
-  &.collapsed
-    .page_width
-      width= !page_width - !sidebar_width
-    #main
-      width: 100%
-      .pre_expander
-        display: none
-    #sidebar
-      float: none
+  background-image= image_url("line_tile.png")
+  border-top= "14px solid" !footer_bg
+  a
+    +link-color-style(!link_color)
+  h1,h2,h3,h4,h5,h6
+    a
+      color= !heading_color
+      +link-color-style-none(!link_color)
   .page_width
     +clearfix
     position: relative
-    padding:
-      top: 25px
-      bottom: 25px
-    background-color= !blog_bg
-    +easy-box-shadow(#ccc)
-    border:
-      left= "1px solid" !page_border_sides
-      right= "1px solid" !page_border_sides
+    width= !page_width + 60
+    padding: 0
 #main
-  width= !page_width - !sidebar_width - !sidebar_margin
+  width= !main_width - (!page_pad * 2) - 2px
+  background-color= !blog_bg
+  +easy-box-shadow(#ccc, 0, 0, 10px)
+  border:
+    left= "1px solid" !page_border_sides
+    right= "1px solid" !page_border_sides
+  padding= 25px !page_pad
   float: left
   &.expanded
-    width: 100%
+    width= !page_width - 2px
 
 #sidebar
   float: left
   width= !sidebar_width
   margin-left= !sidebar_margin
-  font-size: 80%
-  line-height: 1.625em
-  h4
-    margin: 20px 0 0
-    &:first-child
-      margin-top: 10px
-    .small
-      +sans-font
-      font-size: 50%
 
 #footer
   position: relative
   z-index: 2
-  font-size= !base_font_size_small
   clear: both
-  padding= !base_font_size * 1.5 0
-  color= !footer_color
-  +h-linear-gradient(darken(!body_bg, 25), !body_bg)
-  border-top= "14px solid" !footer_bg
-  a
-    color= #ddd
-    &:hover
-      color = #fff
+  padding: 25px 0
+  .page_width
+    +clearfix

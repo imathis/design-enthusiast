@@ -11,3 +11,21 @@
   position: absolute
   top: 0
   right: 0
+
+img
+  border: none
+  &.left
+    +float("left")
+    margin-right: 15px
+    margin-bottom: 15px
+  &.right
+    +float("right")
+    margin-right: 15px
+    margin-bottom: 15px
+
+.vr
+  display: inline-block
+  border-left: 1px solid #999
+  width: 0
+  margin: 0 4px
+  line-height: 120%

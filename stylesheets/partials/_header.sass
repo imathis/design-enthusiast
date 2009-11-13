@@ -1,0 +1,50 @@
+#nav
+  float: left
+  margin-left= !page_pad
+  ul
+    +horizontal-list
+    overflow: hidden
+    li
+      height: 120px
+      overflow: hidden
+      padding: 0 25px
+      a
+        +link-colors(#ccc, #fff)
+        display: inline-block
+        padding: 3.3em 1px 10px
+        font-size: 90%
+        text-transform: uppercase
+        +hover-link
+      &.here
+        border:
+          right: 1px solid #aaa
+          left: 1px solid #aaa
+          background: #333
+        background: #222 url(/images/line_tile.png)
+        a
+          color: #fff
+          text-decoration: none
+          padding:
+            left: 0
+            right: 0
+
+#search
+  position: absolute
+  left= !main_width + !sidebar_margin
+  top= 45px
+  form
+    background: url(/images/search_bg.png) no-repeat
+    padding: 0
+    height: 28px
+    width: 204px
+  #q
+    background: none
+    position: relative
+    top: -2px
+    width: 160px
+    margin-left: 30px
+    font-size: 15px
+    border: none
+    color: #aaa
+    &:focus
+      outline: none

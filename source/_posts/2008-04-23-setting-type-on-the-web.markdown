@@ -1,6 +1,6 @@
 ---
 title: Setting type on the web
-link: http://www.smashingmagazine.com/2008/04/23/5-principles-and-ideas-of-setting-type-on-the-web/
+category: link
 ---
 
 [Smashing Magazine does it again](http://www.smashingmagazine.com/2008/04/23/5-principles-and-ideas-of-setting-type-on-the-web/).

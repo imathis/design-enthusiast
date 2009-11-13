@@ -1,8 +1,8 @@
 !page_width = 900px
 !main_width = 700px
 !page_pad = 30px
-!sidebar_margin = 30px
-!sidebar_width = (!page_width + !page_pad*2) - !main_width - !sidebar_margin
+!sidebar_margin = 25px
+!sidebar_width = (!page_width + !page_pad*2) - !main_width - !sidebar_margin - 10px
 !pad = 15px
 !default_border_radius = 4px
 
@@ -16,16 +16,6 @@ html body
   +clearfix
   background-color= !header_bg
   position: relative
-  a.title
-    +replace-text("logo.png")
-    display: inline-block
-    text-decoration: none
-    height: 64px
-    width: 280px
-    float: left
-    position: relative
-    top: 30px
-
 
 .page_width
   width= !page_width
@@ -48,8 +38,8 @@ html body
   .page_width
     +clearfix
     position: relative
-    width= !page_width + 60
-    padding: 0
+    width= !page_width + 50
+    padding: 0 5px 0 5px
 #main
   width= !main_width - (!page_pad * 2) - 2px
   background-color= !blog_bg

@@ -1,11 +1,14 @@
-body#work #page
+body#work #main
   h2
     margin-top: 0
     margin-bottom: .2em
     padding: 0 2px
+    line-height: 1.2em
   p em
-    font-size: 100%
-    +soft-grey
+    +serif-font
+    font-size: 90%
+    color= !light_text
+    font-style: italic
   .section
     border-top: 1px solid #eee
     padding: 25px 2px 15px
@@ -15,17 +18,19 @@ body#work #page
       padding-top: 0
     p, .footer
       font-size: 85%
+      line-height: 1.5em
     img
       border: 1px solid #ccc
       background: #fff
       +border-radius
       padding: 3px
-    .header
+    h3
+      line-height: 1.2em
       margin:
         top: 0
         bottom: .4em
     .soft
-      +soft-grey
+      color= !light_text
       width: 48%
       &.block
         border:

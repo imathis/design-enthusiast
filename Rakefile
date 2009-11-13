@@ -1,9 +1,9 @@
 require 'active_support'
 
 ## -- CHANGE FOR YOUR PROJECT -- ##
-site_url      = "http://yoursite.com"   # deployed site url
-ssh_user      = "user@host.com"    # for rsync deployment
-document_root = "~/document_root/" # for rsync deployment
+site_url      = "http://brandonmathis.com"   # deployed site url
+ssh_user      = "mathisweb@imathis.com"    # for rsync deployment
+document_root = "~/brandonmathis.com/" # for rsync deployment
 ## ---- ##
 
 port = "4000"     # preview project port eg. http://localhost:4000

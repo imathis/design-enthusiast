@@ -61,9 +61,9 @@ google_analytics: true
               .article
                 %h2= page.title
                 = preserve rp(content)
-                %p.pubdate
-                  Published:
-                  =page.date.strftime("%d %b, %Y")
+              %p.pubdate
+                Published:
+                =page.date.strftime("%d %b, %Y")
               - if page.respond_to? :disqus_short_name
                 #disqus_thread
                   :javascript

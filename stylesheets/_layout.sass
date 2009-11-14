@@ -19,33 +19,6 @@ html body
     left= !page_pad
     right= !page_pad
 
-#page
-  background-color= !page_bg
-  background-image= image_url("line_tile.png")
-  border-top= "14px solid" !footer_bg
-  a
-    +link-color-style(!link_color)
-  h1,h2,h3,h4,h5,h6
-    a
-      color= !heading_color
-      +link-color-style-none(!link_color)
-  .page_width
-    +clearfix
-    position: relative
-    width= !page_width + 50
-    padding: 0 5px 0 5px
-#main
-  width= !main_width - (!page_pad * 2) - 2px
-  background-color= !blog_bg
-  +easy-box-shadow(#ccc, 0, 0, 10px)
-  border:
-    left= "1px solid" !page_border_sides
-    right= "1px solid" !page_border_sides
-  padding= 25px !page_pad
-  float: left
-  &.expanded
-    width= !page_width - 12px
-
 #sidebar
   float: left
   width= !sidebar_width

@@ -13,36 +13,6 @@
     position: relative
     top: 30px
     left: 6px
-#nav
-  float: left
-  margin-left= !page_pad
-  ul
-    +horizontal-list
-    overflow: hidden
-    li
-      height: 120px
-      overflow: hidden
-      padding: 0 25px
-      a
-        +link-colors(#ccc, #fff)
-        display: inline-block
-        padding: 3.3em 1px 10px
-        font-size: 90%
-        text-transform: uppercase
-        +hover-link
-      &.here
-        border:
-          right: 1px solid #aaa
-          left: 1px solid #aaa
-          background: #333
-        background: #222 url(/images/line_tile.png)
-        a
-          color: #fff
-          text-decoration: none
-          padding:
-            left: 0
-            right: 0
-
 #search
   position: absolute
   left= !main_width + !sidebar_margin

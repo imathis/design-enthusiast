@@ -11,7 +11,7 @@ At the beginning of the week, I tweeted:
 
 Using Compass (which leverages the power of [SASS](http://sass-lang.com)), I was able to infuse my stylesheets with the power of 'mixins' allowing me to be extremely agile during the design process. This enabled me to skip the mockup phase, and go straight to the code.
 
-**After five hours we had a freshly conceived design**, and time left over to do photography, manage some content, and discuss a roadmap for the future direction of the site. The design process was so smooth I'm working to release it as an open source Wordpress template, hopefully in the next month or so.
+**After five hours we had a freshly conceived design**, and time left over to do photography, manage some content, and discuss a roadmap for the future direction of the site. The design process was so smooth I'm working to release it as an open source <del>Wordpress</del> **Jekyll** template, hopefully in the next month or so.
 
 **Check out Christian's new site here:** [http://restlesspilgrim.com](http://restlesspilgrim.com)
 

@@ -1,4 +1,5 @@
 #page
+  +clearfix
   background-color= !page_bg
   background-image= image_url("line_tile.png")
   border-top= "14px solid" !footer_bg
@@ -9,12 +10,11 @@
       color= !heading_color
       +link-color-style-none(!link_color)
   .page_width
-    +clearfix
     position: relative
-    width= !page_width + 50
-    padding: 0 5px 0 5px
+    width= !page_width + (!page_pad * 2)
+    padding: 0
 #main
-  width= !main_width - (!page_pad * 2) - 2px
+  width= !main_width - (!page_pad * 2)
   background-color= !blog_bg
   +easy-box-shadow(#ccc, 0, 0, 10px)
   border:
@@ -23,4 +23,4 @@
   padding= 25px !page_pad
   float: left
   &.expanded
-    width= !page_width - 12px
+    width= !page_width

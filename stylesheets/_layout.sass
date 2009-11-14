@@ -2,7 +2,7 @@
 !main_width = 700px
 !page_pad = 30px
 !sidebar_margin = 25px
-!sidebar_width = (!page_width + !page_pad*2) - !main_width - !sidebar_margin - 10px
+!sidebar_width = (!page_width + !page_pad*2) - !main_width - !sidebar_margin
 !pad = 15px
 !default_border_radius = 4px
 
@@ -18,16 +18,3 @@ html body
   padding:
     left= !page_pad
     right= !page_pad
-
-#sidebar
-  float: left
-  width= !sidebar_width
-  margin-left= !sidebar_margin
-
-#footer
-  position: relative
-  z-index: 2
-  clear: both
-  padding: 25px 0
-  .page_width
-    +clearfix

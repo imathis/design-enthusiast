@@ -1,6 +1,12 @@
 #footer
+  position: relative
+  z-index: 2
+  clear: both
+  padding: 25px 0
   color= !footer_color
   border-top= "14px solid" !footer_bg
+  .page_width
+    +clearfix
   span.credit
     color: #767676
     +reset-box-model

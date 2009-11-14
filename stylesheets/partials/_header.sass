@@ -1,13 +1,17 @@
-#header a.title
-  +replace-text("logo.png")
-  display: inline-block
-  text-decoration: none
-  height: 64px
-  width: 280px
-  float: left
+#header
+  +clearfix
+  background-color= !header_bg
   position: relative
-  top: 30px
-  left: 6px
+  a.title
+    +replace-text("logo.png")
+    display: inline-block
+    text-decoration: none
+    height: 64px
+    width: 280px
+    float: left
+    position: relative
+    top: 30px
+    left: 6px
 #nav
   float: left
   margin-left= !page_pad

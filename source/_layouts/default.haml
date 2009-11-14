@@ -38,14 +38,15 @@ google_analytics: true
     - if page.respond_to? :google_analytics
       %script(src="http://www.google-analytics.com/ga.js" type="text/javascript")
   %body(id="#{(page.respond_to?(:body_id) ? page.body_id : nil)}")
-    #header.page_width
-      %a.title(href="/")=page.blog_title
-      - if page.respond_to? :google_custom_search_id
-        #search
-          %form(action="http://www.google.com/cse" id="cse-search-box")
-            %input(type="hidden" name="cx" value="#{page.google_custom_search_id}")
-            %input(type="hidden" name="ie" value="UTF-8")
-            %input#q(type="text" name="q")
+    #header
+      .page_width
+        %a.title(href="/")=page.blog_title
+        - if page.respond_to? :google_custom_search_id
+          #search
+            %form(action="http://www.google.com/cse" id="cse-search-box")
+              %input(type="hidden" name="cx" value="#{page.google_custom_search_id}")
+              %input(type="hidden" name="ie" value="UTF-8")
+              %input#q(type="text" name="q")
       #nav
         %ul
           %li.alpha(class="#{(page.respond_to?(:nav) && (page.nav == 'blog') || !page.respond_to?(:nav) ? 'here' : nil)}")
@@ -66,10 +67,9 @@ google_analytics: true
               - if page.respond_to? :disqus_short_name
                 #disqus_thread
                   :javascript
-                    var disqus_developer = true;
-                    var disqus_url = "#{page.full_url}/#{page.url}";
+                    var disqus_url = "#{page.full_url}#{page.url}";
                   %noscript
-                    %a(href="http://designenthusiast.disqus.com/?url=ref") View the discussion thread
+                    %a(href="http://#{page.disqus_short_name}.disqus.com/?url=ref") View the discussion thread
                   %script(type="text/javascript" src="http://disqus.com/forums/#{page.disqus_short_name}/embed.js")
           - else
             = preserve rp(content)
@@ -120,4 +120,23 @@ google_analytics: true
         %span.credit
           Powered by <a href="http://octopress.org">Octopress</a>
           &ndash; design <span class="amp">&</span> content &copy; #{Time.now.strftime('%Y')} &ndash; brandon mathis
-        %span.credit 
+    - if page.respond_to? :disqus_short_name
+      //Disqus Comments code
+      :javascript
+        (function() {
+            var links = document.getElementsByTagName('a');
+            var query = '?';
+            for(var i = 0; i < links.length; i++) {
+              if(links[i].href.indexOf('#disqus_thread') >= 0) {
+                query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+              }
+            }
+            document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/#{page.disqus_short_name}/get_num_replies.js' + query + '"></' + 'script>');
+          })();
+    - if page.respond_to? :google_analytics
+      //Google Analytics code
+      :javascript
+        try {
+        var pageTracker = _gat._getTracker("UA-10876422-1");
+        pageTracker._trackPageview();
+        } catch(err) {}

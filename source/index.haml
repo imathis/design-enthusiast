@@ -11,11 +11,6 @@ nav: blog
         = rp(site.markdown("#{post.data['exerpt']} &hellip; #{link_to('more &raquo;', post.url, {:class=>'more'})}"))
       - else
         = preserve rp(post.content)
-      - if page.respond_to? :disqus_short_name
-        .footer
-          - if post.data["comments_off"]
-            %em.comments_off Comments disabled
-          - else
-            %a(href="#{post.url}/#disqus_thread")Comments
+      %a(href="#{post.url}/#disqus_thread")Comments
   .footer
     %a(href="/archives.html" title="archives") &laquo; Blog Archives

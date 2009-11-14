@@ -6,7 +6,7 @@ ssh_user      = "mathisweb@imathis.com"    # for rsync deployment
 document_root = "~/brandonmathis.com/" # for rsync deployment
 ## ---- ##
 
-port = "4000"     # preview project port eg. http://localhost:4000
+port = "5000"     # preview project port eg. http://localhost:4000
 site = "site"     # compiled site directory
 source = "source" # source file directory
 

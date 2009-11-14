@@ -58,12 +58,12 @@ google_analytics: true
         #main(class="#{(page.respond_to?(:no_sidebar) ? 'expanded' : nil)}")
           - if page.respond_to? :date
             .blog
-              %h2= page.title
               .article
+                %h2= page.title
                 = preserve rp(content)
-              %p.pubdate
-                Published:
-                =page.date.strftime("%d %b, %Y")
+                %p.pubdate
+                  Published:
+                  =page.date.strftime("%d %b, %Y")
               - if page.respond_to? :disqus_short_name
                 #disqus_thread
                   :javascript

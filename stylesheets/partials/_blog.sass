@@ -1,6 +1,8 @@
 #page
   .blog
     +clearfix
+    margin: 0 -2px
+    padding: 2px
     h2
       line-height: 1.25em
       margin-bottom: .625em
@@ -18,6 +20,7 @@
       border-bottom= "1px solid" !article_border
       text-align: right
     .footer
+      clear: both
       padding-top= !base_font_size * 1.5
       padding-bottom: 35px
       font-size: 80%
@@ -32,3 +35,15 @@
     font-size= !h4
   a
     +link-color-style-none(!link_color)
+
+.hover_switcher
+  overflow: hidden
+  border: 2px solid #aaa
+  +easy-box-shadow(#ccc)
+  .hide
+    display: none
+  &:hover
+    .hide
+      display: inline-block
+    .show
+      display: none

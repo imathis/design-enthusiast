@@ -5,5 +5,4 @@ project_type = :stand_alone
 http_path = "/"
 css_dir = "site/stylesheets"
 sass_dir = "/stylesheets"
-images_dir = "images"
-relative_assets = true
+#relative_assets = true

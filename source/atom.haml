@@ -11,7 +11,7 @@ full_url: http://brandonmathis.com
   %link(href="#{page.full_url}/atom.xml" rel="self")
   %link(href="#{page.full_url}")
   %updated= Time.now.xmlschema
-  %id=page.full_url
+  %id #{page.full_url}/
   %author
     %name= page.author
     %email= page.email

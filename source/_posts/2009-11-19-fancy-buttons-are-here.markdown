@@ -9,13 +9,13 @@ tags: compass, sass, open source
 See more examples, and download the source at [github](http://github.com/imathis/fancy-buttons/).
 
 Here's a screenshot of some fancy buttons from the github project example. **Hover to see what they look like without CSS gradients**.
-<div class="hover_switcher" style='width:500px; height: 350px; margin: 0 auto'>
+<div class="hover_switcher">
   <img class="show" src="http://s3.imathis.com/dev/compass/fancy-buttons/demo.png" alt="Fancy Buttton Demo" title="Fancy Buttton Demo"/>
   <img class="hide" src="http://s3.imathis.com/dev/compass/fancy-buttons/demo-no-gradients.png" alt="Fancy Buttton Demo - Without Gradients" title="Fancy Buttton Demo - Without Gradients"/>
 </div>
 
 #### What's it doing?
-Here's a sample of what CSS rules this mixin hanldes for you:
+Here's a sample of what CSS rules this mixin handles for you:
 
 1. Button reset - to get browsers to the same starting point
 2. Rounded corners, Text shadows, and Gradients + vendoring

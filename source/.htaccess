@@ -1,3 +1,3 @@
 RewriteEngine on
 RewriteCond %{HTTP_USER_AGENT} !FeedBurner
-RewriteRule ^atom\.xml$ feed://feeds.brandonmathis.com/designenthusiast [R,L]
+RewriteRule ^atom\.xml$ http://feeds.brandonmathis.com/designenthusiast [R,L]

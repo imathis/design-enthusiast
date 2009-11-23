@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteCond %{HTTP_USER_AGENT} !FeedBurner
+RewriteRule ^index\.xml$ http://feeds.feedburner.com/YOURFEEDADDRESS [R,L]

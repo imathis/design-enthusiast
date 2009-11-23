@@ -14,7 +14,7 @@ disqus_short_name: designenthusiast
 google_custom_search_id: 000682590315597099166:l47aablh-em
 google_analytics: true
 
-feedburner: designenthusiast
+feedurl: feed://feeds.brandonmathis.com/designenthusiast
 
 ---
 
@@ -27,7 +27,7 @@ feedburner: designenthusiast
     - if page.respond_to? :keywords
       %meta(name="keywords" content="#{page.keywords}")/
     %link(href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css")
-    %link(href="#{(page.respond_to?(:feedburner) ? "feed://feeds.feedburner.com/#{page.feedburner}" : "/atom.xml")}" rel="alternate" title="#{page.blog_title}" type="application/atom+xml")
+    %link(href="#{page.respond_to?(:feedurl) ? "#{page.feedurl}" : "/atom.xml"}" rel="alternate" title="#{page.blog_title}" type="application/atom+xml")
     - if page.respond_to? :twitter_user
       :javascript
         var twitter_user = "#{page.twitter_user}"
@@ -78,7 +78,7 @@ feedburner: designenthusiast
         - unless page.respond_to? :no_sidebar
           #sidebar
             #blog_links.section.alpha
-              %a#rss(href="#{(page.respond_to?(:feedburner) ? "feed://feeds.feedburner.com/#{page.feedburner}" : "/atom.xml")}") Subscribe
+              %a#rss(href="#{page.respond_to?(:feedurl) ? "#{page.feedurl}" : "/atom.xml"}") Subscribe
               %a#archive(href="/archives.html" title="blog archive") Blog Archive
             - unless page.respond_to? :date
               #hire_me.section

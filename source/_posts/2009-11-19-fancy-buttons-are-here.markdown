@@ -14,7 +14,7 @@ Here's a screenshot of some fancy buttons from the github project example. **Hov
   <img class="hide" src="http://s3.imathis.com/dev/compass/fancy-buttons/demo-no-gradients.png" alt="Fancy Buttton Demo - Without Gradients" title="Fancy Buttton Demo - Without Gradients"/>
 </div>
 
-#### What's it doing?
+#### What's It Doing?
 Here's a sample of what CSS rules this mixin handles for you:
 
 1. Button reset - to get browsers to the same starting point
@@ -22,8 +22,16 @@ Here's a sample of what CSS rules this mixin handles for you:
 3. Background image fallback
 4. Padding, Text size, line-height, etc
 5. Default, Hover, and Active states for all styles
+6. Lots of tricky color math to generate beautiful gradients from one color
 
-That's a lot of css to write, effectively reduced to a single mixin. Of course, it's also great that you can use the bare minimum html.
+That's a lot of CSS to write, effectively reduced to a single mixin. Of course, it's also great that you can use the bare minimum HTML.
+
+##### What's Compass and Where's the CSS?
+In the screencast I'm writing my styles in [Sass](http://sass-lang.com) which is much cleaner and more powerful than CSS.
+Every time I save the file, Compass automatically compiles the Sass to regular or compressed CSS. If you're not familiar with Compass,
+you should [check it out](http://wiki.github.com/chriseppstein/compass/) because this is the future of open source design.
+Without compass I'd be posting stylesheets and images, and trying to explain how you could customize them. Compass lets me
+package my stylesheets as a plugin so it's easier to share, and easier to use.
 
 ##### IE Support
 In IE the buttons don't have rounded corners. So far, I haven't found a solution that lets me use clean html without javascript.
@@ -32,3 +40,6 @@ If you have any suggestions for how to improve the appearance of fancy buttons i
 
 I'd like to point out, if you prefer using methods like sliding doors, **you can use fancy buttons to generate source images**. Just fill a button with no-break spaces '&amp;nbsp;'
 to render an empty button. Take a screenshot and cut it up to use as a background image.
+
+##### If You Liked This
+I'm starting a screencast series about how to use SASS and Compass to be an efficient and incredible web designer. [Subscribe for updates.](feed://feeds.feedburner.com/designenthusiast)

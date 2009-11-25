@@ -13,6 +13,7 @@ disqus_short_name: designenthusiast
 
 google_custom_search_id: 000682590315597099166:l47aablh-em
 google_analytics: true
+google_analytics_tracking_id: UA-10876422-1
 
 feedurl: feed://feeds.brandonmathis.com/designenthusiast
 
@@ -139,6 +140,6 @@ feedurl: feed://feeds.brandonmathis.com/designenthusiast
       //Google Analytics code
       :javascript
         try {
-        var pageTracker = _gat._getTracker("UA-10876422-1");
+        var pageTracker = _gat._getTracker("#{page.google_analytics_tracking_id}");
         pageTracker._trackPageview();
         } catch(err) {}

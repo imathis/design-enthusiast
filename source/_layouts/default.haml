@@ -67,15 +67,19 @@ feedurl: feed://feeds.brandonmathis.com/designenthusiast
               %p.pubdate
                 Published:
                 =page.date.strftime("%d %b, %Y")
-              - if page.respond_to? :disqus_short_name
-                #disqus_thread
-                  :javascript
-                    var disqus_url = "#{page.full_url}#{page.url}";
-                  %noscript
-                    %a(href="http://#{page.disqus_short_name}.disqus.com/?url=ref") View the discussion thread
-                  %script(type="text/javascript" src="http://disqus.com/forums/#{page.disqus_short_name}/embed.js")
           - else
             = preserve rp(content)
+          - unless page.respond_to? :no_comments
+            - if page.respond_to? :disqus_short_name
+              #disqus_thread
+                :javascript
+                  var disqus_developer = true
+                  var page_path = window.location.pathname;
+                  var disqus_url = "#{page.full_url}"+ page_path.substring(0, page_path.length -1);
+                  console.log(disqus_url)
+                %noscript
+                  %a(href="http://#{page.disqus_short_name}.disqus.com/?url=ref") View the discussion thread
+                %script(type="text/javascript" src="http://disqus.com/forums/#{page.disqus_short_name}/embed.js")
         - unless page.respond_to? :no_sidebar
           #sidebar
             #blog_links.section.alpha
@@ -123,19 +127,6 @@ feedurl: feed://feeds.brandonmathis.com/designenthusiast
         %span.credit
           Powered by <a href="http://octopress.org">Octopress</a>
           &ndash; design <span class="amp">&</span> content &copy; #{Time.now.strftime('%Y')} &ndash; brandon mathis
-    - if page.respond_to? :disqus_short_name
-      //Disqus Comments code
-      :javascript
-        (function() {
-            var links = document.getElementsByTagName('a');
-            var query = '?';
-            for(var i = 0; i < links.length; i++) {
-              if(links[i].href.indexOf('#disqus_thread') >= 0) {
-                query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-              }
-            }
-            document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/#{page.disqus_short_name}/get_num_replies.js' + query + '"></' + 'script>');
-          })();
     - if page.respond_to? :google_analytics
       //Google Analytics code
       :javascript

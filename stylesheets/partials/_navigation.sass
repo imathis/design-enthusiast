@@ -11,16 +11,16 @@
       a
         +link-colors(#ccc, #fff)
         display: inline-block
-        padding: 3.3em 1px 10px
+        padding: 3.3em 2px 10px
         font-size: 90%
         text-transform: uppercase
         +hover-link
       &.here
         border:
-          right: 1px solid #aaa
-          left: 1px solid #aaa
-          background: #333
-        background: #222 url(/images/line_tile.png)
+          right: 2px solid #888
+          left: 2px solid #888
+        background: #252525 #{image_url("line_tile.png")}
+        +v-gradient(#343434, #1a1a1a)
         a
           color: #fff
           text-decoration: none

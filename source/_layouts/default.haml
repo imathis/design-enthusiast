@@ -28,6 +28,7 @@ feedurl: feed://feeds.brandonmathis.com/designenthusiast
     - if page.respond_to? :keywords
       %meta(name="keywords" content="#{page.keywords}")/
     %link(href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css")
+    %link(href="/images/favicon.png" rel="shortcut icon" type="image/png")
     %link(href="#{page.respond_to?(:feedurl) ? "#{page.feedurl}" : "/atom.xml"}" rel="alternate" title="#{page.blog_title}" type="application/atom+xml")
     - if page.respond_to? :twitter_user
       :javascript
@@ -54,6 +55,8 @@ feedurl: feed://feeds.brandonmathis.com/designenthusiast
         %ul
           %li.alpha(class="#{(page.respond_to?(:nav) && (page.nav == 'blog') || !page.respond_to?(:nav) ? 'here' : nil)}")
             %a(href="/") Blog
+          %li(class="#{(page.respond_to?(:nav) && (page.nav == 'projects') ? 'here' : nil)}")
+            %a(href="/projects") Projects
           %li.omega(class="#{(page.respond_to?(:nav) && (page.nav == 'work') ? 'here' : nil)}")
             %a(href="/work") Work
     #page
@@ -85,7 +88,7 @@ feedurl: feed://feeds.brandonmathis.com/designenthusiast
             #blog_links.section.alpha
               %a#rss(href="#{page.respond_to?(:feedurl) ? "#{page.feedurl}" : "/atom.xml"}") Subscribe
               %a#archive(href="/archives.html" title="blog archive") Blog Archive
-            - unless page.respond_to? :date
+            - unless page.respond_to? :simple_sidebar
               #hire_me.section
                 %h4 Let's Talk
                 %p
@@ -99,7 +102,7 @@ feedurl: feed://feeds.brandonmathis.com/designenthusiast
               %p
                 %img.left(src="/content/avatar.jpg" style="margin-top: 3px; margin-bottom: 0")
                 I'm a design enthusiast who's passionate about my craft. I mainly design web applications, but I also love photography and print design.
-            - unless page.respond_to? :date
+            - unless page.respond_to? :simple_sidebar
               - if page.respond_to? :twitter_user
                 .section
                   %h4 Twitter <small>follow <a href="http://twitter.com/#{page.twitter_user}">@#{page.twitter_user}</a></small>
@@ -111,14 +114,14 @@ feedurl: feed://feeds.brandonmathis.com/designenthusiast
                   %h4 My Delicious <small><a href="http://delicious.com/#{page.delicious_user}">more &rarr;</a></small>
                   #delicious
                     %script(type="text/javascript" src="http://feeds.delicious.com/v2/js/#{page.delicious_user}?title=&count=#{page.delicious_count}&sort=date&extended")
-              .section.omega
-                %ol#social
-                  %li <a href="http://twitter.com/imathis" class="twitter" title="Follow me on Twitter">Twitter</a>
-                  %li <a href="http://github.com/imathis" class="github" title="My Github profile">Github</a>
-                  %li <a href="http://facebook.com/brandon.mathis" class="facebook" title="My Facebook profile">Facebook</a>
-                  %li <a href="http://www.linkedin.com/in/brandonmathis" class="linkedin" title="My Linked-in profile">Linked-in</a>
-                  %li <a href="http://delicious.com/imathis/" class="delicious" title="My Delicious links">Delicious</a>
-                  %li <a href="http://flickr.com/photos/imathis/" class="flickr" title="My Flickr photo stream">Flickr</a>
+            .section.omega
+              %ol#social
+                %li <a href="http://twitter.com/imathis" class="twitter" title="Follow me on Twitter">Twitter</a>
+                %li <a href="http://github.com/imathis" class="github" title="My Github profile">Github</a>
+                %li <a href="http://facebook.com/brandon.mathis" class="facebook" title="My Facebook profile">Facebook</a>
+                %li <a href="http://www.linkedin.com/in/brandonmathis" class="linkedin" title="My Linked-in profile">Linked-in</a>
+                %li <a href="http://delicious.com/imathis/" class="delicious" title="My Delicious links">Delicious</a>
+                %li <a href="http://flickr.com/photos/imathis/" class="flickr" title="My Flickr photo stream">Flickr</a>
     #footer
       .page_width
         <a href="http://compass-style.org" title="Styled with Compass" class="affiliate compass">Styled with Compass</a>

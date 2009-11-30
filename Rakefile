@@ -2,7 +2,7 @@ require 'active_support'
 
 ## -- CHANGE FOR YOUR PROJECT -- ##
 site_url      = "http://brandonmathis.com"   # deployed site url
-ssh_user      = "mathisweb@imathis.com"    # for rsync deployment
+ssh_user      = "mathisweb@brandonmathis.com"    # for rsync deployment
 document_root = "~/brandonmathis.com/" # for rsync deployment
 ## ---- ##
 

@@ -1,0 +1,192 @@
+/* line 27, sass/screen.sass */
+body {
+  text-align: center;
+  padding: 10px 0 40px;
+  font-family: "Lucida Grande", Lucida, Arial, sans_serif;
+  background: #222;
+  color: #ccc; }
+
+/* line 33, sass/screen.sass */
+h1, h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #eee;
+  letter-spacing: -1px;
+  text-align: left;
+  margin-bottom: 0; }
+
+/* line 39, sass/screen.sass */
+h1 {
+  font-size: 50px; }
+
+/* line 41, sass/screen.sass */
+h2 {
+  padding-top: 30px;
+  clear: both;
+  font-size: 40px; }
+
+/* line 45, sass/screen.sass */
+p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #24aef5;
+  font-size: 130%; }
+
+/* line 49, sass/screen.sass */
+a {
+  color: #eee; }
+/* line 51, sass/screen.sass */
+a:hover {
+  color: #24aef5; }
+
+/* line 53, sass/screen.sass */
+#download {
+  position: absolute;
+  top: 73px;
+  right: 255px;
+  display: inline-block;
+  background-color: #24aef5;
+  padding: 4px 8px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  color: #222;
+  text-decoration: none; }
+/* line 63, sass/screen.sass */
+#download:hover {
+  background: #eee; }
+
+/* line 65, sass/screen.sass */
+div {
+  position: relative;
+  text-align: left;
+  clear: both;
+  width: 700px;
+  margin: 0 auto 0;
+  overflow: hidden; }
+/* line 72, sass/screen.sass */
+div img {
+  vertical-align: middle;
+  float: left;
+  margin: 0 1px 1px 0; }
+/* line 76, sass/screen.sass */
+div span {
+  display: inline-block;
+  margin-top: 20px;
+  padding-left: 5px; }
+
+/* line 82, sass/screen.sass */
+.light-clear .male {
+  background: -webkit-gradient(linear, left top, left bottom, from(#3cb7f6), to(#0a95dc));
+  background: -moz-linear-gradient(left top, left bottom, from(#3cb7f6), to(#0a95dc));
+  background-color: #24aef5; }
+/* line 13, sass/screen.sass */
+.light-clear .male:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f67b3c), to(#dc510a));
+  background: -moz-linear-gradient(left top, left bottom, from(#f67b3c), to(#dc510a)); }
+/* line 84, sass/screen.sass */
+.light-clear .female {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ef9bef), to(#e459e5));
+  background: -moz-linear-gradient(left top, left bottom, from(#ef9bef), to(#e459e5));
+  background-color: #eb85ec; }
+/* line 13, sass/screen.sass */
+.light-clear .female:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9cef9b), to(#5ae559));
+  background: -moz-linear-gradient(left top, left bottom, from(#9cef9b), to(#5ae559)); }
+
+/* line 87, sass/screen.sass */
+.light-frame .male {
+  background: -webkit-gradient(linear, left top, left bottom, from(#d0484c), to(#a22a2d));
+  background: -moz-linear-gradient(left top, left bottom, from(#d0484c), to(#a22a2d));
+  background-color: #cb3438; }
+/* line 13, sass/screen.sass */
+.light-frame .male:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#48d0cd), to(#2aa29f));
+  background: -moz-linear-gradient(left top, left bottom, from(#48d0cd), to(#2aa29f)); }
+/* line 89, sass/screen.sass */
+.light-frame .female {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a187dc), to(#734cca));
+  background: -moz-linear-gradient(left top, left bottom, from(#a187dc), to(#734cca));
+  background-color: #9273d6; }
+/* line 13, sass/screen.sass */
+.light-frame .female:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#c1dc87), to(#a3ca4c));
+  background: -moz-linear-gradient(left top, left bottom, from(#c1dc87), to(#a3ca4c)); }
+
+/* line 92, sass/screen.sass */
+.dark-clear .male {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a22a2d), to(#d0484c));
+  background: -moz-linear-gradient(left top, left bottom, from(#a22a2d), to(#d0484c));
+  background-color: #cb3438; }
+/* line 13, sass/screen.sass */
+.dark-clear .male:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2aa29f), to(#48d0cd));
+  background: -moz-linear-gradient(left top, left bottom, from(#2aa29f), to(#48d0cd)); }
+/* line 94, sass/screen.sass */
+.dark-clear .female {
+  background: -webkit-gradient(linear, left top, left bottom, from(#734cca), to(#a187dc));
+  background: -moz-linear-gradient(left top, left bottom, from(#734cca), to(#a187dc));
+  background-color: #9273d6; }
+/* line 13, sass/screen.sass */
+.dark-clear .female:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a3ca4c), to(#c1dc87));
+  background: -moz-linear-gradient(left top, left bottom, from(#a3ca4c), to(#c1dc87)); }
+
+/* line 97, sass/screen.sass */
+.dark-frame .male {
+  background: -webkit-gradient(linear, left top, left bottom, from(#3cb7f6), to(#0a95dc));
+  background: -moz-linear-gradient(left top, left bottom, from(#3cb7f6), to(#0a95dc));
+  background-color: #24aef5; }
+/* line 13, sass/screen.sass */
+.dark-frame .male:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f67b3c), to(#dc510a));
+  background: -moz-linear-gradient(left top, left bottom, from(#f67b3c), to(#dc510a)); }
+/* line 99, sass/screen.sass */
+.dark-frame .female {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ef9bef), to(#e459e5));
+  background: -moz-linear-gradient(left top, left bottom, from(#ef9bef), to(#e459e5));
+  background-color: #eb85ec; }
+/* line 13, sass/screen.sass */
+.dark-frame .female:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9cef9b), to(#5ae559));
+  background: -moz-linear-gradient(left top, left bottom, from(#9cef9b), to(#5ae559)); }
+
+/* line 102, sass/screen.sass */
+.male-sizes img {
+  background: -webkit-gradient(linear, left top, left bottom, from(#3cb7f6), to(#0a95dc));
+  background: -moz-linear-gradient(left top, left bottom, from(#3cb7f6), to(#0a95dc));
+  background-color: #24aef5; }
+/* line 13, sass/screen.sass */
+.male-sizes img:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f67b3c), to(#dc510a));
+  background: -moz-linear-gradient(left top, left bottom, from(#f67b3c), to(#dc510a)); }
+
+/* line 105, sass/screen.sass */
+.female-sizes img {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ef9bef), to(#e459e5));
+  background: -moz-linear-gradient(left top, left bottom, from(#ef9bef), to(#e459e5));
+  background-color: #eb85ec; }
+/* line 13, sass/screen.sass */
+.female-sizes img:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9cef9b), to(#5ae559));
+  background: -moz-linear-gradient(left top, left bottom, from(#9cef9b), to(#5ae559)); }
+
+/* line 107, sass/screen.sass */
+.avatar {
+  position: relative; }
+/* line 109, sass/screen.sass */
+.avatar.a182 {
+  top: 18px; }
+/* line 111, sass/screen.sass */
+.avatar.a96 {
+  top: 104px; }
+/* line 113, sass/screen.sass */
+.avatar.a64 {
+  top: 136px; }
+/* line 115, sass/screen.sass */
+.avatar.a48 {
+  top: 152px; }
+/* line 117, sass/screen.sass */
+.avatar.a32 {
+  top: 168px; }
+/* line 119, sass/screen.sass */
+.avatar.a24 {
+  top: 176px; }

@@ -17,5 +17,7 @@ a placeholder that users are going to cover up anyway? If the app you just joine
 that poor experience, even if it's temporary. If your app does this, think about how unwelcoming that is.
 It should be nice to be a new user, and giving users a nice identity shows them you care.
 
+<hr/>
+
 [Demo Page](demo/) | [Download](fancy-avatars.zip)<br/>
 <em class="light small">Download includes the Fireworks source file</em>

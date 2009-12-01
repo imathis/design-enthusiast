@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Projects - Fancy Buttons
+title: "Projects :: Fancy Buttons"
 nav: projects
 ---
 

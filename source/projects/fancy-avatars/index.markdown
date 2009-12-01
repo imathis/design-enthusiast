@@ -8,7 +8,7 @@ simple_sidebar: true
 ## Fancy Avatars
 
 <img src="fancy-avatars.png" alt="avatar" title=""/>
-While working on [memberhub.com](http://memberhub.com), creating custom avatars wasn't in the budget, so I designed them anyway and released them for free. The latest
+While working on [memberhub.com](http://memberhub.com), creating custom avatars wasn't in the budget, so I designed some anyway and released them for free. The latest
 version has transparent PNGs that allow use background colors or images for simple customization.
 
 ##### Why Bother?

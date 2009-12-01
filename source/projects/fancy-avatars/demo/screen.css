@@ -44,7 +44,7 @@ a:hover {
   left: 380px;
   text-align: right; }
 /* line 61, sass/screen.sass */
-#download p {
+#download em {
   padding: 15px 0;
   display: block;
   font-size: 85%;

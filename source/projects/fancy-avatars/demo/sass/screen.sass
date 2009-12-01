@@ -1,8 +1,9 @@
 @import compass/css3.sass
+@import fancy_buttons.sass
 
 =topp(!num)
   top= 200px - !num
-=auto-bg(!color, !inverse = false)
+=auto-bg(!color, !inverse = false, !hover = false)
   !color1 = lighten(!color, 5)
   !color2 = lighten(!color, -10)
   @if !inverse
@@ -12,6 +13,8 @@
   background-color= !color
   &:hover
     !color = adjust_hue(!color, 180)
+    @if !hover
+      !color = !hover
     !color1 = lighten(!color, 5)
     !color2 = lighten(!color, -10)
     @if !inverse
@@ -52,16 +55,23 @@ a
     color: #24aef5
 #download
   position: absolute
-  top: 73px
-  right: 255px
-  display: inline-block
-  background-color: #24aef5
-  padding: 4px 8px
-  +border-radius
-  color: #222
-  text-decoration: none
-  &:hover
-    background: #eee
+  top: 48px
+  left: 380px
+  text-align: right
+  p
+    padding: 15px 0
+    display: block
+    font-size: 85%
+    color: #ccc
+    width: 240px
+    line-height: 1.625em
+  a.button
+    +fancy-button-structure(18px, 4px)
+    +fancy-button-colors(darken(#24aef5, 10))
+.license
+  color: #777
+  a
+    color: #aaa
 div
   position: relative
   text-align: left
@@ -95,9 +105,19 @@ div
     +auto-bg(#9273d6, true)
 .dark-frame
   .male
-    +auto-bg(!blue)
+    +auto-bg(!blue, true)
   .female
-    +auto-bg(#eb85ec)
+    +auto-bg(#eb85ec, true)
+.gray-clear
+  .male
+    +auto-bg(mix(blue, black, 60), true)
+  .female
+    +auto-bg(mix(red, black, 60), true)
+.gray-frame
+  .male
+    +auto-bg(mix(blue, black, 60))
+  .female
+    +auto-bg(mix(red, black, 60))
 .male-sizes
   img
     +auto-bg(!blue)

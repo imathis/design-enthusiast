@@ -8,6 +8,8 @@ nav: projects
 
 <object width="640" height="400"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=7723529&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=7723529&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="640" height="400"></embed></object>
 
+[Fancy Buttons Demo &raquo;](demo/)
+
 Here's a screenshot of some fancy buttons from the github project example. **Hover to see what they look like without CSS gradients**.
 <div class="hover_switcher">
   <img class="show" src="http://s3.imathis.com/dev/compass/fancy-buttons/demo.png" alt="Fancy Buttton Demo" title="Fancy Buttton Demo"/>

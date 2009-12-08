@@ -6,7 +6,7 @@ tags: compass, sass, open source
 
 <object width="640" height="400"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=7723529&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=7723529&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="640" height="400"></embed></object><p><a href="http://vimeo.com/7723529">Fancy Buttons Demo</a>
 
-See more examples, and download the source at [github](http://github.com/imathis/fancy-buttons/).
+[Fancy Buttons CSS Demo &raquo;](/projects/fancy-buttons/demo/)
 
 Here's a screenshot of some fancy buttons from the github project example. **Hover to see what they look like without CSS gradients**.
 <div class="hover_switcher">
@@ -43,3 +43,7 @@ to render an empty button. Take a screenshot and cut it up to use as a backgroun
 
 ##### If You Liked This
 I'm starting a screencast series about how to use SASS and Compass to be an efficient and incredible web designer. [Subscribe for updates.](feed://feeds.feedburner.com/designenthusiast)
+
+<hr/>
+
+[Demo Page](/projects/fancy-buttons/demo) | [Gem](http://gemcutter.org/gems/fancy-buttons/) | [Github Project](http://github.com/imathis/fancy-buttons/)

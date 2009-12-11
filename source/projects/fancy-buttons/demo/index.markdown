@@ -5,6 +5,7 @@ title: "Fancy Buttons - Demo"
 nav: projects
 body_id: light
 ---
+
 <h1>Fancy Buttons</h1>
 <div>
   <button class="green">Click Me</button>
@@ -26,3 +27,8 @@ body_id: light
   <button class="custom arrow">&rarr;</button>
   <button class="custom spade">&Omega;</button>
 </div>
+
+<hr>
+
+<em>For CSS3 gradients view this demo with [Safari](http://www.apple.com/safari/), [Chrome](http://www.google.com/chrome), or [Firefox 3.6](http://www.mozilla.com/en-US/firefox/all-beta.html)
+<br/>or checkout [this screenshot](http://s3.imathis.com/dev/compass/fancy-buttons/demo.png)</em>

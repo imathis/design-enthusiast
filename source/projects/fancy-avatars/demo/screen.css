@@ -1,289 +1,220 @@
-/* line 30, sass/screen.sass */
-body {
-  text-align: center;
-  padding: 10px 0 40px;
-  font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: #222;
+/* line 28, sass/screen.sass */
+#main {
   color: #ccc; }
-
-/* line 36, sass/screen.sass */
-h1, h2 {
+/* line 30, sass/screen.sass */
+#main h1, #main h2 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #eee;
   letter-spacing: -1px;
   text-align: left;
   margin-bottom: 0; }
-
-/* line 42, sass/screen.sass */
-h1 {
+/* line 36, sass/screen.sass */
+#main h1 {
   font-size: 50px; }
-
-/* line 44, sass/screen.sass */
-h2 {
+/* line 38, sass/screen.sass */
+#main h2 {
   padding-top: 30px;
   clear: both;
   font-size: 40px; }
-
-/* line 48, sass/screen.sass */
-p {
+/* line 42, sass/screen.sass */
+#main p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #24aef5;
   font-size: 130%; }
-
-/* line 52, sass/screen.sass */
-a {
+/* line 46, sass/screen.sass */
+#main a {
   color: #eee; }
-/* line 54, sass/screen.sass */
-a:hover {
+/* line 48, sass/screen.sass */
+#main a:hover {
   color: #24aef5; }
-
-/* line 56, sass/screen.sass */
-#download {
+/* line 50, sass/screen.sass */
+#main #download {
   position: absolute;
-  top: 48px;
-  left: 380px;
+  top: 80px;
+  right: 15px;
   text-align: right; }
-/* line 61, sass/screen.sass */
-#download em {
+/* line 55, sass/screen.sass */
+#main #download em {
   padding: 15px 0;
   display: block;
-  font-size: 85%;
+  font-size: 70%;
   color: #ccc;
-  width: 240px;
+  width: 230px;
   line-height: 1.625em; }
-/* line 68, sass/screen.sass */
-#download a.button {
-  font-family: "Lucida Grande", Lucida, Arial, sans_serif;
-  background: url('avatars/button_bg.png') repeat-x bottom left;
-  margin: 0;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  border-style: solid;
-  font-weight: bold;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  padding: 5px 18px;
-  font-size: 18px;
-  line-height: 21.6px;
-  border-width: 1px;
-  color: #fff;
-  background-color: #0098e6;
-  background: -webkit-gradient(linear, left top, left bottom, from(#94d7fa), to(#0ba2f0), color-stop(0.1, #3cb7f6), color-stop(0.5, #0a8bce), color-stop(0.5, #0981bf));
-  background: -moz-linear-gradient(left top, left bottom, from(#94d7fa), to(#0ba2f0), color-stop(0.1, #3cb7f6), color-stop(0.5, #0a8bce), color-stop(0.5, #0981bf));
-  text-shadow: #004467 1px 1px 1px;
-  border-color: #087bb5; }
-/* line 98, ../../../../../../../../../opt/local/lib/ruby/gems/1.8/gems/fancy-buttons-0.3.4/lib/sass/_fancy_buttons.sass */
-#download a.button::-moz-focus-inner {
-  border: none;
-  padding: 0; }
-/* line 101, ../../../../../../../../../opt/local/lib/ruby/gems/1.8/gems/fancy-buttons-0.3.4/lib/sass/_fancy_buttons.sass */
-#download a.button:focus {
-  outline: none; }
-/* line 81, ../../../../../../../../../opt/local/lib/ruby/gems/1.8/gems/fancy-buttons-0.3.4/lib/sass/_fancy_buttons.sass */
-#download a.button:active {
-  padding: 4px 17px;
-  border-width: 2px; }
-/* line 84, ../../../../../../../../../opt/local/lib/ruby/gems/1.8/gems/fancy-buttons-0.3.4/lib/sass/_fancy_buttons.sass */
-#download a.button.disabled:active {
-  padding: 5px 18px;
-  border-width: 1px; }
-/* line 23, ../../../../../../../../../opt/local/lib/ruby/gems/1.8/gems/fancy-buttons-0.3.4/lib/sass/_fancy_buttons.sass */
-#download a.button:hover, #download a.button:focus {
-  color: #fff;
-  background-color: #008ed6;
-  background: -webkit-gradient(linear, left top, left bottom, from(#85d2fa), to(#0a98e1), color-stop(0.1, #2db2f6), color-stop(0.5, #0981bf), color-stop(0.5, #0877b0));
-  background: -moz-linear-gradient(left top, left bottom, from(#85d2fa), to(#0a98e1), color-stop(0.1, #2db2f6), color-stop(0.5, #0981bf), color-stop(0.5, #0877b0));
-  text-shadow: #003957 1px 1px 1px;
-  border-color: #0770a6; }
-/* line 25, ../../../../../../../../../opt/local/lib/ruby/gems/1.8/gems/fancy-buttons-0.3.4/lib/sass/_fancy_buttons.sass */
-#download a.button:active {
-  color: #fff;
-  background-color: #0084c8;
-  background: -webkit-gradient(linear, left top, left bottom, from(#77cdf8), to(#0a8ed3), color-stop(0.1, #20acf4), color-stop(0.5, #0977b1), color-stop(0.5, #086da2));
-  background: -moz-linear-gradient(left top, left bottom, from(#77cdf8), to(#0a8ed3), color-stop(0.1, #20acf4), color-stop(0.5, #0977b1), color-stop(0.5, #086da2));
-  text-shadow: #003049 1px 1px 1px;
-  border-color: #076798; }
-
-/* line 71, sass/screen.sass */
-.license {
+/* line 62, sass/screen.sass */
+#main .license {
+  font-size: 120%;
   color: #777; }
-/* line 73, sass/screen.sass */
-.license a {
+/* line 65, sass/screen.sass */
+#main .license a {
   color: #aaa; }
-
-/* line 75, sass/screen.sass */
-div {
+/* line 67, sass/screen.sass */
+#main div {
   position: relative;
   text-align: left;
   clear: both;
-  width: 700px;
   margin: 0 auto 0;
   overflow: hidden; }
-/* line 82, sass/screen.sass */
-div img {
+/* line 74, sass/screen.sass */
+#main div.avatars img + img {
+  margin-right: 15px; }
+/* line 76, sass/screen.sass */
+#main div p {
+  padding: 15px 0 20px; }
+/* line 78, sass/screen.sass */
+#main div img {
   vertical-align: middle;
   float: left;
   margin: 0 1px 1px 0; }
-/* line 86, sass/screen.sass */
-div span {
+/* line 82, sass/screen.sass */
+#main div span {
   display: inline-block;
   margin-top: 20px;
   padding-left: 5px; }
-
-/* line 92, sass/screen.sass */
-.light-clear .male {
+/* line 88, sass/screen.sass */
+#main .light-clear .male {
   background: -webkit-gradient(linear, left top, left bottom, from(#3cb7f6), to(#0a95dc));
   background: -moz-linear-gradient(left top, left bottom, from(#3cb7f6), to(#0a95dc));
   background-color: #24aef5; }
-/* line 14, sass/screen.sass */
-.light-clear .male:hover {
+/* line 13, sass/screen.sass */
+#main .light-clear .male:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#f67b3c), to(#dc510a));
   background: -moz-linear-gradient(left top, left bottom, from(#f67b3c), to(#dc510a)); }
-/* line 94, sass/screen.sass */
-.light-clear .female {
+/* line 90, sass/screen.sass */
+#main .light-clear .female {
   background: -webkit-gradient(linear, left top, left bottom, from(#ef9bef), to(#e459e5));
   background: -moz-linear-gradient(left top, left bottom, from(#ef9bef), to(#e459e5));
   background-color: #eb85ec; }
-/* line 14, sass/screen.sass */
-.light-clear .female:hover {
+/* line 13, sass/screen.sass */
+#main .light-clear .female:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#9cef9b), to(#5ae559));
   background: -moz-linear-gradient(left top, left bottom, from(#9cef9b), to(#5ae559)); }
-
-/* line 97, sass/screen.sass */
-.light-frame .male {
+/* line 93, sass/screen.sass */
+#main .light-frame .male {
   background: -webkit-gradient(linear, left top, left bottom, from(#d0484c), to(#a22a2d));
   background: -moz-linear-gradient(left top, left bottom, from(#d0484c), to(#a22a2d));
   background-color: #cb3438; }
-/* line 14, sass/screen.sass */
-.light-frame .male:hover {
+/* line 13, sass/screen.sass */
+#main .light-frame .male:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#48d0cd), to(#2aa29f));
   background: -moz-linear-gradient(left top, left bottom, from(#48d0cd), to(#2aa29f)); }
-/* line 99, sass/screen.sass */
-.light-frame .female {
+/* line 95, sass/screen.sass */
+#main .light-frame .female {
   background: -webkit-gradient(linear, left top, left bottom, from(#a187dc), to(#734cca));
   background: -moz-linear-gradient(left top, left bottom, from(#a187dc), to(#734cca));
   background-color: #9273d6; }
-/* line 14, sass/screen.sass */
-.light-frame .female:hover {
+/* line 13, sass/screen.sass */
+#main .light-frame .female:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#c1dc87), to(#a3ca4c));
   background: -moz-linear-gradient(left top, left bottom, from(#c1dc87), to(#a3ca4c)); }
-
-/* line 102, sass/screen.sass */
-.dark-clear .male {
+/* line 98, sass/screen.sass */
+#main .dark-clear .male {
   background: -webkit-gradient(linear, left top, left bottom, from(#a22a2d), to(#d0484c));
   background: -moz-linear-gradient(left top, left bottom, from(#a22a2d), to(#d0484c));
   background-color: #cb3438; }
-/* line 14, sass/screen.sass */
-.dark-clear .male:hover {
+/* line 13, sass/screen.sass */
+#main .dark-clear .male:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#2aa29f), to(#48d0cd));
   background: -moz-linear-gradient(left top, left bottom, from(#2aa29f), to(#48d0cd)); }
-/* line 104, sass/screen.sass */
-.dark-clear .female {
+/* line 100, sass/screen.sass */
+#main .dark-clear .female {
   background: -webkit-gradient(linear, left top, left bottom, from(#734cca), to(#a187dc));
   background: -moz-linear-gradient(left top, left bottom, from(#734cca), to(#a187dc));
   background-color: #9273d6; }
-/* line 14, sass/screen.sass */
-.dark-clear .female:hover {
+/* line 13, sass/screen.sass */
+#main .dark-clear .female:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#a3ca4c), to(#c1dc87));
   background: -moz-linear-gradient(left top, left bottom, from(#a3ca4c), to(#c1dc87)); }
-
-/* line 107, sass/screen.sass */
-.dark-frame .male {
+/* line 103, sass/screen.sass */
+#main .dark-frame .male {
   background: -webkit-gradient(linear, left top, left bottom, from(#0a95dc), to(#3cb7f6));
   background: -moz-linear-gradient(left top, left bottom, from(#0a95dc), to(#3cb7f6));
   background-color: #24aef5; }
-/* line 14, sass/screen.sass */
-.dark-frame .male:hover {
+/* line 13, sass/screen.sass */
+#main .dark-frame .male:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#dc510a), to(#f67b3c));
   background: -moz-linear-gradient(left top, left bottom, from(#dc510a), to(#f67b3c)); }
-/* line 109, sass/screen.sass */
-.dark-frame .female {
+/* line 105, sass/screen.sass */
+#main .dark-frame .female {
   background: -webkit-gradient(linear, left top, left bottom, from(#e459e5), to(#ef9bef));
   background: -moz-linear-gradient(left top, left bottom, from(#e459e5), to(#ef9bef));
   background-color: #eb85ec; }
-/* line 14, sass/screen.sass */
-.dark-frame .female:hover {
+/* line 13, sass/screen.sass */
+#main .dark-frame .female:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#5ae559), to(#9cef9b));
   background: -moz-linear-gradient(left top, left bottom, from(#5ae559), to(#9cef9b)); }
-
-/* line 112, sass/screen.sass */
-.gray-clear .male {
+/* line 108, sass/screen.sass */
+#main .gray-clear .male {
   background: -webkit-gradient(linear, left top, left bottom, from(#000066), to(#0000b3));
   background: -moz-linear-gradient(left top, left bottom, from(#000066), to(#0000b3));
   background-color: #000099; }
-/* line 14, sass/screen.sass */
-.gray-clear .male:hover {
+/* line 13, sass/screen.sass */
+#main .gray-clear .male:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#666600), to(#b3b200));
   background: -moz-linear-gradient(left top, left bottom, from(#666600), to(#b3b200)); }
-/* line 114, sass/screen.sass */
-.gray-clear .female {
+/* line 110, sass/screen.sass */
+#main .gray-clear .female {
   background: -webkit-gradient(linear, left top, left bottom, from(#660000), to(#b30000));
   background: -moz-linear-gradient(left top, left bottom, from(#660000), to(#b30000));
   background-color: #990000; }
-/* line 14, sass/screen.sass */
-.gray-clear .female:hover {
+/* line 13, sass/screen.sass */
+#main .gray-clear .female:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#006666), to(#00b2b3));
   background: -moz-linear-gradient(left top, left bottom, from(#006666), to(#00b2b3)); }
-
-/* line 117, sass/screen.sass */
-.gray-frame .male {
+/* line 113, sass/screen.sass */
+#main .gray-frame .male {
   background: -webkit-gradient(linear, left top, left bottom, from(#0000b3), to(#000066));
   background: -moz-linear-gradient(left top, left bottom, from(#0000b3), to(#000066));
   background-color: #000099; }
-/* line 14, sass/screen.sass */
-.gray-frame .male:hover {
+/* line 13, sass/screen.sass */
+#main .gray-frame .male:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#b3b200), to(#666600));
   background: -moz-linear-gradient(left top, left bottom, from(#b3b200), to(#666600)); }
-/* line 119, sass/screen.sass */
-.gray-frame .female {
+/* line 115, sass/screen.sass */
+#main .gray-frame .female {
   background: -webkit-gradient(linear, left top, left bottom, from(#b30000), to(#660000));
   background: -moz-linear-gradient(left top, left bottom, from(#b30000), to(#660000));
   background-color: #990000; }
-/* line 14, sass/screen.sass */
-.gray-frame .female:hover {
+/* line 13, sass/screen.sass */
+#main .gray-frame .female:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#00b2b3), to(#006666));
   background: -moz-linear-gradient(left top, left bottom, from(#00b2b3), to(#006666)); }
-
-/* line 122, sass/screen.sass */
-.male-sizes img {
+/* line 118, sass/screen.sass */
+#main .male-sizes img {
   background: -webkit-gradient(linear, left top, left bottom, from(#3cb7f6), to(#0a95dc));
   background: -moz-linear-gradient(left top, left bottom, from(#3cb7f6), to(#0a95dc));
   background-color: #24aef5; }
-/* line 14, sass/screen.sass */
-.male-sizes img:hover {
+/* line 13, sass/screen.sass */
+#main .male-sizes img:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#f67b3c), to(#dc510a));
   background: -moz-linear-gradient(left top, left bottom, from(#f67b3c), to(#dc510a)); }
-
-/* line 125, sass/screen.sass */
-.female-sizes img {
+/* line 121, sass/screen.sass */
+#main .female-sizes img {
   background: -webkit-gradient(linear, left top, left bottom, from(#ef9bef), to(#e459e5));
   background: -moz-linear-gradient(left top, left bottom, from(#ef9bef), to(#e459e5));
   background-color: #eb85ec; }
-/* line 14, sass/screen.sass */
-.female-sizes img:hover {
+/* line 13, sass/screen.sass */
+#main .female-sizes img:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#9cef9b), to(#5ae559));
   background: -moz-linear-gradient(left top, left bottom, from(#9cef9b), to(#5ae559)); }
-
-/* line 127, sass/screen.sass */
-.avatar {
+/* line 123, sass/screen.sass */
+#main .avatar {
   position: relative; }
-/* line 129, sass/screen.sass */
-.avatar.a182 {
+/* line 125, sass/screen.sass */
+#main .avatar.a182 {
   top: 18px; }
-/* line 131, sass/screen.sass */
-.avatar.a96 {
+/* line 127, sass/screen.sass */
+#main .avatar.a96 {
   top: 104px; }
-/* line 133, sass/screen.sass */
-.avatar.a64 {
+/* line 129, sass/screen.sass */
+#main .avatar.a64 {
   top: 136px; }
-/* line 135, sass/screen.sass */
-.avatar.a48 {
+/* line 131, sass/screen.sass */
+#main .avatar.a48 {
   top: 152px; }
-/* line 137, sass/screen.sass */
-.avatar.a32 {
+/* line 133, sass/screen.sass */
+#main .avatar.a32 {
   top: 168px; }
-/* line 139, sass/screen.sass */
-.avatar.a24 {
+/* line 135, sass/screen.sass */
+#main .avatar.a24 {
   top: 176px; }

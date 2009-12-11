@@ -1,5 +1,4 @@
 @import compass/css3.sass
-@import fancy_buttons.sass
 
 =topp(!num)
   top= 200px - !num
@@ -26,115 +25,112 @@
 !green = adjust_hue(!blue, -90)
 !orange = adjust_hue(!green, -90)
 !magenta = adjust_hue(!orange, -90)
-
-body
-  text-align: center
-  padding: 10px 0 40px
-  font-family: "Lucida Grande", Lucida, Arial, sans_serif
-  background: #222
+#main
   color: #ccc
-h1, h2
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-  color: #eee
-  letter-spacing: -1px
-  text-align: left
-  margin-bottom: 0
-h1
-  font-size: 50px
-h2
-  padding-top: 30px
-  clear: both
-  font-size: 40px
-p
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-  color: #24aef5
-  font-size: 130%
-a
-  color: #eee
-  &:hover
+  h1, h2
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    color: #eee
+    letter-spacing: -1px
+    text-align: left
+    margin-bottom: 0
+  h1
+    font-size: 50px
+  h2
+    padding-top: 30px
+    clear: both
+    font-size: 40px
+  p
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
     color: #24aef5
-#download
-  position: absolute
-  top: 48px
-  left: 380px
-  text-align: right
-  em
-    padding: 15px 0
-    display: block
-    font-size: 85%
-    color: #ccc
-    width: 230px
-    line-height: 1.625em
-  a.button
-    +fancy-button-structure(18px, 4px)
-    +fancy-button-colors(darken(#24aef5, 10))
-.license
-  color: #777
+    font-size: 130%
   a
-    color: #aaa
-div
-  position: relative
-  text-align: left
-  clear: both
-  width: 700px
-  margin: 0 auto 0
-  overflow: hidden
-  img
-    vertical-align: middle
-    float: left
-    margin: 0 1px 1px 0
-  span
-    display: inline-block
-    margin-top: 20px
-    padding-left: 5px
+    color: #eee
+    &:hover
+      color: #24aef5
+  #download
+    position: absolute
+    top: 80px
+    right: 15px
+    text-align: right
+    em
+      padding: 15px 0
+      display: block
+      font-size: 70%
+      color: #ccc
+      width: 230px
+      line-height: 1.625em
+  .license
+    font-size: 120%
+    color: #777
+    a
+      color: #aaa
+  div
+    position: relative
+    text-align: left
+    clear: both
+    margin: 0 auto 0
+    overflow: hidden
+    &.avatars
+      img + img
+        margin-right: 15px
+    p
+      padding: 15px 0 20px
+    img
+      vertical-align: middle
+      float: left
+      margin: 0 1px 1px 0
+    span
+      display: inline-block
+      margin-top: 20px
+      padding-left: 5px
 
-.light-clear
-  .male
-    +auto-bg(!blue)
-  .female
-    +auto-bg(#eb85ec)
-.light-frame
-  .male
-    +auto-bg(lighten(#a22a2d, 10))
-  .female
-    +auto-bg(#9273d6)
-.dark-clear
-  .male
-    +auto-bg(lighten(#a22a2d, 10), true)
-  .female
-    +auto-bg(#9273d6, true)
-.dark-frame
-  .male
-    +auto-bg(!blue, true)
-  .female
-    +auto-bg(#eb85ec, true)
-.gray-clear
-  .male
-    +auto-bg(mix(blue, black, 60), true)
-  .female
-    +auto-bg(mix(red, black, 60), true)
-.gray-frame
-  .male
-    +auto-bg(mix(blue, black, 60))
-  .female
-    +auto-bg(mix(red, black, 60))
-.male-sizes
-  img
-    +auto-bg(!blue)
-.female-sizes
-  img
-    +auto-bg(#eb85ec)
-.avatar
-  position: relative
-  &.a182
-    +topp(182)
-  &.a96
-    +topp(96)
-  &.a64
-    +topp(64)
-  &.a48
-    +topp(48)
-  &.a32
-    +topp(32)
-  &.a24
-    +topp(24)
+  .light-clear
+    .male
+      +auto-bg(!blue)
+    .female
+      +auto-bg(#eb85ec)
+  .light-frame
+    .male
+      +auto-bg(lighten(#a22a2d, 10))
+    .female
+      +auto-bg(#9273d6)
+  .dark-clear
+    .male
+      +auto-bg(lighten(#a22a2d, 10), true)
+    .female
+      +auto-bg(#9273d6, true)
+  .dark-frame
+    .male
+      +auto-bg(!blue, true)
+    .female
+      +auto-bg(#eb85ec, true)
+  .gray-clear
+    .male
+      +auto-bg(mix(blue, black, 60), true)
+    .female
+      +auto-bg(mix(red, black, 60), true)
+  .gray-frame
+    .male
+      +auto-bg(mix(blue, black, 60))
+    .female
+      +auto-bg(mix(red, black, 60))
+  .male-sizes
+    img
+      +auto-bg(!blue)
+  .female-sizes
+    img
+      +auto-bg(#eb85ec)
+  .avatar
+    position: relative
+    &.a182
+      +topp(182)
+    &.a96
+      +topp(96)
+    &.a64
+      +topp(64)
+    &.a48
+      +topp(48)
+    &.a32
+      +topp(32)
+    &.a24
+      +topp(24)

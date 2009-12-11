@@ -10,5 +10,4 @@ sass_dir = "stylesheets"
 images_dir = "source/images"
 images_dir = "source/images/"
 http_images_path = "/images"
-
 output_style = :compressed

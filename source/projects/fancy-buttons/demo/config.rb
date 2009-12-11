@@ -7,3 +7,4 @@ css_dir = "stylesheets"
 sass_dir = "src"
 images_dir = "images"
 relative_assets = true
+output_style = :compressed

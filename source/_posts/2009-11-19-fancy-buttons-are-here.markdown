@@ -4,6 +4,11 @@ category: open source
 tags: compass, sass, open source
 ---
 
+<span id="flash" class="notice">
+  **Update**: Fancy Buttons is under active development and this blog post will slowly go out of date.
+  Checkout the [Fancy Buttons Project Page &raquo;](/projects/fancy-buttons)
+</span>
+
 <object width="640" height="400"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=7723529&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=7723529&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="640" height="400"></embed></object><p><a href="http://vimeo.com/7723529">Fancy Buttons Demo</a>
 
 [Fancy Buttons CSS Demo &raquo;](/projects/fancy-buttons/demo/)

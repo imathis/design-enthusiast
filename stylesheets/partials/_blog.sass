@@ -28,6 +28,15 @@
       .comments_off
         font-size: 95%
 
+#flash
+  display: inline-block
+  padding: 15px 25px
+  margin-bottom: 15px
+  +border-radius(5px)
+  &.notice
+    background: #FAFAD2
+    border= "1px dashed" darken(#FAFAD2, 35)
+    color= darken(#FAFAD2, 80%)
 #disqus_thread
   padding-top: 35px
   h3

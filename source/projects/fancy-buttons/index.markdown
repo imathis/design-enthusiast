@@ -16,6 +16,18 @@ Here's a screenshot of some fancy buttons from the github project example. **Hov
   <img class="hide" src="http://s3.imathis.com/dev/compass/fancy-buttons/demo-no-gradients.png" alt="Fancy Buttton Demo - Without Gradients" title="Fancy Buttton Demo - Without Gradients"/>
 </div>
 
+<span id="flash" class="notice">
+  **Important:** Fancy Buttons 0.3.6 requires Compass 0.10.0-pre2 which must be *manually installed* until Compass
+  0.10 is released in the next couple of weeks.
+</span>
+
+Just run this and you should be good to go.
+
+{% highlight bash %}
+sudo gem install compass --pre
+sudo gem update fancy-buttons
+{% endhighlight %}
+
 #### What's It Doing?
 Here's a sample of what CSS rules this mixin handles for you:
 

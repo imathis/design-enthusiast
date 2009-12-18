@@ -14,6 +14,8 @@ nav: projects
 **Important:** Fancy Buttons 0.3.6 requires Compass 0.10.0-pre2 which must be *manually installed* until Compass
 0.10 is released in the next couple of weeks. Just run this and you should be good to go.
 
+<small>*If you have any previous versions of compass, chriseppstein-compass, compass-colors, or chriseppstein-compass-colors, uninstall them to prevent them from being loaded.*</small>
+
 {% highlight bash %}
 sudo gem install compass --pre
 sudo gem install fancy-buttons
@@ -24,12 +26,18 @@ To create a new project based on fancy-buttons:<br/>
 compass -r compass-colors -r fancy-buttons -f fancy-buttons project_directory
 {% endhighlight %}
 
-To add fancy-buttons to an existing compass project:<br/>
-{% highlight bash %}
-# Add the following lines to your compass configuration file:
+To add fancy-buttons to an existing compass project, add this to your configuration file (rails: compass.config, other: config.rb):  
+{% highlight ruby %}
 require 'compass-colors'
 require 'fancy-buttons'
+{% endhighlight %}
 
+Then import fancy-buttons in your sass file:  
+{% highlight sass %}
+@import fancy-buttons.sass
+{% endhighlight %}
+
+{% highlight bash %}
 # Then run the following command:
 compass -r fancy-buttons -f fancy-buttons project_directory
 {% endhighlight %}

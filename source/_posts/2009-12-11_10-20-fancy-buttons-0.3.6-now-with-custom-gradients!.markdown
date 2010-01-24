@@ -1,7 +1,9 @@
 ---
 title: "Fancy Buttons 0.3.6 -  Now With Custom Gradients!"
-layout: default
-tags: Compass, Sass, CSS, CSS3, web design
+tags:
+- Compass
+- Sass
+- CSS3
 ---
 
 If you're new to Fancy Buttons, checkout the [Project Page](/projects/fancy-buttons/) and the [Demo](/projects/fancy-buttons/demo/)

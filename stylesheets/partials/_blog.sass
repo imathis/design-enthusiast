@@ -4,15 +4,27 @@
     margin: 0 -2px
     padding: 2px
     h2
-      line-height: 1.25em
-      margin-bottom: .625em
+      padding-top: 0
+      margin-bottom: .1em
+    .title
+      text-decoration: none
+      &:hover
+        text-decoration: underline
     .article
-      padding= !base_font_size*2 0 !base_font_size * 1.5
-      border-bottom= "1px solid" !article_border
+      border-bottom: 1px solid #{!article_border}
+      margin-top: 2.5em
+      padding-bottom: 1.5em
+      position: relative
       &:first-child
-        padding-top: 0
-      em
-        color= !light_text
+        margin-top: 0
+      .meta
+        border-bottom: 1px dashed #ddd
+        text-transform: uppercase
+        color: #777
+        padding: 8px 0 5px
+        margin-bottom: 1.5em
+        font-size: 80%
+        letter-spacing: 1px
     .pubdate
       padding: 15px 0
       font-size: 80%
@@ -31,7 +43,7 @@
 #flash
   display: inline-block
   padding: 15px 25px
-  margin-bottom: 15px
+  margin: 1em 0
   +border-radius(5px)
   &.notice
     background: #FAFAD2

@@ -9,7 +9,7 @@ no_comments: true
     .article
       %h2= link_to(post.title, post.url, {:class=>"title"})
       .meta
-        posted: #{post.date.strftime("%B #{post.date.day.ordinalize}, %Y")}
+        by: Brandon Mathis | posted: #{post.date.strftime("%B #{post.date.day.ordinalize}, %Y")}
       - if post.data["exerpt"]
         = rp(site.markdown("#{post.data['exerpt']} &hellip; #{link_to('more &raquo;', post.url, {:class=>'more'})}"))
       - else

@@ -66,10 +66,9 @@ feedurl: feed://feeds.brandonmathis.com/designenthusiast
             .blog
               .article
                 %h2= page.title
+                .meta
+                  by: Brandon Mathis | posted: #{page.date.strftime("%B #{page.date.day.ordinalize}, %Y")}
                 = preserve rp(content)
-              %p.pubdate
-                Published:
-                =page.date.strftime("%d %b, %Y")
           - else
             = preserve rp(content)
           - unless page.respond_to? :no_comments

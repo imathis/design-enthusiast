@@ -35,6 +35,21 @@ task :post, :filename do |t, args|
   end
 end
 
+# usage rake isolate[my-post]
+desc "Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much quicker."
+task :isolate, :filename do |t, args|
+  stash_dir = "#{source}/#{stash}"
+  FileUtils.mkdir(stash_dir) unless File.exist?(stash_dir)
+  Dir.glob("#{source}/#{posts}/*.*") do |post|
+    FileUtils.mv post, stash_dir unless post.include?(args.filename)
+  end
+end
+
+desc "Move all stashed posts back into the posts directory, ready for site generation."
+task :integrate do
+  FileUtils.mv Dir.glob("#{source}/#{stash}/*.*"), "#{source}/#{posts}/"
+end
+
 desc "list tasks"
 task :list do
   puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).to_sentence}"
@@ -129,7 +144,7 @@ end
 
 
 desc "Build an XML sitemap of all html files."
-task :sitemap => :default do
+task :sitemap do
   html_files = FileList.new("#{site}/**/*.html").map{|f| f[("#{site}".size)..-1]}.map do |f|
     if f.ends_with?("index.html")
       f[0..(-("index.html".size + 1))]
@@ -144,14 +159,14 @@ task :sitemap => :default do
       priority = case f
       when %r{^/$}
         1.0
-      when %r{^/blog}
+      when %r{^/articles}
         0.9
       else
         0.8
       end
       sitemap.puts %Q{  <url>}
       sitemap.puts %Q{    <loc>#{site_url}#{f}</loc>}
-      sitemap.puts %Q{    <lastmod>#{Time.to_s('%Y-%m-%d')}</lastmod>}
+      sitemap.puts %Q{    <lastmod>#{Time.now.strftime('%Y-%m-%d')}</lastmod>}
       sitemap.puts %Q{    <changefreq>weekly</changefreq>}
       sitemap.puts %Q{    <priority>#{priority}</priority>}
       sitemap.puts %Q{  </url>}

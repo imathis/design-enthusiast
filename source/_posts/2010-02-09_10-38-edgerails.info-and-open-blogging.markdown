@@ -1,0 +1,21 @@
+---
+title: "EdgeRails.Info & Open Blogging"
+tags:
+- work
+- octopress
+---
+
+Yesterday, [Ryan Daigle](http://ryandaigle.com) launched [EdgeRails.info](http://edgerails.info) (previously [http://ryandaigle.com](http://ryandaigle.com)), which has been a terrific resource for edge Rails junkies for nearly four years. When Ryan approached me to do the design we decided to try something crazy.
+
+### Forking Authors
+Ryan wanted to stop being the bottleneck for edge Rails news, and so the [EdgeRails.info site source](http://github.com/rwdaigle/edgerails) is hosted on Github where authors are encouraged to fork the site and submit their articles as pull requests. Anyone with commit access could patch the site, and publish the submission. Likewise, readers can submit patches to correct typos and factual inaccuracies. I like to think of this as *Open Blogging*, and I really hope it catches on.
+
+### Open Blogging
+Using Github to manage submissions makes the whole process more transparent and truly opens the site up in a way that database powered blogging software cannot compete with. With a static site, there are no security or performance issues, and with no database to worry about, deployment couldn't be more simple. If Ryan disappears someday, any one of us could keep the site going by grabbing the source and redeploying to a new server. In every sensible way, it's truly open.
+
+So what do you think, does this have a chance?
+
+<hr/>
+<small>
+[EdgeRails.info](http://edgerails.info) is powered by [Octopress](http://github.com/imathis/octopress) &mdash; a blogging framework I'm working on. *It's not quite ready for mass geek adoption, but I hope to announce that soon.*
+</small>

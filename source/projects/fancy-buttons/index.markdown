@@ -34,7 +34,7 @@ require 'fancy-buttons'
 
 Then import fancy-buttons in your sass file:  
 {% highlight sass %}
-@import fancy-buttons.sass
+@import fancy_buttons.sass
 {% endhighlight %}
 
 {% highlight bash %}

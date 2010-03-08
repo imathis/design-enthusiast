@@ -53,11 +53,11 @@ feedurl: feed://feeds.brandonmathis.com/designenthusiast
               %input#q(type="text" name="q")
       #nav
         %ul
-          %li.alpha(class="#{(page.respond_to?(:nav) && (page.nav == 'blog') || !page.respond_to?(:nav) ? 'here' : nil)}")
+          %li(class="#{(page.respond_to?(:nav) && (page.nav == 'blog') || !page.respond_to?(:nav) ? 'here' : nil)}")
             %a(href="/") Blog
           %li(class="#{(page.respond_to?(:nav) && (page.nav == 'projects') ? 'here' : nil)}")
             %a(href="/projects") Projects
-          %li.omega(class="#{(page.respond_to?(:nav) && (page.nav == 'work') ? 'here' : nil)}")
+          %li(class="#{(page.respond_to?(:nav) && (page.nav == 'work') ? 'here' : nil)}")
             %a(href="/work") Work
     #page
       .page_width

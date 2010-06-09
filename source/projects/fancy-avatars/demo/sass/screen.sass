@@ -1,35 +1,39 @@
-@import compass/css3.sass
+@import compass
+=v-gradient($c1, $c2)
+  +linear-gradient(color-stops($c1, $c2))
 
-=topp(!num)
-  top= 200px - !num
-=auto-bg(!color, !inverse = false, !hover = false)
-  !color1 = lighten(!color, 5)
-  !color2 = lighten(!color, -10)
-  @if !inverse
-    +v-gradient(!color2, !color1)
+=topp($num)
+  top: 200px - $num
+
+=auto-bg($color, $inverse: false, $hover: false)
+  $color1: lighten($color, 5)
+  $color2: lighten($color, -10)
+  @if $inverse
+    +v-gradient($color2, $color1)
   @else
-    +v-gradient(!color1, !color2)
-  background-color= !color
+    +v-gradient($color1, $color2)
+  background-color: $color
   &:hover
-    !color = adjust_hue(!color, 180)
-    @if !hover
-      !color = !hover
-    !color1 = lighten(!color, 5)
-    !color2 = lighten(!color, -10)
-    @if !inverse
-      +v-gradient(!color2, !color1)
+    $color: adjust-hue($color, 180)
+    @if $hover
+      $color: $hover
+    $color1: lighten($color, 5)
+    $color2: lighten($color, -10)
+    @if $inverse
+      +v-gradient($color2, $color1)
     @else
-      +v-gradient(!color1, !color2)
+      +v-gradient($color1, $color2)
 
-!blue = #24aef5
-!green = adjust_hue(!blue, -90)
-!orange = adjust_hue(!green, -90)
-!magenta = adjust_hue(!orange, -90)
+$blue: #24aef5
+$green: adjust-hue($blue, -90)
+$orange: adjust-hue($green, -90)
+$magenta: adjust-hue($orange, -90)
+
 #main
-  color: #ccc
+  color: #cccccc
   h1, h2
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-    color: #eee
+    color: #eeeeee
     letter-spacing: -1px
     text-align: left
     margin-bottom: 0
@@ -44,7 +48,7 @@
     color: #24aef5
     font-size: 130%
   a
-    color: #eee
+    color: #eeeeee
     &:hover
       color: #24aef5
   #download
@@ -56,14 +60,14 @@
       padding: 15px 0
       display: block
       font-size: 70%
-      color: #ccc
+      color: #cccccc
       width: 230px
       line-height: 1.625em
   .license
     font-size: 120%
-    color: #777
+    color: #777777
     a
-      color: #aaa
+      color: #aaaaaa
   div
     position: relative
     text-align: left
@@ -83,10 +87,9 @@
       display: inline-block
       margin-top: 20px
       padding-left: 5px
-
   .light-clear
     .male
-      +auto-bg(!blue)
+      +auto-bg($blue)
     .female
       +auto-bg(#eb85ec)
   .light-frame
@@ -101,7 +104,7 @@
       +auto-bg(#9273d6, true)
   .dark-frame
     .male
-      +auto-bg(!blue, true)
+      +auto-bg($blue, true)
     .female
       +auto-bg(#eb85ec, true)
   .gray-clear
@@ -116,7 +119,7 @@
       +auto-bg(mix(red, black, 60))
   .male-sizes
     img
-      +auto-bg(!blue)
+      +auto-bg($blue)
   .female-sizes
     img
       +auto-bg(#eb85ec)

@@ -4,7 +4,7 @@
   .page_width
     position: relative
   a.title
-    +replace-text("mini-logo.png")
+    +replace-text(unquote(unquote(unquote("mini-logo.png"))))
     display: inline-block
     text-decoration: none
     height: 42px
@@ -15,4 +15,4 @@
     left: 15px
 
 body#light #header a.title
-  +replace-text("mini-logo-black.png")
+  +replace-text(unquote(unquote(unquote("mini-logo-black.png"))))

@@ -55,7 +55,7 @@ end
 desc "Generate styles only"
 task :generate_style do
   puts ">>> Generating styles <<<"
-  system "compass"
+  system "compass compile"
 end
 
 desc "Generate site files only"

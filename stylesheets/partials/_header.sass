@@ -1,10 +1,10 @@
 #header
   +clearfix
-  background-color= !header_bg
+  background-color: $header_bg
   .page_width
     position: relative
   a.title
-    +replace-text("logo.png")
+    +replace-text(unquote(unquote("logo.png")))
     display: inline-block
     text-decoration: none
     height: 64px
@@ -13,10 +13,11 @@
     position: relative
     top: 30px
     left: 6px
+
 #search
   position: absolute
-  left= !main_width + !sidebar_margin
-  top= 45px
+  left: $main_width + $sidebar_margin
+  top: 45px
   form
     background: url(/images/search_bg.png) no-repeat
     padding: 0
@@ -30,6 +31,6 @@
     margin-left: 30px
     font-size: 15px
     border: none
-    color: #aaa
+    color: #aaaaaa
     &:focus
       outline: none

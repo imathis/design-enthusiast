@@ -5,26 +5,26 @@
     padding: 2px
     h2
       line-height: 1.25em
-      margin-bottom: .625em
+      margin-bottom: 0.625em
     .article
-      padding= !base_font_size*2 0 !base_font_size * 1.5
-      border-bottom= "1px solid" !article_border
+      padding: $base_font_size * 2 0 $base_font_size * 1.5
+      border-bottom: unquote("1px solid") $article_border
       &:first-child
         padding-top: 0
       em
-        color= !light_text
+        color: $light_text
     .pubdate
       padding: 15px 0
       font-size: 80%
-      color= !light_text
-      border-bottom= "1px solid" !article_border
+      color: $light_text
+      border-bottom: unquote("1px solid") $article_border
       text-align: right
     .footer
       clear: both
-      padding-top= !base_font_size * 1.5
+      padding-top: $base_font_size * 1.5
       padding-bottom: 35px
       .comments_off, .metadata
-        color: #666
+        color: #666666
       .comments_off
         font-size: 95%
 
@@ -34,19 +34,20 @@
   margin-bottom: 15px
   +border-radius(5px)
   &.notice
-    background: #FAFAD2
-    border= "1px dashed" darken(#FAFAD2, 35)
-    color= darken(#FAFAD2, 80%)
+    background: #fafad2
+    border: unquote("1px dashed") darken(#fafad2, 35)
+    color: darken(#fafad2, 80%)
+
 #disqus_thread
   padding-top: 35px
   h3
-    font-size= !h4
+    font-size: $h4
   a
-    +link-color-style-none(!link_color)
+    +link-color-style-none($link_color)
 
 .hover_switcher
-  +box-shadow(#ccc)
-  border: 2px solid #aaa
+  +box-shadow(#cccccc)
+  border: 2px solid #aaaaaa
   display: inline-block
   .hide
     display: none

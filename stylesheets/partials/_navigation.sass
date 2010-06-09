@@ -1,6 +1,6 @@
 #nav
   float: left
-  margin-left= !page_pad
+  margin-left: $page_pad
   ul
     +horizontal-list
     overflow: hidden
@@ -9,7 +9,7 @@
       overflow: hidden
       padding: 0 25px
       a
-        +link-colors(#ccc, #fff)
+        +link-colors(#cccccc, white)
         display: inline-block
         padding: 3.3em 2px 10px
         font-size: 90%
@@ -17,12 +17,12 @@
         +hover-link
       &.here
         border:
-          right: 2px solid #888
-          left: 2px solid #888
+          right: 2px solid #888888
+          left: 2px solid #888888
         background: #252525 #{image_url("line_tile.png")}
         +v-gradient(#343434, #1a1a1a)
         a
-          color: #fff
+          color: white
           text-decoration: none
           padding:
             left: 0

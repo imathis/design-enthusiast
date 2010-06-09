@@ -1,15 +1,15 @@
 #sidebar
   float: left
-  width= !sidebar_width - 2px
-  margin-left= !sidebar_margin
+  width: $sidebar_width - 2px
+  margin-left: $sidebar_margin
   color: black
   font-size: 13px
   line-height: 1.525em
   .section
-    margin-left: -#{!sidebar_margin}
-    padding: 15px 0 10px #{!sidebar_margin}
+    margin-left: -$sidebar_margin
+    padding: 15px 0 10px $sidebar_margin
     border:
-      top: 1px solid #eee
+      top: 1px solid #eeeeee
       bottom: 1px solid #c6c6c6
     &.alpha
       padding-top: 20px
@@ -18,13 +18,13 @@
       border-bottom: 0
   h4
     margin: 0
-    font-size= !h5+3
+    font-size: $h5 + 3
     small
-      color: #888
+      color: #888888
       +sans-font
       font-size: 52%
       a
-        +link-color-style(!link_color)
+        +link-color-style($link_color)
 
 #blog_links.section
   padding-bottom: 20px
@@ -32,13 +32,13 @@
     font-size: 15px
     +heading-font
     font-weight: bold
-    color= #555
+    color: #555555
     text-decoration: none
-    +link-color-style-none(!link_color)
+    +link-color-style-none($link_color)
   #rss
     display: inline-block
     padding: 0 6px 0 28px
-    background: #{image_url("rss.png")} no-repeat left center
+    background: image_url("rss.png") no-repeat left center
   #archive
     display: inline-block
     border-left: 1px solid #c6c6c6
@@ -56,7 +56,7 @@
   li
     margin: 0 15px
     padding: 10px 0 0
-    border-bottom: #ddd 1px dashed
+    border-bottom: #dddddd 1px dashed
     &:last-child
       border-bottom: 0
 
@@ -64,13 +64,13 @@
   p
     font-style: italic
   li
-    color: #666
+    color: #666666
     font-style: normal
     padding-bottom: 8px
 
 #hire_me
   h4
-    background= image_url("hire_me_small.png") "no-repeat left center"
+    background: image_url(unquote("hire_me_small.png")) unquote("no-repeat left center")
     padding: 10px 0 15px 85px
     position: relative
     left: -10px
@@ -84,21 +84,21 @@
   li, a
     display: inline-block
   li a
-    +opacity(.85)
+    +opacity(0.85)
     +reset-box-model
-    +sprite-background("social.png", 24px)
+    +sprite-background(unquote("social.png"), 24px)
     text-indent: -9999em
     &:hover
       +opacity(1)
     &.twitter
-      +sprite-row(1,24px)
+      +sprite-row(1, 24px)
     &.github
-      +sprite-row(2,24px)
+      +sprite-row(2, 24px)
     &.facebook
-      +sprite-row(3,24px)
-    &.linkedin          
-      +sprite-row(4,24px)
-    &.delicious         
-      +sprite-row(5,24px)
-    &.flickr            
-      +sprite-row(6,24px)
+      +sprite-row(3, 24px)
+    &.linkedin
+      +sprite-row(4, 24px)
+    &.delicious
+      +sprite-row(5, 24px)
+    &.flickr
+      +sprite-row(6, 24px)

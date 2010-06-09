@@ -32,9 +32,9 @@ require 'compass-colors'
 require 'fancy-buttons'
 {% endhighlight %}
 
-Then import fancy-buttons in your sass file:  
-{% highlight sass %}
-@import fancy-buttons.sass
+Then import fancy_buttons in your sass file:  
+{% highlight css %}
+@import fancy_buttons
 {% endhighlight %}
 
 {% highlight bash %}

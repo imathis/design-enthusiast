@@ -9,6 +9,8 @@ document_root = "~/brandonmathis.com/" # for rsync deployment
 port = "5000"     # preview project port eg. http://localhost:4000
 site = "site"     # compiled site directory
 source = "source" # source file directory
+stash     = "_stash"
+posts     = "_posts"
 
 def ok_failed(condition)
   if (condition)
@@ -18,8 +20,17 @@ def ok_failed(condition)
   end
 end
 
+## if you're deploying with github, change the default deploy to deploy_github
+desc "default deploy task"
+task :deploy => [:deploy_rsync] do
+end
+
+desc "Generate and deploy task"
+task :generate_deploy => [:integrate, :generate, :clean_debug, :deploy] do
+end
+
 desc "generate website in output directory"
-task :default => [:generate_site, :generate_style] do
+task :generate => [:generate_site, :generate_style] do
   puts ">>> Site Generating Complete! <<<\n\n"
 end
 
@@ -28,11 +39,26 @@ desc "Begin a new post in #{source}/_posts"
 task :post, :filename do |t, args|
   args.with_defaults(:filename => 'new-post')
   #system "touch #{source}/_posts/#{Time.now.strftime('%Y-%m-%d_%H-%M')}-#{args.filename}.markdown"
-  open("#{source}/_posts/#{Time.now.strftime('%Y-%m-%d_%H-%M')}-#{args.filename.gsub(/[ _]/, '-')}.markdown", 'w') do |post|
+  open("#{source}/_posts/#{Time.now.strftime('%Y-%m-%d_%H-%M')}-#{args.filename.downcase.gsub(/[ _]/, '-')}.markdown", 'w') do |post|
     post.puts "---"
     post.puts "title: \"#{args.filename.gsub(/[-_]/, ' ').titlecase}\""
     post.puts "---"
   end
+end
+
+# usage rake isolate[my-post]
+desc "Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much quicker."
+task :isolate, :filename do |t, args|
+  stash_dir = "#{source}/#{stash}"
+  FileUtils.mkdir(stash_dir) unless File.exist?(stash_dir)
+  Dir.glob("#{source}/#{posts}/*.*") do |post|
+    FileUtils.mv post, stash_dir unless post.include?(args.filename)
+  end
+end
+
+desc "Move all stashed posts back into the posts directory, ready for site generation."
+task :integrate do
+  FileUtils.mv Dir.glob("#{source}/#{stash}/*.*"), "#{source}/#{posts}/"
 end
 
 desc "list tasks"
@@ -66,8 +92,7 @@ task :generate_site => [:clean, :generate_style] do
 end
 
 def rebuild_site(relative)
-  puts "\n"
-  puts ">>> Change Detected to: #{relative} <<<"
+  puts "\n\n>>> Change Detected to: #{relative} <<<"
   IO.popen('rake generate_site'){|io| print(io.readpartial(512)) until io.eof?}
   puts '>>> Update Complete <<<'
 end
@@ -97,10 +122,32 @@ task :watch do
   end
 end
 
-desc "generate and deploy website"
-multitask :deploy => [:default, :clean_debug] do
-  print ">>> Deploying website <<<"
+desc "generate and deploy website via rsync"
+multitask :deploy_rsync do
+  puts ">>> Deploying website to #{site_url} <<<"
   ok_failed system("rsync -avz --delete #{site}/ #{ssh_user}:#{document_root}")
+end
+
+desc "generate and deploy website to github user pages"
+multitask :deploy_github do
+  puts ">>> Deploying #{deploy_branch} branch to Github Pages <<<"
+  require 'git'
+  repo = Git.open('.')
+  puts "\n>>> Checking out #{deploy_branch} branch <<<\n"
+  repo.branch("#{deploy_branch}").checkout
+  (Dir["*"] - [site]).each { |f| rm_rf(f) }
+  Dir["#{site}/*"].each {|f| mv(f, ".")}
+  rm_rf(site)
+  puts "\n>>> Moving generated site files <<<\n"
+  Dir["**/*"].each {|f| repo.add(f) }
+  repo.status.deleted.each {|f, s| repo.remove(f)}
+  puts "\n>>> Commiting: Site updated at #{Time.now.utc} <<<\n"
+  message = ENV["MESSAGE"] || "Site updated at #{Time.now.utc}"
+  repo.commit(message)
+  puts "\n>>> Pushing generated site to #{deploy_branch} branch <<<\n"
+  repo.push
+  puts "\n>>> Github Pages deploy complete <<<\n"
+  repo.branch("#{source_branch}").checkout
 end
 
 desc "start up an instance of serve on the output files"
@@ -123,13 +170,13 @@ task :stop_serve do
 end
 
 desc "preview the site in a web browser"
-multitask :preview => [:default, :start_serve] do
+multitask :preview => [:start_serve] do
   system "open http://localhost:#{port}"
 end
 
 
 desc "Build an XML sitemap of all html files."
-task :sitemap => :default do
+task :sitemap do
   html_files = FileList.new("#{site}/**/*.html").map{|f| f[("#{site}".size)..-1]}.map do |f|
     if f.ends_with?("index.html")
       f[0..(-("index.html".size + 1))]
@@ -144,14 +191,14 @@ task :sitemap => :default do
       priority = case f
       when %r{^/$}
         1.0
-      when %r{^/blog}
+      when %r{^/articles}
         0.9
       else
         0.8
       end
       sitemap.puts %Q{  <url>}
       sitemap.puts %Q{    <loc>#{site_url}#{f}</loc>}
-      sitemap.puts %Q{    <lastmod>#{Time.to_s('%Y-%m-%d')}</lastmod>}
+      sitemap.puts %Q{    <lastmod>#{Time.now.strftime('%Y-%m-%d')}</lastmod>}
       sitemap.puts %Q{    <changefreq>weekly</changefreq>}
       sitemap.puts %Q{    <priority>#{priority}</priority>}
       sitemap.puts %Q{  </url>}

@@ -15,7 +15,7 @@ full_url: http://brandonmathis.com
   %author
     %name= page.author
     %email= page.email
-  - site.posts.reverse[0..14].each do |post|
+  - site.posts.reject{|p| p.data['draft']}.sort_by(&:date).reverse[0..14].each do |post|
     %entry
       %title= rp(post.title)
       %link(href="#{page.full_url}#{post.url}")

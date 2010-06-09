@@ -159,12 +159,33 @@ module Helpers
   def style_amp(input)
     input.gsub(" & "," <span class='amp'>&</span> ")
   end
+  
+  module PartialsHelper
+    
+    # A very hackish way to handle partials.  We'll go with it till it breaks...
+    def include(partial_name)
+      file_ext = partial_name[(partial_name.index('.') + 1)..partial_name.length]
+      contents = IO.read("_includes/#{partial_name}")
+      case file_ext
+      when 'haml'
+        Haml::Engine.new(contents).render(binding)
+      when 'textile'
+        RedCloth.new(contents).to_html
+      when 'markdown'
+        RDiscount.new(contents).to_html
+      else
+        contents
+      end
+    end
+  end
+  
+  include PartialsHelper
 end
 
 class String
   def titlecase
     small_words = %w(a an and as at but by en for if in of on or the to v v. via vs vs.)
-
+    
     x = split(" ").map do |word|
       # note: word could contain non-word characters!
       # downcase all small_words, capitalize the rest
@@ -177,11 +198,11 @@ class String
     # small words after colons are capitalized
     x.join(" ").gsub(/:\s?(\W*#{small_words.join("|")}\W*)\s/) { ": #{$1.smart_capitalize} " }
   end
-
+  
   def titlecase!
     replace(titlecase)
   end
-
+  
   def smart_capitalize
     # ignore any leading crazy characters and capitalize the first real character
     if self =~ /^['"\(\[']*([a-z])/
@@ -192,7 +213,7 @@ class String
     end
     self
   end
-
+  
   def smart_capitalize!
     replace(smart_capitalize)
   end

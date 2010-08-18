@@ -11,10 +11,6 @@ nav: projects
 [Fancy Buttons Demo &raquo;](demo/)
 
 ### How to Install
-**Important:** Fancy Buttons 0.3.6 requires Compass 0.10.0-pre2 which must be *manually installed* until Compass
-0.10 is released in the next couple of weeks. Just run this and you should be good to go.
-
-<small>*If you have any previous versions of compass, chriseppstein-compass, compass-colors, or chriseppstein-compass-colors, uninstall them to prevent them from being loaded.*</small>
 
 {% highlight bash %}
 gem install compass

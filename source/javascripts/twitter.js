@@ -17,6 +17,7 @@ var tweet_container = 'li';
 var twitter_container = 'twitter_status';
 var key = '-!-!-';
 var show_source = false;
+var show_replies = false;
 
 window.addEvent('domready',function() {
 	getTwitterStatus(twitter_user);
@@ -77,7 +78,7 @@ function getTwitterStatus(twitter_name){
   		onComplete: function(tweets,user) {
         the_tweets = Array();
   			tweets.each(function(tweet,i) {
-  			  if((tweet.in_reply_to_status_id && show_replies) || !tweet.in_reply_to_status_id){
+  			  if(((tweet.in_reply_to_status_id || tweet.text.charAt(0) == '@') && show_replies) || (!tweet.in_reply_to_status_id && tweet.text.charAt(0) != '@')){
   			    if(the_tweets.length == tweet_count) return;
     			  the_tweets.push(tweet.text + key + tweet.created_at + key + tweet.id + key + tweet.source);
   				}

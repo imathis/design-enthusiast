@@ -17,29 +17,28 @@ nav: projects
 <small>*If you have any previous versions of compass, chriseppstein-compass, compass-colors, or chriseppstein-compass-colors, uninstall them to prevent them from being loaded.*</small>
 
 {% highlight bash %}
-sudo gem install compass --pre
-sudo gem install fancy-buttons
+gem install compass
+gem install fancy-buttons
 {% endhighlight %}
 
 To create a new project based on fancy-buttons:<br/>
 {% highlight bash %}
-compass -r compass-colors -r fancy-buttons -f fancy-buttons project_directory
+compass install -r fancy-buttons -f fancy-buttons /path/to/project
 {% endhighlight %}
 
 To add fancy-buttons to an existing compass project, add this to your configuration file (rails: compass.config, other: config.rb):  
 {% highlight ruby %}
-require 'compass-colors'
 require 'fancy-buttons'
 {% endhighlight %}
 
-Then import fancy_buttons in your sass file:  
+Then import fancy-buttons in your sass file:  
 {% highlight css %}
-@import fancy_buttons
+@import fancy-buttons
 {% endhighlight %}
 
 {% highlight bash %}
 # Then run the following command:
-compass -r fancy-buttons -f fancy-buttons project_directory
+compass install -r fancy-buttons -f fancy-buttons /path/to/project
 {% endhighlight %}
 
 Here's a screenshot of some fancy buttons from the github project example. **Hover to see what they look like without CSS gradients**.

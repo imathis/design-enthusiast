@@ -32,11 +32,6 @@ Then import fancy-buttons in your sass file:
 @import fancy-buttons
 {% endhighlight %}
 
-{% highlight bash %}
-# Then run the following command:
-compass install -r fancy-buttons -f fancy-buttons /path/to/project
-{% endhighlight %}
-
 Here's a screenshot of some fancy buttons from the github project example. **Hover to see what they look like without CSS gradients**.
 <div class="hover_switcher">
   <img class="show" src="http://s3.imathis.com/dev/compass/fancy-buttons/demo.png" alt="Fancy Buttton Demo" title="Fancy Buttton Demo"/>

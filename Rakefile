@@ -122,7 +122,7 @@ task :watch do
   end
 end
 
-desc "generate and deploy website via rsync"
+desc "deploy website via rsync"
 multitask :deploy_rsync do
   puts ">>> Deploying website to #{site_url} <<<"
   ok_failed system("rsync -avz --delete #{site}/ #{ssh_user}:#{document_root}")

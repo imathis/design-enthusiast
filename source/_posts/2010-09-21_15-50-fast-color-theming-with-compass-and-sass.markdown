@@ -10,7 +10,7 @@ Here's a glimpse at my normal workflow for theming a site with Compass and Sass.
 
 Checkout the video below. I know I could have been more thorough, so leave a comment if you have a question.
 
-<iframe src="http://player.vimeo.com/video/15168461?portrait=0&amp;color=ffffff" width="640" height="400" frameborder="0"></iframe><p><a href="http://vimeo.com/15168461">Fast color theming with Compass & Sass</a> from <a href="http://vimeo.com/user1983434">Brandon Mathis</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+<object width="640" height="429" type="application/x-shockwave-flash" data="/assets/jwplayer/player.swf"><param name="movie" value="http://s3.imathis.com/video/color-themes.mp4" /><param name="allowfullscreen" value="true" /><param name="flashvars" value="file=http://s3.imathis.com/video/color-themes.mp4&skin=/assets/jwplayer/glow/glow.xml" /></object>
 
 Here's the gradient-bg mixin demonstrated in this video: *note: I'm sorry for the syntax highlighting. Pygments doesn't grok the new Sass syntax.*
 

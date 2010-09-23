@@ -1,6 +1,10 @@
+var flashplayerlocation = "/assets/jwplayer/player.swf";
+var flashplayerskin = "/assets/jwplayer/glow/glow.xml";
+
 window.addEvent('domready', function() {
   codeblocks = $$('div.highlight');
   codeblocks.each(addExpander);
+  html5toFlash();
 });
 
 function addExpander(div){
@@ -44,4 +48,32 @@ function enableCompressedLayout(codeblocks){
       }
     }
 	}).inject($('main'), 'top');
+}
+function html5toFlash(){
+  var videos = $$('video');
+  if(!videos){return}
+  videos.each(function(video){
+    source = video.getElement('source').get('src');
+    if(!source.contains('mp4') || !Modernizr.video.h264){
+      flashvid = new Element('object', {
+        'width': video.get('width').toInt(),
+        'height': video.get('height').toInt() + 19 + 'px',
+        'type': 'application/x-shockwave-flash',
+        'data': flashplayerlocation
+      });
+      flashvid.adopt([
+        new Element('param', {
+          'name':'movie', 'value' : source
+        }),
+        new Element('param', {
+          'name':'allowfullscreen', 'value':'true'
+        }),
+        new Element('param', {
+          'name':'flashvars', 'value' : "file="+source+"&skin="+flashplayerskin
+        })
+      ])
+      flashvid.inject(video, 'after');
+      video.dispose();
+    }
+  })
 }

@@ -10,7 +10,9 @@ Here's a glimpse at my normal workflow for theming a site with Compass and Sass.
 
 Checkout the video below. I know I could have been more thorough, so leave a comment if you have a question.
 
-<object width="640" height="429" type="application/x-shockwave-flash" data="/assets/jwplayer/player.swf"><param name="movie" value="http://s3.imathis.com/video/color-themes.mp4" /><param name="allowfullscreen" value="true" /><param name="flashvars" value="file=http://s3.imathis.com/video/color-themes.mp4&skin=/assets/jwplayer/glow/glow.xml" /></object>
+<video width="640" height="400" preload="none" controls>
+  <source src="http://s3.imathis.com/video/color-themes.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+</video>
 
 Here's the gradient-bg mixin demonstrated in this video: *note: I'm sorry for the syntax highlighting. Pygments doesn't grok the new Sass syntax.*
 

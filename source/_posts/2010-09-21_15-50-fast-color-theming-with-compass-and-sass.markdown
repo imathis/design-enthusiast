@@ -10,7 +10,7 @@ Here's a glimpse at my normal workflow for theming a site with Compass and Sass.
 
 Checkout the video below. I know I could have been more thorough, so leave a comment if you have a question.
 
-<video width="640" height="400" preload="none" controls>
+<video width="640" height="400" preload="none" controls poster="http://s3.imathis.com/video/color-themes-poster.png">
   <source src="http://s3.imathis.com/video/color-themes.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
 </video>
 

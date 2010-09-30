@@ -35,5 +35,5 @@ body_id: light
 
 <hr>
 
-<em>For CSS3 gradients view this demo with [Safari](http://www.apple.com/safari/), [Chrome](http://www.google.com/chrome), or [Firefox 3.6](http://www.mozilla.com/en-US/firefox/all-beta.html)
-<br/>or checkout [this screenshot](http://s3.imathis.com/dev/compass/fancy-buttons/demo.png)</em>
+*For CSS3 gradients view with [Safari](http://www.apple.com/safari/), [Chrome](http://www.google.com/chrome), or [Firefox 3.6+](http://www.mozilla.com/en-US/firefox/)*
+*or see [this screenshot](http://s3.imathis.com/dev/compass/fancy-buttons/demo.png)*

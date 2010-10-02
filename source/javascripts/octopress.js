@@ -55,24 +55,22 @@ function html5toFlash(){
   videos.each(function(video){
     source = video.getElement('source').get('src');
     if(!source.contains('mp4') || !Modernizr.video.h264){
-      flashvid = new Element('object', {
-        'width': video.get('width').toInt(),
-        'height': video.get('height').toInt() + 19 + 'px',
-        'type': 'application/x-shockwave-flash',
-        'data': flashplayerlocation
+      span = new Element('span').wraps(video);
+      flashvid = new Swiff(flashplayerlocation, {
+        width   : video.get('width').toInt(),
+        height  : video.get('height').toInt() + 29,
+        params  : {
+          movie : source,
+          wmode : "opaque",
+          allowfullscreen : "true"
+        },
+        vars : {
+          file : source,
+          image : video.get('poster'),
+          skin : flashplayerskin
+        },
+        container: span
       });
-      flashvid.adopt([
-        new Element('param', {
-          'name':'movie', 'value' : source
-        }),
-        new Element('param', {
-          'name':'allowfullscreen', 'value':'true'
-        }),
-        new Element('param', {
-          'name':'flashvars', 'value' : "file="+source+"&skin="+flashplayerskin
-        })
-      ])
-      flashvid.inject(video, 'after');
       video.dispose();
     }
   })

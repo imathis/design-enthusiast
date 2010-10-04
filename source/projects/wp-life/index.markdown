@@ -1,7 +1,14 @@
 ---
-title: "WP-Life: a WordPress Theme for Family Blogging"
-tags: Sass, Compass, WordPress, open-source
+layout: default
+title: "Projects :: WP-Life"
+nav: projects
 ---
+
+[Demo](http://life.imathis.com) |
+[Github](http://github.com/imathis/wp-life)
+
+## WP-Life: A WordPress Theme for Family Blogging
+
 
 I wrote a very minimal WordPress theme for my family blog. This is it. [http://life.imathis.com](http://life.imathis.com). When I say minimal, I mean it.
 Here's a list of what **this doesn't have**:

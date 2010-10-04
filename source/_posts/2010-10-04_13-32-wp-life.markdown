@@ -3,6 +3,7 @@ title: "WP-Life: a WordPress Theme for Family Blogging"
 tags: Sass, Compass, WordPress, open-source
 ---
 
+<img src="/content/blog/2010/wp-life/wp-life-screenshot.jpg" alt="WP-Life Screenshot" class="right" />
 I wrote a very minimal WordPress theme for my family blog. This is it. [http://life.imathis.com](http://life.imathis.com). When I say minimal, I mean it.
 Here's a list of what **this doesn't have**:
 
@@ -22,7 +23,7 @@ I strongly dislike (to put it mildly) how nearly all WordPress themes are writte
 making the same edits across many different files. It just plain sucks. You already know this because you learned to write WordPress themes by modifying existing themes.
 
 With WordPress themes frequently HTML tags (like `<div id="wrapper">`) opened in one file and closed in another file, which is liked through a magical WordPress function. This makes editing a real pain since you can use text editor folding, and you have to keep track
-of closed divs across multiple files. This leads to lots of inline HTML comments like "`<!-- closing #wrapper-7-big-blue-crappy-theme -->`" scattered across the theme.
+of closed divs across multiple files. This leads to lots of inline HTML comments like `<!-- closing #wrapper-7-big-blue-crappy-theme -->` scattered across the theme.
 Updating custom WordPress themes is a pain which typically involves messing about with replacing files over ftp.
 
 ### How WP-Life fixes that

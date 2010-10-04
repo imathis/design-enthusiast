@@ -4,13 +4,12 @@ title: "Projects :: WP-Life"
 nav: projects
 ---
 
-[Demo](http://life.imathis.com) |
-[Github](http://github.com/imathis/wp-life)
-
 ## WP-Life: A WordPress Theme for Family Blogging
 
-<img src="/content/blog/2010/wp-life/wp-life-screenshot.jpg" alt="WP-Life Screenshot" class="right" />
-I wrote a very minimal WordPress theme for my family blog. This is it. [http://life.imathis.com](http://life.imathis.com). When I say minimal, I mean it.
+Get the [source on Github](http://github.com/imathis/wp-life).
+
+<a href="/content/blog/2010/wp-life/wp-life-screenshot-full.png"><img src="/content/blog/2010/wp-life/wp-life-screenshot.jpg" alt="WP-Life Screenshot" class="right" title="WP Life screenshot - click to zoom" /></a>
+I wrote a very minimal WordPress theme for my family blog. This is it. When I say minimal, I mean it.
 Here's a list of what **this doesn't have**:
 
 - A sidebar
@@ -43,5 +42,5 @@ Updating custom WordPress themes is a pain which typically involves messing abou
 
 ### Sound good?
 
-The theme is on [github](http://github.com/imathis/wp-life) where you can grab the source make it do whatever your family needs.
+You can [get the theme source](http://github.com/imathis/wp-life) on github and make it do whatever your family needs.
 If you have problems with it, I'll read issues posted on github or comments here &mdash; but I'm not going to hold your hand or anything.

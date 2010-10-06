@@ -1,0 +1,64 @@
+---
+title: "Gap's New Blanding"
+---
+
+GAP is now Gap. At least they're not 'gap' but really? Why the change? Here's a look at what makes a logo good or bad. If you don't already know, it's much more than how it looks.
+
+<img src="/content/blog/2010/gap/gap-logos.png" alt="GAP comparison"/>
+
+I'm may be coining this term, but I'm calling the ruin of classic brands *Blanding*.
+
+### Design Review: Old GAP
+
+At this point in history, we can start calling this "The good GAP logo". Briefly, here are some key points to note.
+
+##### It's Elite
+
+It's skinny and good looking. It can wear anything and look amazing. "If you want to shop here lose some weight, tubby."
+
+##### It's Unique
+
+Have you seen many logos with a highly condensed serif typeface? Probably not. I haven't. One reason for this is that it's hard to accommodate many letters with a highly condensed typeface as readability decreases with each letter you have to process.
+With only three characters it's not a problem, and the typeface suits it perfectly.
+
+##### It's Flexible
+
+<img src="/content/blog/2010/gap/old-gap-black.png" title="black only, old logo" alt="black only, old logo" class="left"/> Because this logo reduces well to black only, it's easy
+to use anywhere. You could emboss it, reverse it, cut it out, or use transparency. Reversing out of a box gives it a solid symmetry which allows it to execute well on labels, packaging, or any form of physical presentation.
+This logo is fantastic.
+
+### Design Review: New Gap
+
+One thing to keep in mind here: a brand is more than a logo. Gap can do a lot here to make use of that square. Eventually you'll get used to it and decide that it makes sense.
+Soon, just like [the Walmart* Logo](/blog/2008/07/02/wal-mart-becomes-walmart/), you'll forget how stupid it was the first time you saw it.
+
+##### It's a Fatty
+
+The first thing you notice, after you stop staring at the square, is that the logo has gained some weight. This is a major change &mdash; not a brand update &mdash; but a complete departure.
+This logo has forgotten it was ever thin and beautiful.
+
+##### It's Forgettable
+
+In the new logo, 'Gap' feels more like the word than the company. Why is that? I suggest two reasons.
+
+**1. Helvetica Neue.** You've seen it everywhere. In fact, drop the blue box and the logo appears in the title of this blog post. It's the same font but with a tiny customization on the 'G' and the 'p'. That's how common it is.
+
+**2. Lowercase 'ap'.** Moving away from uppercase logos seems to be a trend. [tcby](http://www.underconsideration.com/brandnew/archives/the_countrys_blandest_yogurt.php), [Mayflower](http://www.underconsideration.com/brandnew/archives/a_moving_ship.php), [technicolor](http://www.underconsideration.com/brandnew/archives/technically_this_is_very_colorful.php), [mapquest](http://www.underconsideration.com/brandnew/archives/mapquest_comes_alive.php), and [girl scouts](http://www.underconsideration.com/brandnew/archives/this_is_not_your_moms_girl_scouts.php)
+have each dropped some or all of their uppercase letters. In digital communication, using all uppercase is equated to shouting, and using lowercase can make logos look more natural or friendly. This effect is probably because most of the words we read are written without uppercase letters.
+
+For some brands this change is good, but in this case, it isn't. Since 'gap' is such a common word, uppercase letters really helped convey that it referred to the company. Even if you don't use the correct font, typing 'GAP' invokes the brand easily. Uppercase was very much a part of the brand, and I think changing it was a mistake.
+
+##### It's Not Flexible
+
+<img src="/content/blog/2010/gap/gap-black.png" title="black only, new logo" alt="black only, new logo" class="left"/> Applications of this logo will frequently require special considerations. For one thing, unlike the previous version, it cannot be displayed in black and white. It requires gray. This matters because all that fun stuff I mentioned above (embossing, reversing, transparency, etc) gets a lot more complicated when a logo requires more than one color to work.
+
+The union of the 'p' with the square also makes everything more challenging. Embossing won't work unless you can use different depths for the letters and the square, which changes what materials you can use.
+This intersection also makes cutouts impossible since the 'p' won't read correctly with a big square cut out of it. While gradients may look fine on the screen, they don't usually print well in newspapers.
+
+### Bad Logos Are Expensive
+
+Logo design is so much more than just making graphics that *feel* like your brand. The guidelines and constraints which a designer must design for are tremendous.
+With a good logo, like the old GAP, any graphic designer can use it with ease, no matter what the application. A bad logo needs more thorough guidelines to cover the difficulties with each application.
+Check out [Best Buy's logo guidelines](http://bbybrandidentity.com/guidelines/logo/) for an example of what these are like.
+
+If you've ever been stuck trying to figure out how to prepare a complex multicolored logo for embroidery, you know what I'm talking about. A logo may look fantastic, but if it's not flexible it's going to be expensive down the road.

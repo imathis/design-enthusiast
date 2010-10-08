@@ -55,7 +55,7 @@ function html5toFlash(){
   videos.each(function(video){
     source = video.getElement('source').get('src');
     if(!source.contains('mp4') || !Modernizr.video.h264){
-      span = new Element('span').wraps(video);
+      span = new Element('span', {'class':'video'}).wraps(video);
       flashvid = new Swiff(flashplayerlocation, {
         width   : video.get('width').toInt(),
         height  : video.get('height').toInt() + 29,
@@ -72,6 +72,17 @@ function html5toFlash(){
         container: span
       });
       video.dispose();
+    } else if(video.get('preload') == "none"){
+      video.addEvent('click', function(event){
+        clickToLoad(video);
+      });
     }
   })
+}
+function clickToLoad(video){
+  video.set('preload', true);
+  if(!video.get('autoplay')){
+    video.set('autoplay', true);
+  }
+  video.removeEvent('click', clickToLoad);
 }

@@ -21,9 +21,9 @@ This way it doesn't just look like some word typed on a screen. Now it's a logo!
 **1. Be clever.** <br/>
 Make it confusing at first. Your logo should be like a fun puzzle with an "Oh, I get it" at the end.
 
-**2. Always use your first idea, unless it's hard** <br/>
-
-<img src="/content/blog/2010/easy-logo/fedex-logo.jpg" alt="Fedex's logo" title="There is no spoon." class="left"/> Be careful though, clever logos can take a lot of work. Everyone knows by now that FedEx has hidden an arrow and a spoon in their logo. That probably took a long time, and it's too easy read. Avoid that.
+<img src="/content/blog/2010/easy-logo/fedex-logo.jpg" alt="Fedex's logo" title="There is no spoon." class="right"/>
+**2. Always use your first idea.** <br/>
+Be careful, clever logos can take a lot of work. For example, everyone knows by now that FedEx has hidden an arrow and a spoon in their logo. That probably took a long time, and it's too easy read. Avoid that.
 
 ### My new logo
 

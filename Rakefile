@@ -1,4 +1,5 @@
 require 'active_support'
+require 'titlecase'
 
 ## -- CHANGE FOR YOUR PROJECT -- ##
 site_url      = "http://brandonmathis.com"   # deployed site url

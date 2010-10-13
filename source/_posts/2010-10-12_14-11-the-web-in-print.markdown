@@ -3,7 +3,7 @@ title: "The Web in Print"
 tags: print design
 ---
 
-A couple of days ago I posted a [sceencast](/blog/2010/10/08/how-to-get-high-resolution-screenshots-of-a-website) on producing high resolution screenshots of a website for print.
+A couple of days ago I posted a [screencast](/blog/2010/10/08/how-to-get-high-resolution-screenshots-of-a-website) on producing high resolution screenshots of a website for print.
 If I'm honest, when I made that screencast, I had really just discovered the method for getting hi-res screenshots. I was sure it would work, but I hadn't actually tried using them in the design.
 
 Now, I've actually completed the design and I wanted to share the finished work.

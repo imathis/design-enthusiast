@@ -1,0 +1,58 @@
+GEM
+  remote: http://rubygems.org/
+  remote: http://gems.github.com/
+  specs:
+    RedCloth (4.2.3)
+    activesupport (2.3.5)
+    cgi_multipart_eof_fix (2.5.0)
+    classifier (1.3.3)
+      fast-stemmer (>= 1.0.0)
+    compass (0.10.5)
+      haml (>= 3.0.4)
+    daemons (1.1.0)
+    directory_watcher (1.3.2)
+    fancy-buttons (0.6.0.pre1)
+      compass (>= 0.10.0)
+      haml (>= 3.0.2)
+    fast-stemmer (1.0.0)
+    fastthread (1.0.7)
+    fssm (0.1.4)
+    gem_plugin (0.2.3)
+    haml (3.0.21)
+    henrik-jekyll (0.5.2)
+      RedCloth (>= 4.0.4)
+      classifier (>= 1.3.1)
+      directory_watcher (>= 1.1.1)
+      liquid (>= 1.9.0)
+      maruku (>= 0.5.9)
+      open4 (>= 0.9.6)
+    liquid (2.2.2)
+    maruku (0.6.0)
+      syntax (>= 1.0.0)
+    mongrel (1.1.5)
+      cgi_multipart_eof_fix (>= 2.4)
+      daemons (>= 1.0.3)
+      fastthread (>= 1.0.1)
+      gem_plugin (>= 0.2.3)
+    open4 (1.0.1)
+    rack (1.2.1)
+    rake (0.8.7)
+    rdiscount (1.6.5)
+    serve (0.11.7)
+      activesupport (>= 2.3.5)
+      rack (>= 1.2.1)
+    syntax (1.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activesupport (= 2.3.5)
+  compass
+  fancy-buttons (= 0.6.0.pre1)
+  fssm
+  henrik-jekyll
+  mongrel
+  rake
+  rdiscount
+  serve

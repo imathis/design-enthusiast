@@ -1,0 +1,19 @@
+---
+title: "Fancy Buttons 1.0 Released"
+---
+
+Check out the [changelog](http://github.com/imathis/fancy-buttons/blob/master/CHANGELOG.markdown) for a full look at what's new.
+
+To get the latest <code>gem install fancy-buttons</code>.
+
+<q>Wait a sec&hellip; you skipped 0.6 - 0.9; what are you trying to pull?</q> Here's the deal. Some slick new Sass features are coming and when they do, I'll be doing some exciting stuff with fancy buttons that I couldn't do before. That may mean leaving behind some current mixins and it will be easier for people to look to the 1.* version to get their legacy fix instead of trying to remember to use 0.6.1 or something.
+
+### 2.0 Concept
+
+In 2.0 I'll be building on the upcoming Sass features **named variables** and **lists** along with <code>@extend</code> and other goodies to make it even easier to use fancy buttons. I also want offer a variety of button styles [like these](http://ubuwaits.github.com/css3-buttons/) and allow you to modify them or create your own without much effort. Just pick a style, a color and go.
+
+#### 'Til then&hellip;
+
+For a project that I use all the time, it's pretty lame that there's really no documentation to speak of except a few blog posts and demo video that is way out of date. In the mean time, while I await more Sass awesomeness, I'll be working to make sure 1.0 has good support with a new improved screen cast and thorough documentation with examples.
+
+I'll be posting some of that goodness soon.

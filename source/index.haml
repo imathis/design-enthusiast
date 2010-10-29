@@ -5,7 +5,7 @@ nav: blog
 no_comments: true
 ---
 .blog
-  - site.posts.sort_by(&:date).reverse[0..9].each_with_index do |post,index|
+  - site.posts.reject{|p| p.data['draft']}.sort_by(&:date).reverse[0..9].each_with_index do |post,index|
     .article
       %h2= link_to(post.title, post.url, {:class=>"title"})
       .meta

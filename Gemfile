@@ -4,7 +4,7 @@ source "http://gems.github.com"
 gem 'activesupport', "2.3.5"
 gem 'henrik-jekyll'
 gem 'compass'
-gem 'fancy-buttons', "0.6.0.pre1"
+gem 'fancy-buttons'
 gem 'rdiscount'
 gem 'fssm'
 gem 'serve'

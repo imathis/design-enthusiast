@@ -6,7 +6,9 @@ nav: projects
 
 ## Fancy Buttons
 
-<object width="640" height="400"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=7723529&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=7723529&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="640" height="400"></embed></object>
+<video width="640" height="360" preload="none" controls poster="http://s3.imathis.com/video/zero-to-fancy-buttons.png">
+  <source src="http://s3.imathis.com/video/zero-to-fancy-buttons.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
+</video>
 
 [Fancy Buttons Demo &raquo;](demo/)
 

@@ -1,7 +1,7 @@
 ---
 layout: demo
 demo_css: stylesheets/buttons.css
-title: "Fancy Buttons - Demo"
+title: "Fancy Buttons - Color Demo"
 nav: projects
 body_id: light
 ---
@@ -9,7 +9,7 @@ body_id: light
 <h1>Fancy Buttons</h1>
 <div>
   <button class="green">Click Me</button>
-  <a href="#" class="button blue">Click Me</a>
+  <a href="#" class="big blue">Click Me</a>
   <button class="red">Click Me</button>
 </div>
 <div>
@@ -20,11 +20,6 @@ body_id: light
 <div>
   <button class="light">Click Me</button>
   <button class="matte-blue">Click Me</button>
-</div>
-<h2>Disabled Buttons</h2>
-<div>
-  <button class="green" disabled>Click Me</button>
-  <button class="red" disabled>Click Me</button>
 </div>
 <h2>Custom Radial Gradient</h2>
 <div>

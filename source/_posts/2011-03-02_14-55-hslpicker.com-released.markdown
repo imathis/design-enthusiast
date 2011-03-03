@@ -1,0 +1,41 @@
+---
+title: "HSLpicker.com Released"
+---
+I needed a good HSL color picker, so I built one. [Check it out &raquo;](http://hslpicker.com).
+
+<img src="/content/blog/2011/hslpicker/hslpicker.png" title="Enjoy this dramatic picture of HSLpicker.com"/>
+
+### Cool Stuff
+
+1. This was designed in browser using CSS3, Javascript, and HTML. Zero images.
+2. Sliders use CSS3 gradients which change as the sliders move.
+3. Every color change generates 745 new colors to restyle the site.
+4. The URL updates with the hex color code, for easy color sharing.
+5. Use the arrow keys on the slider inputs to move 5 steps at a time.
+6. It's [open source](http://github.com/imathis/hsl-color-picker/). Explore the code, or fork and improve on Github.
+
+<img src="/content/blog/2011/hslpicker/features.png" title="Enjoy this dramatic picture of HSLpicker.com"/>
+
+### Why?
+
+At first I thought HSL was yet another name for HSB, (also called HSV). It isn't, but without a good color picker, it was difficult to wrap my head around it.
+I didn't originally plan to spend five days building an HSL color picker, but I couldn't find one that I liked, and I wanted one badly.
+
+Specifically, I wanted an HSL picker with interactive gradient sliders. Why? Because sliders are more precise than [color wheels](http://www.workwithcolor.com/hsl-color-schemer-01.htm) or [gradient maps](http://mothereffinghsl.com/).
+While choosing an initial color is more fluid experience with wheels and maps, refining your color choice or transforming other colors with the same changes is pretty hard. Trying to pick the same color twice is even a challenge.
+
+### What's so great about HSL?
+
+HSL allows us to describe meaningful relationships between colors. Given this brown color, `hsl(36, 73%, 10%)`, it's clear that if we desaturate 40 steps and lighten 70 steps we have `hsl(36, 33%, 80%)`, a cream color. Look at that in hex, `#2C1D07` to `#DDCFBB`, or in rgb, `rgb(44, 29, 7)` to `rgb(221, 207, 187)`, and the relationship between colors isn't evident in any meaningful way.
+
+[Sass](http://sass-lang.com/) has some great color functions that allow me to manipulate colors using these relationships. I can use Sass's adjust-color function to convert brown to cream from the example above.
+
+{% highlight css %}
+adjust-color(#2C1D07, $saturation: -40%, $lightness: 70%)
+//returns #DDCFBB
+{% endhighlight %}
+
+Note that Sass converts easily between RGB, HSL, and hex, giving us the intuitive utility of HSL and the browser compatibility of hex color notation.
+
+I do a lot of color manipulation in [fancy buttons](/projects/fancy-buttons/) and version 2.0 ([coming soon](https://github.com/imathis/fancy-buttons/tree/edge)) relies heavily on color transformation functions to
+create some really nice new themes. My new HSL picker is already helping me do a better job of working with color, and I hope it helps you too.

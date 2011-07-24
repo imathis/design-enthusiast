@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "WAL*MART becomes Walmart*"
 category: design
 ---

@@ -1,7 +1,10 @@
 ---
+layout: post
 title: "Faster Color Theming With Compass and Sass"
-layout: default
-tags: Sass, Compass, video, CSS3
+categories:
+- Sass
+- Compass
+- screencast
 ---
 
 Designing in-browser is often faster than using a graphics application. The result can be deployed immediately, and maintained easily in version control. There's no excuse not to be doing this, except perhaps, you don't know how yet.

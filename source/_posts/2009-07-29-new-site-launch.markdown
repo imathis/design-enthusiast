@@ -1,4 +1,5 @@
 ---
+layout: post
 title: New Site Launch
 category: site
 ---

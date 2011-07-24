@@ -1,4 +1,5 @@
 ---
+layout: post
 title: TypeCon 2008 as Imagined by College Humor
 category: video
 ---

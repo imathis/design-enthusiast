@@ -1,5 +1,10 @@
 ---
+layout: post
 title: "Fancy Buttons 1.0 Released"
+categories:
+- open source
+- compass
+- sass
 ---
 
 Check out the [changelog](http://github.com/imathis/fancy-buttons/blob/master/CHANGELOG.markdown) for a full look at what's new.

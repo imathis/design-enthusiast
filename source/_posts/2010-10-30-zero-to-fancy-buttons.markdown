@@ -1,5 +1,10 @@
 ---
+layout: post
 title: "Zero to Fancy Buttons"
+categories:
+- compass
+- sass
+- screencast
 ---
 
 Here's a quick screencast demonstrating how you can use [fancy buttons](http://github.com/imathis/fancy-buttons) to easily generate beautiful flexible CSS3 buttons.

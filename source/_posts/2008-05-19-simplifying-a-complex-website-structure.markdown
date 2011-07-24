@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Simplifying a complex website structure"
 category: link
 ---

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: High Quality Ampersands on the Web
 category: link
 ---

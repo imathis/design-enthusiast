@@ -1,7 +1,10 @@
 ---
+layout: post
 title: "How to Get Better Clients and Better Rates"
-tags: opinion, design, contracting
-draft: true
+categories:
+- design
+- freelancing
+published: false
 ---
 
 If I were to give one bit of simple advice to the web design community, it would be this:

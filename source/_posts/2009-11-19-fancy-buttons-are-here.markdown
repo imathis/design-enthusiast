@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Fancy Buttons Are Here!
 category: open source
 tags: compass, sass, open source

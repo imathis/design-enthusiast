@@ -1,5 +1,7 @@
 ---
+layout: post
 title: "HSLpicker.com Released"
+categories: open source
 ---
 I needed a good HSL color picker, so I built one. [Check it out &raquo;](http://hslpicker.com).
 

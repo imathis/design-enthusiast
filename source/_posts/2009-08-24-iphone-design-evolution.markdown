@@ -1,4 +1,5 @@
 ---
+layout: post
 title: iPhone Design Evolution
 category: video
 tags: iphone, app, design, video

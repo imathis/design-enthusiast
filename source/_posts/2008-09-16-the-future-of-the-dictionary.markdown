@@ -1,4 +1,5 @@
 ---
+layout: post
 title: The Future of the Dictionary (I Hope)
 category: video
 ---

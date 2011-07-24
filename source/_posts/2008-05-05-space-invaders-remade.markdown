@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Space Invaders Remade"
 category: video
 ---

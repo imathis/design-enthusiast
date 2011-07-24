@@ -1,5 +1,7 @@
 ---
+layout: post
 title: "Coping With Your Family?"
+categories: marketing
 ---
 
 While you work at a MegaCorp "developing strategy", you long for a product that would keep you focused, and get you through the day.

@@ -1,8 +1,7 @@
 ---
+layout: post
 title: "Moo Cards: A Balance of Freedom & Constraint"
-tags:
-- design
-- print
+categories: design
 ---
 
 In the past I've always designed my own business cards, printed them on expensive card stock, and hand-cut them with an X-Acto knife. My cards were way nicer than those my clients had gotten *professionally* printed with bubbly ink, no-bleed designs, and cheap paper. Though I put tremendous care into my cards, I never was happy with the design.
@@ -25,7 +24,7 @@ I realized that I could print several design iterations and decide later which w
 
 <img src="/content/blog/2010/cards/handout.jpg" alt="handout cards" width="220px" class="right"/> The process was fun and simple, and as soon as I finished, I wanted to do it again. When my cards arrived, I was absolutely delighted by the print quality and the care put into their presentation. Smartly Moo even included some beautiful promotional cards to hand out when people inevitably ask about mine.
 
-### A Second Iteration 
+### A Second Iteration
 After holding the finished product, I began to see how my design could be improved. I learned that Gill Sans is harder to read at a small size in a high contrast print, so I switched to Futura. I showed my cards to some far-sighted friends and adjusted my font size accordingly. I discarded a background gradient (which I should have known wouldn't translate well to print) in favor of a solid color. **Sidenote:** On screen, gradients emulate the subtleties of a natural light source, but on a real object it doesn't make sense and generally looks bad.
 
 I changed my approach choosing a single design with multiple color variations. In the promotional cards Moo sent me, I learned that they do a fantastic job with bright colors and I wanted to use that boldness in my design. I was inspired by what [Seth Godin said](http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html):
@@ -36,7 +35,7 @@ I changed my approach choosing a single design with multiple color variations. I
 
 ### The Final Design
 
-<img src="/content/blog/2010/cards/all.jpg" alt="all card designs" width="640px"/> 
+<img src="/content/blog/2010/cards/all.jpg" alt="all card designs" width="640px"/>
 
 The MiniCard's unique constraints inspired me with a fresh challenge and their pricing model encouraged me to experiment. Instead of treating business cards like a necessary design task, I saw them as a opportunity to release quickly, fail cheaply, and improve. Now when I give someone a business card, it's something valuable to me, and I hope they're delighted.
 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Adobe Design FAIL"
 exerpt: "I'm amazed that Adobe can be so backward. Taking over the web browser's interface is offensive especially when it breaks the usability"
 category: design

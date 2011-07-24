@@ -1,6 +1,7 @@
 ---
+layout: post
 title: "The Web in Print"
-tags: print design
+categories: print design
 ---
 
 A couple of days ago I posted a [screencast](/blog/2010/10/08/how-to-get-high-resolution-screenshots-of-a-website) on producing high resolution screenshots of a website for print.

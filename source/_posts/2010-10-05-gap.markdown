@@ -1,6 +1,9 @@
 ---
+layout: post
 title: "Gap's New Blanding"
-tags: Logos, Branding
+categories:
+- Logos
+- Branding
 ---
 
 GAP is now Gap. At least they're not 'gap' but really? Why the change? Here's a look at what makes a logo good or bad. If you don't already know, it's much more than how it looks.

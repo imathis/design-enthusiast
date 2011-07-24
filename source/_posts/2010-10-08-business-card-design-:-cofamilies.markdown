@@ -1,6 +1,9 @@
 ---
+layout: post
 title: "Business Card Design : Cofamilies"
-tags: print, logo
+categories:
+- print
+- logo
 ---
 
 I've been able to do branding work as a part of my work with [Cofamilies.com](http://cofamilies.com/). Today I ordered these business cards from [Moo.com](http://moo.com).

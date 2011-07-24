@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Simply amazing video editing
 category: video
 ---

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Homer Simpson - CSS Animation
 category: link
 ---

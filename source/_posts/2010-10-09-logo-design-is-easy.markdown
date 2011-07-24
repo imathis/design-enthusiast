@@ -1,6 +1,9 @@
 ---
+layout: post
 title: "Logo Design Is Easy"
-tags: logo, branding, sarcasm
+categories:
+- design
+- branding
 ---
 
 <img src="/content/blog/2010/easy-logo/myspace-logo.jpg" alt="MySpace's rediculous logo" title="My blank? Oh... My 'Space' Got it!"/><img src="/content/blog/2010/easy-logo/gap-logo.png" alt="Gap's rediculous logo" title="Helvetica Neue and a Box makes a logo"/>

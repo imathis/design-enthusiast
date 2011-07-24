@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "New Project: Fancy Avatars"
 category: open source
 tags: icons, avatars, open source

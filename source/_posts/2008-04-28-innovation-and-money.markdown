@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Innovation doesn't grow on money?
 category: link
 ---

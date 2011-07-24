@@ -1,6 +1,8 @@
 ---
+layout: post
 title: "How to Get High Resolution Screenshots of a Website"
-tags: Screencast, video
+categories:
+- screencast
 ---
 
 I'm working on a brochure for [cofamilies.com](http://cofamilies.com) (a web app I'm designing) and we want to highlight some screenshots from the app. Problem is,

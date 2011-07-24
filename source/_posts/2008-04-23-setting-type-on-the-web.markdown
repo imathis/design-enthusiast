@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Setting type on the web
 category: link
 ---

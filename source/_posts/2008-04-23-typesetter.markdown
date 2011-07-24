@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Typetester, Compare fonts for the screen"
 category: link
 ---

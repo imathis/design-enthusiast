@@ -1,7 +1,7 @@
 ---
+layout: post
 title: "Quick-tip: Textmate's \"Filter Through Command\""
-layout: default
-tags: HTML, Haml, video
+categories: screencast
 ---
 
 I just stumbled across the TextMate menu option "**Filter Through Command**". It does exactly what you'd think. Uses the current document, or selected text

@@ -1,6 +1,7 @@
 ---
+layout: post
 title: "EdgeRails.Info & Open Blogging"
-tags:
+categories:
 - work
 - octopress
 ---

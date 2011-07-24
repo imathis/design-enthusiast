@@ -1,4 +1,5 @@
 ---
+layout: post
 title: A Redesign Rumble - "The Dawn of Bliss"
 category: design
 ---

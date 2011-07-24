@@ -1,4 +1,5 @@
 ---
+layout: post
 title: The Bell Tolls for IE6
 category: link
 ---

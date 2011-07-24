@@ -1,5 +1,10 @@
+.bundle
 .DS_Store
 .sass-cache
-.bundle
-site/
-credentials.php
+_gist_cache
+_code_cache
+_deploy
+public
+source/_stash
+source/stylesheets/screen.css
+vendor

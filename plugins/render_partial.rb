@@ -22,13 +22,20 @@
 #
 
 require 'pathname'
+require './plugins/octopress_filters'
 
 module Jekyll
 
   class RenderPartialTag < Liquid::Tag
-    def initialize(tag_name, file, tokens)
+    include OctopressFilters
+    def initialize(tag_name, markup, tokens)
+      @file = nil
+      @raw = false
+      if markup =~ /^(\S+)\s?(\w+)?/
+        @file = $1.strip
+        @raw = $2 == 'raw'
+      end
       super
-      @file = file.strip
     end
 
     def render(context)
@@ -45,9 +52,14 @@ module Jekyll
         if contents =~ /\A-{3}.+[^\A]-{3}\n(.+)/m
           contents = $1.lstrip
         end
-        partial = Liquid::Template.parse(contents)
-        context.stack do
-          partial.render(context)
+        contents = pre_filter(contents)
+        if @raw
+          contents
+        else
+          partial = Liquid::Template.parse(contents)
+          context.stack do
+            partial.render(context)
+          end
         end
       end
     end
